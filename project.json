@@ -1,7 +1,7 @@
 {
 	"programVersion": 2,
 	"versionName": "11.1",
-	"name": "Webinar_08_01_2025 - v11.1",
+	"name": "Webinar_06_06_2026 - v11.1",
 	"mainDiagram": {
 		"tables": [
 			{
@@ -12,11 +12,32 @@
 				"height": 152
 			},
 			{
-				"gid": 2587384379,
+				"gid": 3195531163,
+				"y": 125,
+				"x": 1280,
+				"width": 191.203125,
+				"height": 292
+			},
+			{
+				"gid": 4060332959,
+				"y": 425,
+				"x": 200,
+				"width": 130.5,
+				"height": 292
+			},
+			{
+				"gid": 3129098150,
+				"y": 425,
+				"x": 360,
+				"width": 191.203125,
+				"height": 292
+			},
+			{
+				"gid": 989021800,
 				"y": 10,
-				"x": 1215,
-				"width": 182.640625,
-				"height": 152
+				"x": 635,
+				"width": 133.59375,
+				"height": 208
 			},
 			{
 				"gid": 1649626657,
@@ -26,23 +47,30 @@
 				"height": 400
 			},
 			{
+				"gid": 3731193179,
+				"y": 10,
+				"x": 1260,
+				"width": 137.5,
+				"height": 96
+			},
+			{
 				"gid": 3129131776,
-				"y": 210,
-				"x": 315,
-				"width": 147.703125,
-				"height": 401
+				"y": 10,
+				"x": 320,
+				"width": 136.703125,
+				"height": 400
 			},
 			{
 				"gid": 4046201341,
 				"y": 10,
-				"x": 635,
+				"x": 795,
 				"width": 146.046875,
 				"height": 264
 			},
 			{
 				"gid": 3845127662,
 				"y": 10,
-				"x": 810,
+				"x": 970,
 				"width": 134.390625,
 				"height": 400
 			},
@@ -54,25 +82,32 @@
 				"height": 320
 			},
 			{
-				"gid": 2329695445,
+				"gid": 3364504875,
+				"y": 235,
+				"x": 635,
+				"width": 116.046875,
+				"height": 320
+			},
+			{
+				"gid": 1367544977,
+				"y": 290,
+				"x": 780,
+				"width": 116.046875,
+				"height": 320
+			},
+			{
+				"gid": 646194183,
+				"y": 432,
+				"x": 18,
+				"width": 153.046875,
+				"height": 320
+			},
+			{
+				"gid": 3488055602,
 				"y": 10,
-				"x": 970,
-				"width": 128.9375,
-				"height": 96
-			},
-			{
-				"gid": 514404242,
-				"y": 180,
-				"x": 1215,
-				"width": 147.59375,
-				"height": 236
-			},
-			{
-				"gid": 2698031820,
-				"y": 127,
-				"x": 983,
-				"width": 204.15625,
-				"height": 136
+				"x": 1119,
+				"width": 132.46875,
+				"height": 261
 			}
 		]
 	},
@@ -95,29 +130,30 @@
 				},
 				"usernameField": "CustomerID",
 				"passwordField": "password",
-				"emailField": null,
+				"emailField": "email2",
 				"extUserIdField": null,
 				"fullnameField": null,
 				"userpicField": "userpic",
+				"twoFactorField": "two_factor",
+				"codeField": "˂Create new˃",
+				"phoneField": "Phone",
 				"activationField": "˂Create new˃",
 				"resetTokenField": "˂Create new˃",
-				"resetDateField": "˂Create new˃",
-				"userGroupField": "CustomerID"
+				"resetDateField": "˂Create new˃"
 			}
 		],
 		"sessionControl": {
 			"lifeTime": 15,
-			"sessionName": "TewKA6fia7uoAGaqOnJ9",
-			"JWTSecret": "vAZlKC7ZnEK1TBJG20Ng"
+			"sessionName": "ZrUzTqestw2zJunGin25",
+			"JWTSecret": "VDoiqT8aVrpzTwfEjytW"
 		},
 		"registration": {
-			"remindMethod": 1,
+			"remindMethod": 0,
 			"hashAlgorithm": 0,
 			"registerPage": false,
 			"remindPage": false,
 			"changePwdPage": false,
 			"caseInsensitiveLogin": true,
-			"hashPassword": false,
 			"passwordValidation": {
 				"strong": false,
 				"minimumLength": 8,
@@ -133,17 +169,17 @@
 			"passesCount": 5
 		},
 		"emailSettings": {
-			"fromEmail": "",
+			"fromEmail": "support@xlinesoft.com",
 			"usePHPDefinedSMTP": false,
 			"useBuiltInMailer": false,
-			"SMTPServer": "localhost",
-			"SMTPPort": 25,
-			"SMTPUser": "",
-			"SMTPPassword": "",
-			"securityProtocol": 0
+			"SMTPServer": "smtp.gmail.com",
+			"SMTPPort": 465,
+			"SMTPUser": "support@xlinesoft.com",
+			"SMTPPassword": "sfdetpllnlliihaq",
+			"securityProtocol": 1
 		},
 		"advancedSecurity": {
-			"allowGuestLogin": true
+			"allowGuestLogin": false
 		},
 		"auditAndLocking": {
 			"loggingMode": 0,
@@ -162,15 +198,18 @@
 			"tables": {}
 		},
 		"twoFactorSettings": {
-			"available": false,
+			"available": true,
 			"required": false,
 			"enable": true,
 			"remember": true,
-			"types": {},
-			"twoFactorField": "",
-			"emailField": "",
-			"phoneField": "",
-			"codeField": "",
+			"types": {
+				"phone": true,
+				"email": true
+			},
+			"twoFactorField": "two_factor",
+			"emailField": "email1",
+			"phoneField": "Phone",
+			"codeField": "˂Create new˃",
 			"projectName": ""
 		},
 		"staticPermissions": {
@@ -197,6 +236,11 @@
 							"table": "products",
 							"restrictedPages": {}
 						},
+						"categories": {
+							"mask": "ADESPI",
+							"table": "categories",
+							"restrictedPages": {}
+						},
 						"order details": {
 							"mask": "ADESPI",
 							"table": "order details",
@@ -207,124 +251,54 @@
 							"table": "orders",
 							"restrictedPages": {}
 						},
+						"task1": {
+							"mask": "ADESPI",
+							"table": "task1",
+							"restrictedPages": {}
+						},
+						"task2": {
+							"mask": "ADESPI",
+							"table": "task2",
+							"restrictedPages": {}
+						},
+						"task3": {
+							"mask": "ADESPI",
+							"table": "task3",
+							"restrictedPages": {}
+						},
+						"task5": {
+							"mask": "ADESPI",
+							"table": "task5",
+							"restrictedPages": {}
+						},
+						"Dashboard": {
+							"mask": "ADESPI",
+							"table": "Dashboard",
+							"restrictedPages": {}
+						},
+						"Calendar1 calendar": {
+							"mask": "ADESPI",
+							"table": "Calendar1 calendar",
+							"restrictedPages": {}
+						},
+						"calendar3": {
+							"mask": "ADESPI",
+							"table": "calendar3",
+							"restrictedPages": {}
+						},
+						"Calendar3 calendar": {
+							"mask": "ADESPI",
+							"table": "Calendar3 calendar",
+							"restrictedPages": {}
+						},
 						"<global>": {
 							"mask": "ADESPI",
 							"table": "<global>",
-							"restrictedPages": {}
-						},
-						"questions": {
-							"mask": "ADESPI",
-							"table": "questions",
-							"restrictedPages": {}
-						},
-						"users_answers": {
-							"mask": "ADESPI",
-							"table": "users_answers",
-							"restrictedPages": {}
-						},
-						"change_password": {
-							"mask": "ADESPI",
-							"table": "change_password",
-							"restrictedPages": {}
-						},
-						"Tasks1 chart": {
-							"mask": "ADESPI",
-							"table": "Tasks1 chart",
 							"restrictedPages": {}
 						}
 					},
 					"admin": false,
 					"username": "<Default>"
-				},
-				"<Guest>": {
-					"permissions": {
-						"agents": {
-							"mask": "",
-							"table": "agents",
-							"restrictedPages": {
-								"list": true,
-								"view": true
-							}
-						},
-						"employees": {
-							"mask": "",
-							"table": "employees",
-							"restrictedPages": {
-								"list": true,
-								"view": true
-							}
-						},
-						"products": {
-							"mask": "",
-							"table": "products",
-							"restrictedPages": {
-								"list": true,
-								"view": true
-							}
-						},
-						"order details": {
-							"mask": "",
-							"table": "order details",
-							"restrictedPages": {
-								"list": true,
-								"view": true
-							}
-						},
-						"orders": {
-							"mask": "",
-							"table": "orders",
-							"restrictedPages": {
-								"list": true,
-								"view": true
-							}
-						},
-						"questions": {
-							"mask": "",
-							"table": "questions",
-							"restrictedPages": {
-								"list": true,
-								"view": true
-							}
-						},
-						"users_answers": {
-							"mask": "",
-							"table": "users_answers",
-							"restrictedPages": {
-								"list": true,
-								"view": true
-							}
-						},
-						"change_password": {
-							"mask": "A",
-							"table": "change_password",
-							"restrictedPages": {
-								"list": true,
-								"view": true,
-								"reset": false,
-								"add": true
-							}
-						},
-						"<global>": {
-							"mask": "",
-							"table": "<global>",
-							"restrictedPages": {
-								"menu": true
-							}
-						},
-						"customers": {
-							"mask": "",
-							"table": "",
-							"restrictedPages": {
-								"list": true,
-								"view": true
-							}
-						},
-						"Tasks1 chart": {
-							"mask": "S",
-							"table": "Tasks1 chart",
-							"restrictedPages": {}
-						}
-					}
 				}
 			}
 		}
@@ -353,10 +327,57 @@
 							"itemType": 2,
 							"linkType": 0,
 							"iconType": 2,
-							"iconName": "glyphicon-earphone",
+							"iconName": "glyphicon-send",
 							"showIconType": 2,
 							"table": 2509679470,
 							"pageType": "list"
+						}
+					},
+					{
+						"id": "16",
+						"children": [
+							{
+								"id": "7",
+								"parent": "16",
+								"data": {
+									"name": {
+										"table": "orders",
+										"type": 6
+									},
+									"pageId": "list",
+									"itemType": 2,
+									"linkType": 0,
+									"iconType": 2,
+									"iconName": "glyphicon-leaf",
+									"showIconType": 2,
+									"table": 3845127662,
+									"pageType": "list"
+								}
+							},
+							{
+								"id": "6",
+								"parent": "16",
+								"data": {
+									"name": {
+										"table": "order details",
+										"type": 6
+									},
+									"pageId": "list",
+									"itemType": 2,
+									"linkType": 0,
+									"iconType": 2,
+									"iconName": "glyphicon-briefcase",
+									"showIconType": 2,
+									"table": 4046201341,
+									"pageType": "list"
+								}
+							}
+						],
+						"data": {
+							"name": {
+								"text": "Orders",
+								"type": 0
+							}
 						}
 					},
 					{
@@ -370,7 +391,7 @@
 							"itemType": 2,
 							"linkType": 0,
 							"iconType": 2,
-							"iconName": "glyphicon-tree-conifer",
+							"iconName": "glyphicon-leaf",
 							"showIconType": 2,
 							"table": 1649626657,
 							"pageType": "list"
@@ -387,7 +408,7 @@
 							"itemType": 2,
 							"linkType": 0,
 							"iconType": 2,
-							"iconName": "glyphicon-earphone",
+							"iconName": "glyphicon-shopping-cart",
 							"showIconType": 2,
 							"table": 3129131776,
 							"pageType": "list"
@@ -414,50 +435,16 @@
 						"id": "5",
 						"data": {
 							"name": {
-								"table": "order details",
+								"table": "categories",
 								"type": 6
 							},
 							"pageId": "list",
 							"itemType": 2,
 							"linkType": 0,
 							"iconType": 2,
-							"iconName": "glyphicon-tree-conifer",
+							"iconName": "glyphicon-hand-right",
 							"showIconType": 2,
-							"table": 4046201341,
-							"pageType": "list"
-						}
-					},
-					{
-						"id": "6",
-						"data": {
-							"name": {
-								"table": "orders",
-								"type": 6
-							},
-							"pageId": "list",
-							"itemType": 2,
-							"linkType": 0,
-							"iconType": 2,
-							"iconName": "glyphicon-leaf",
-							"showIconType": 2,
-							"table": 3845127662,
-							"pageType": "list"
-						}
-					},
-					{
-						"id": "7",
-						"data": {
-							"name": {
-								"table": "questions",
-								"type": 6
-							},
-							"pageId": "list",
-							"itemType": 2,
-							"linkType": 0,
-							"iconType": 2,
-							"iconName": "glyphicon-tree-conifer",
-							"showIconType": 2,
-							"table": 2329695445,
+							"table": 989021800,
 							"pageType": "list"
 						}
 					},
@@ -465,50 +452,16 @@
 						"id": "8",
 						"data": {
 							"name": {
-								"table": "users_answers",
+								"table": "task1",
 								"type": 6
 							},
 							"pageId": "list",
 							"itemType": 2,
 							"linkType": 0,
 							"iconType": 2,
-							"iconName": "glyphicon-camera",
+							"iconName": "glyphicon-send",
 							"showIconType": 2,
-							"table": 2698031820,
-							"pageType": "list"
-						}
-					},
-					{
-						"id": "7",
-						"data": {
-							"name": {
-								"table": "questions",
-								"type": 6
-							},
-							"pageId": "list",
-							"itemType": 2,
-							"linkType": 0,
-							"iconType": 2,
-							"iconName": "glyphicon-tree-conifer",
-							"showIconType": 2,
-							"table": 2329695445,
-							"pageType": "list"
-						}
-					},
-					{
-						"id": "8",
-						"data": {
-							"name": {
-								"table": "users_answers",
-								"type": 6
-							},
-							"pageId": "list",
-							"itemType": 2,
-							"linkType": 0,
-							"iconType": 2,
-							"iconName": "glyphicon-camera",
-							"showIconType": 2,
-							"table": 2698031820,
+							"table": 3364504875,
 							"pageType": "list"
 						}
 					},
@@ -516,31 +469,115 @@
 						"id": "9",
 						"data": {
 							"name": {
-								"table": "change_password",
+								"table": "task2",
 								"type": 6
 							},
-							"pageId": "add",
+							"pageId": "list",
 							"itemType": 2,
 							"linkType": 0,
 							"iconType": 2,
-							"iconName": "glyphicon-heart-empty",
+							"iconName": "glyphicon-barcode",
 							"showIconType": 2,
-							"table": 2587384379,
-							"pageType": "add"
+							"table": 1367544977,
+							"pageType": "list"
 						}
 					},
 					{
 						"id": "10",
 						"data": {
 							"name": {
-								"table": "Tasks1 chart",
+								"table": "task3",
 								"type": 6
 							},
-							"pageId": "gantt",
+							"pageId": "list",
 							"itemType": 2,
 							"linkType": 0,
-							"table": 514404242,
-							"pageType": "gantt"
+							"table": 646194183,
+							"pageType": "list"
+						}
+					},
+					{
+						"id": "11",
+						"data": {
+							"name": {
+								"table": "task5",
+								"type": 6
+							},
+							"pageId": "dashboard",
+							"itemType": 2,
+							"linkType": 0,
+							"table": 3488055602,
+							"pageType": "dashboard"
+						}
+					},
+					{
+						"id": "11",
+						"data": {
+							"name": {
+								"table": "task5",
+								"type": 6
+							},
+							"pageId": "dashboard",
+							"itemType": 2,
+							"linkType": 0,
+							"table": 3488055602,
+							"pageType": "dashboard"
+						}
+					},
+					{
+						"id": "12",
+						"data": {
+							"name": {
+								"table": "Dashboard",
+								"type": 6
+							},
+							"pageId": "dashboard",
+							"itemType": 2,
+							"linkType": 0,
+							"table": 3731193179,
+							"pageType": "dashboard"
+						}
+					},
+					{
+						"id": "13",
+						"data": {
+							"name": {
+								"table": "Calendar1 calendar",
+								"type": 6
+							},
+							"pageId": "calendar",
+							"itemType": 2,
+							"linkType": 0,
+							"table": 3195531163,
+							"pageType": "calendar"
+						}
+					},
+					{
+						"id": "14",
+						"data": {
+							"name": {
+								"table": "calendar3",
+								"type": 6
+							},
+							"pageId": "list",
+							"itemType": 2,
+							"linkType": 0,
+							"table": 4060332959,
+							"pageType": "list"
+						}
+					},
+					{
+						"id": "15",
+						"data": {
+							"name": {
+								"table": "Calendar3 calendar",
+								"type": 6
+							},
+							"pageId": "calendar",
+							"itemType": 2,
+							"linkType": 0,
+							"table": 3129098150,
+							"pageType": "calendar"
 						}
 					}
 				]
@@ -637,7 +674,11 @@
 								"welcome_item8",
 								"welcome_item9",
 								"welcome_item10",
-								"welcome_item11"
+								"welcome_item11",
+								"welcome_item12",
+								"welcome_item13",
+								"welcome_item14",
+								"welcome_item15"
 							]
 						}
 					},
@@ -662,13 +703,13 @@
 						"type": 6
 					},
 					"linkIcon": {
-						"glyph": "earphone"
+						"glyph": "send"
 					},
 					"linkComments": {
 						"text": "Agents description",
 						"type": 0
 					},
-					"background": "#dc143c",
+					"background": "#cd5c5c",
 					"linkType": 0
 				},
 				"welcome_item1": {
@@ -681,13 +722,13 @@
 						"type": 6
 					},
 					"linkIcon": {
-						"glyph": "tree-conifer"
+						"glyph": "leaf"
 					},
 					"linkComments": {
 						"text": "Customers description",
 						"type": 0
 					},
-					"background": "#e67349",
+					"background": "#daa520",
 					"linkType": 0
 				},
 				"welcome_item2": {
@@ -700,13 +741,13 @@
 						"type": 6
 					},
 					"linkIcon": {
-						"glyph": "earphone"
+						"glyph": "shopping-cart"
 					},
 					"linkComments": {
 						"text": "Employees description",
 						"type": 0
 					},
-					"background": "#7b68ee",
+					"background": "#cfae83",
 					"linkType": 0
 				},
 				"welcome_item3": {
@@ -725,10 +766,29 @@
 						"text": "Products description",
 						"type": 0
 					},
-					"background": "#e07878",
+					"background": "#7b68ee",
 					"linkType": 0
 				},
 				"welcome_item4": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "categories",
+					"linkPage": "list",
+					"linkText": {
+						"table": "categories",
+						"type": 6
+					},
+					"linkIcon": {
+						"glyph": "hand-right"
+					},
+					"linkComments": {
+						"text": "Categories description",
+						"type": 0
+					},
+					"background": "#db7093",
+					"linkType": 0
+				},
+				"welcome_item5": {
 					"type": "welcome_item",
 					"linkUrl": "",
 					"linkTable": "order details",
@@ -738,16 +798,12 @@
 						"type": 6
 					},
 					"linkIcon": {
-						"glyph": "tree-conifer"
+						"glyph": "briefcase"
 					},
-					"linkComments": {
-						"text": "Order Details description",
-						"type": 0
-					},
-					"background": "#2f4f4f",
+					"background": "#cd5c5c",
 					"linkType": 0
 				},
-				"welcome_item5": {
+				"welcome_item6": {
 					"type": "welcome_item",
 					"linkUrl": "",
 					"linkTable": "orders",
@@ -759,7 +815,121 @@
 					"linkIcon": {
 						"glyph": "leaf"
 					},
-					"background": "#db7093",
+					"background": "#4682b4",
+					"linkType": 0
+				},
+				"welcome_item7": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "task1",
+					"linkPage": "list",
+					"linkText": {
+						"table": "task1",
+						"type": 6
+					},
+					"linkIcon": {
+						"glyph": "send"
+					},
+					"background": "#7b68ee",
+					"linkType": 0
+				},
+				"welcome_item8": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "task2",
+					"linkPage": "list",
+					"linkText": {
+						"table": "task2",
+						"type": 6
+					},
+					"linkIcon": {
+						"glyph": "barcode"
+					},
+					"background": "#7b68ee",
+					"linkType": 0
+				},
+				"welcome_item9": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "task3",
+					"linkPage": "list",
+					"linkText": {
+						"table": "task3",
+						"type": 6
+					},
+					"background": "#7b68ee",
+					"linkType": 0
+				},
+				"welcome_item10": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "task5",
+					"linkPage": "dashboard",
+					"linkText": {
+						"table": "task5",
+						"type": 6
+					},
+					"background": "#9acd32",
+					"linkType": 0
+				},
+				"welcome_item11": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "task5",
+					"linkPage": "dashboard",
+					"linkText": {
+						"table": "task5",
+						"type": 6
+					},
+					"background": "#9acd32",
+					"linkType": 0
+				},
+				"welcome_item12": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "Dashboard",
+					"linkPage": "dashboard",
+					"linkText": {
+						"table": "Dashboard",
+						"type": 6
+					},
+					"background": "#dc143c",
+					"linkType": 0
+				},
+				"welcome_item13": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "Calendar1 calendar",
+					"linkPage": "calendar",
+					"linkText": {
+						"table": "Calendar1 calendar",
+						"type": 6
+					},
+					"background": "#b22222",
+					"linkType": 0
+				},
+				"welcome_item14": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "calendar3",
+					"linkPage": "list",
+					"linkText": {
+						"table": "calendar3",
+						"type": 6
+					},
+					"background": "#7b68ee",
+					"linkType": 0
+				},
+				"welcome_item15": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "Calendar3 calendar",
+					"linkPage": "calendar",
+					"linkText": {
+						"table": "Calendar3 calendar",
+						"type": 6
+					},
+					"background": "#7b68ee",
 					"linkType": 0
 				},
 				"username_button": {
@@ -778,93 +948,6 @@
 				},
 				"logout_link": {
 					"type": "logout_link"
-				},
-				"welcome_item6": {
-					"type": "welcome_item",
-					"linkUrl": "",
-					"linkTable": "questions",
-					"linkPage": "list",
-					"linkText": {
-						"table": "questions",
-						"type": 6
-					},
-					"linkIcon": {
-						"glyph": "tree-conifer"
-					},
-					"background": "#3cb371",
-					"linkType": 0
-				},
-				"welcome_item7": {
-					"type": "welcome_item",
-					"linkUrl": "",
-					"linkTable": "users_answers",
-					"linkPage": "list",
-					"linkText": {
-						"table": "users_answers",
-						"type": 6
-					},
-					"linkIcon": {
-						"glyph": "camera"
-					},
-					"background": "#e67349",
-					"linkType": 0
-				},
-				"welcome_item8": {
-					"type": "welcome_item",
-					"linkUrl": "",
-					"linkTable": "questions",
-					"linkPage": "list",
-					"linkText": {
-						"table": "questions",
-						"type": 6
-					},
-					"linkIcon": {
-						"glyph": "tree-conifer"
-					},
-					"background": "#3cb371",
-					"linkType": 0
-				},
-				"welcome_item9": {
-					"type": "welcome_item",
-					"linkUrl": "",
-					"linkTable": "users_answers",
-					"linkPage": "list",
-					"linkText": {
-						"table": "users_answers",
-						"type": 6
-					},
-					"linkIcon": {
-						"glyph": "camera"
-					},
-					"background": "#e67349",
-					"linkType": 0
-				},
-				"welcome_item10": {
-					"type": "welcome_item",
-					"linkUrl": "",
-					"linkTable": "change_password",
-					"linkPage": "add",
-					"linkText": {
-						"table": "change_password",
-						"type": 6
-					},
-					"linkIcon": {
-						"glyph": "heart-empty"
-					},
-					"background": "#5f9ea0",
-					"linkType": 0
-				},
-				"welcome_item11": {
-					"type": "welcome_item",
-					"linkUrl": "",
-					"linkTable": "Tasks1 chart",
-					"linkPage": "gantt",
-					"linkText": {
-						"table": "Tasks1 chart",
-						"type": 6
-					},
-					"background": "#dc143c",
-					"linkType": 0
 				}
 			},
 			"dbProps": {},
@@ -909,7 +992,9 @@
 					"cells": {
 						"c2": {
 							"model": "c2",
-							"items": []
+							"items": [
+								"twofactor_message"
+							]
 						},
 						"c1": {
 							"model": "c1",
@@ -988,13 +1073,22 @@
 							"section": ""
 						},
 						{
-							"section": "",
 							"cells": [
 								{
 									"cell": "c3",
 									"colspan": 2
 								}
-							]
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "c11",
+									"colspan": 2
+								}
+							],
+							"section": ""
 						},
 						{
 							"cells": [
@@ -1006,28 +1100,20 @@
 								}
 							],
 							"section": ""
-						},
-						{
-							"cells": [
-								{
-									"cell": "c5",
-									"colspan": 2
-								}
-							],
-							"section": ""
 						}
 					],
 					"cells": {
 						"c4": {
 							"model": "c4",
 							"items": [
-								"remember_password"
+								"remember_password",
+								"remember_machine"
 							]
 						},
 						"c6": {
 							"model": "c6",
 							"items": [
-								"custom_button"
+								"guest_login"
 							]
 						},
 						"c1": {
@@ -1044,14 +1130,19 @@
 								"password"
 							]
 						},
-						"c5": {
-							"model": "c5",
-							"items": []
-						},
 						"c3": {
-							"model": "c2",
+							"model": "c3",
 							"items": [
-								"snippet"
+								"auth_code_message",
+								"auth_code"
+							]
+						},
+						"c11": {
+							"model": "c11",
+							"items": [
+								"auth_altemail",
+								"auth_altphone",
+								"auth_altapp"
 							]
 						}
 					},
@@ -1077,7 +1168,10 @@
 						"c1": {
 							"model": "c1",
 							"items": [
-								"login_button"
+								"login_button",
+								"continue_login_button",
+								"verify_button",
+								"resend_button"
 							]
 						},
 						"c2": {
@@ -1099,6 +1193,9 @@
 			"items": {
 				"login_message": {
 					"type": "login_message"
+				},
+				"guest_login": {
+					"type": "guest_login"
 				},
 				"login-logo": {
 					"type": "login-logo",
@@ -1123,32 +1220,48 @@
 					"type": "remember_password"
 				},
 				"login_button": {
-					"type": "login_button",
-					"icon": {}
+					"type": "login_button"
 				},
-				"snippet": {
-					"type": "snippet",
-					"eventGid": 3255862233
+				"twofactor_message": {
+					"type": "twofactor_message"
 				},
-				"custom_button": {
-					"type": "custom_button",
-					"eventGid": 1541818425,
-					"label": {
-						"text": "Reset password",
-						"type": 0
-					},
-					"icon": {}
+				"auth_code": {
+					"type": "auth_code"
+				},
+				"continue_login_button": {
+					"type": "continue_login_button"
+				},
+				"verify_button": {
+					"type": "verify_button"
+				},
+				"resend_button": {
+					"type": "resend_button"
+				},
+				"auth_code_message": {
+					"type": "auth_code_message"
+				},
+				"remember_machine": {
+					"type": "remember_machine"
+				},
+				"auth_altemail": {
+					"type": "auth_altemail"
+				},
+				"auth_altphone": {
+					"type": "auth_altphone"
+				},
+				"auth_altapp": {
+					"type": "auth_altapp"
 				}
 			},
 			"dbProps": {},
 			"version": 13,
 			"imageItem": {
 				"type": "page_image",
-				"shadow": true,
-				"fullSize": false,
+				"shadow": false,
+				"fullSize": true,
 				"image": {
-					"source": 0,
-					"image": "train-in-the-night-publicdomainvectors.org.png"
+					"source": 1,
+					"image": "pexels-fineas-anton-2975228.jpg"
 				}
 			},
 			"imageBgColor": "#f2f2f2",
@@ -1291,6 +1404,30 @@
 						{
 							"cells": [
 								{
+									"cell": "2factor_label"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "2factor"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "2factor_buttons"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
 									"cell": "fields_message"
 								}
 							],
@@ -1332,7 +1469,31 @@
 							"model": "fields",
 							"items": [
 								"user_picture",
-								"integrated_edit_field"
+								"integrated_edit_field",
+								"integrated_edit_field1",
+								"integrated_edit_field2",
+								"integrated_edit_field3"
+							]
+						},
+						"2factor": {
+							"model": "2factor",
+							"items": [
+								"twofactor_settings"
+							]
+						},
+						"2factor_label": {
+							"model": "2factor_label",
+							"items": [
+								"twofactor_label",
+								"twofactor_comment",
+								"twofactor_setup_comment"
+							]
+						},
+						"2factor_buttons": {
+							"model": "2factor_buttons",
+							"items": [
+								"twofactor_continue",
+								"twofactor_skip"
 							]
 						}
 					},
@@ -1397,6 +1558,40 @@
 					"field": "CustomerID",
 					"type": "integrated_edit_field",
 					"orientation": 0
+				},
+				"twofactor_settings": {
+					"type": "twofactor_settings"
+				},
+				"twofactor_comment": {
+					"type": "twofactor_comment"
+				},
+				"twofactor_setup_comment": {
+					"type": "twofactor_setup_comment"
+				},
+				"twofactor_label": {
+					"type": "twofactor_label",
+					"font-size": "24px"
+				},
+				"twofactor_continue": {
+					"type": "twofactor_continue"
+				},
+				"twofactor_skip": {
+					"type": "twofactor_skip"
+				},
+				"integrated_edit_field1": {
+					"field": "email",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field2": {
+					"field": "email1",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field3": {
+					"field": "email2",
+					"type": "integrated_edit_field",
+					"orientation": 0
 				}
 			},
 			"dbProps": {},
@@ -1413,30 +1608,20 @@
 	],
 	"eventHandlers": [
 		{
-			"eventId": "EVENT_JS_ONLOAD",
-			"pageType": "login",
-			"code": "this.on('beforeSave', function(formObj, fieldControlsArr, pageObj){\n  var val = $(\"#year\").val();\n  formObj.baseParams['year'] = val;\n});\n\n"
-		},
-		{
-			"eventId": "EVENT_BEFORELOGIN",
-			"pageType": "login",
-			"code": "// Place event code here.\n// Use \"Add Action\" button to add code snippets.\n\nif ($_POST[\"year\"]) {\n    $_SESSION[\"year\"] = $_POST[\"year\"];\n} else {\n    $_SESSION[\"year\"] = date('Y');\n}\n\nreturn true;"
+			"eventId": "EVENT_INIT_APP",
+			"code": "// Place event code here.\n// Use \"Add Action\" button to add code snippets.\n\nif (empty($_SESSION[\"var\"]) ) {\n    $_SESSION[\"var\"] = \"a\";\n}\n\n"
 		}
 	],
 	"projectStyle": {
-		"theme": "spacelab",
-		"sidebarWidth": "250px",
+		"theme": "sandstone",
 		"sidebarColor": "light",
-		"sidebarTheme": "primary",
-		"topbarTheme": "primary",
-		"logoTheme": "primary",
-		"fixedSidebar": false,
-		"fixedTopbar": true,
+		"sidebarTheme": "legacy",
+		"topbarTheme": "legacy",
+		"logoTheme": "legacy",
 		"sidebarCustomThemeColor": "legacy",
-		"topbarCustomThemeColor": "#333333",
-		"logoCustomThemeColor": "#000000",
-		"verticalBorders": false,
-		"stripedGrid": false,
+		"topbarCustomThemeColor": "legacy",
+		"logoCustomThemeColor": "legacy",
+		"customCss": "@media print { \n \n div.r-left { display: none !important;  } \n \n .r-left[data-fixed] + .r-content-col { margin-left: 0px !important;}\n    \n .r-vbar-page .r-content-col .r-body > *,\n .r-vbar-page .r-content-col\n { \n     max-width: 100% !important; }       \n }",
 		"gpHeaderBg": "legacy",
 		"gpHeaderColor": "legacy",
 		"gpFooterBg": "legacy",
@@ -1452,6 +1637,10 @@
 		"gcRolloverHighlightColor": "legacy"
 	},
 	"version": "",
+	"settingsTable": {
+		"connId": "conn",
+		"table": "Webinar_06_06_2026___v11_settings"
+	},
 	"messages": {},
 	"projectLogo": {},
 	"cookieBannerText": {}

@@ -1,20 +1,19 @@
 {
-	"sql": "SELECT\r\n\tid,\r\n\tquestion\r\nFROM\r\n\tquestions",
+	"sql": "SELECT\r\n\tProductID,\r\n\tProductName,\r\n\tSupplierID,\r\n\tCategoryID,\r\n\tQuantityPerUnit,\r\n\tUnitPrice,\r\n\tUnitsInStock,\r\n\tUnitsOnOrder,\r\n\tReorderLevel,\r\n\tDiscontinued\r\nFROM\r\n\tproducts",
+	"type": 1,
 	"connId": "conn",
-	"originalTable": "questions",
-	"name": "questions",
-	"shortTableName": "questions",
+	"originalTable": "products",
+	"name": "task2",
+	"shortTableName": "products2",
 	"dbType": 0,
 	"keyFields": [
-		"id"
+		"ProductID"
 	],
-	"detailsBadgeColor": "3cb371",
+	"detailsBadgeColor": "7b68ee",
 	"fields": [
 		{
-			"name": "id",
-			"sqlExpression": "id",
-			"index": 1,
-			"strField": "id",
+			"name": "ProductID",
+			"strField": "ProductID",
 			"type": 3,
 			"autoinc": true,
 			"viewFormats": [
@@ -24,15 +23,13 @@
 				{}
 			],
 			"label": {
-				"English": "Id"
+				"English": "Product ID"
 			},
-			"tableName": "questions"
+			"tableName": "products"
 		},
 		{
-			"name": "question",
-			"sqlExpression": "question",
-			"index": 2,
-			"strField": "question",
+			"name": "ProductName",
+			"strField": "ProductName",
 			"type": 200,
 			"viewFormats": [
 				{}
@@ -41,9 +38,145 @@
 				{}
 			],
 			"label": {
-				"English": "Question"
+				"English": "Product Name"
 			},
-			"tableName": "questions"
+			"tableName": "products"
+		},
+		{
+			"name": "SupplierID",
+			"strField": "SupplierID",
+			"type": 3,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Supplier ID"
+			},
+			"tableName": "products"
+		},
+		{
+			"name": "CategoryID",
+			"strField": "CategoryID",
+			"type": 3,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{
+					"format": "Lookup wizard",
+					"lookupType": 2,
+					"lookupTable": "categories",
+					"lookupTableConnection": "conn",
+					"lookupLinkField": "CategoryID",
+					"lookupDisplayField": "CategoryName"
+				}
+			],
+			"label": {
+				"English": "Category ID"
+			},
+			"tableName": "products"
+		},
+		{
+			"name": "QuantityPerUnit",
+			"strField": "QuantityPerUnit",
+			"type": 200,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Quantity Per Unit"
+			},
+			"tableName": "products"
+		},
+		{
+			"name": "UnitPrice",
+			"strField": "UnitPrice",
+			"type": 14,
+			"viewFormats": [
+				{
+					"format": "Number"
+				}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Unit Price"
+			},
+			"tableName": "products"
+		},
+		{
+			"name": "UnitsInStock",
+			"strField": "UnitsInStock",
+			"type": 2,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Units In Stock"
+			},
+			"tableName": "products"
+		},
+		{
+			"name": "UnitsOnOrder",
+			"strField": "UnitsOnOrder",
+			"type": 2,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Units On Order"
+			},
+			"tableName": "products"
+		},
+		{
+			"name": "ReorderLevel",
+			"strField": "ReorderLevel",
+			"type": 2,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Reorder Level"
+			},
+			"tableName": "products"
+		},
+		{
+			"name": "Discontinued",
+			"strField": "Discontinued",
+			"type": 16,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Discontinued"
+			},
+			"tableName": "products"
+		}
+	],
+	"eventHandlers": [
+		{
+			"eventId": "EVENT_PROCESSVALUES_ADD",
+			"pageType": "add",
+			"code": "// Place event code here.\n// Use \"Add Action\" button to add code snippets.\n\n$sql = DB::PrepareSQL(\"select CategoryID from categories where CategoryName like '%:1%'\", $_GET[\"category\"] );\n$id = DB::DBLookup($sql);\n\n if ( $id ) {\n     $values[\"CategoryID\"] = $id;\n }\n"
 		}
 	],
 	"dbTableInfo": {
@@ -51,7 +184,7 @@
 		"foreignKeys": [],
 		"fields": [
 			{
-				"name": "id",
+				"name": "ProductID",
 				"type": 3,
 				"size": 11,
 				"scale": 0,
@@ -62,22 +195,110 @@
 				"defaultValue": ""
 			},
 			{
-				"name": "question",
+				"name": "ProductName",
 				"type": 200,
-				"size": 4000,
+				"size": 40,
 				"scale": 0,
-				"typeName": "varchar(4000)",
+				"typeName": "varchar(40)",
+				"nullable": false,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "SupplierID",
+				"type": 3,
+				"size": 11,
+				"scale": 0,
+				"typeName": "int(11)",
 				"nullable": true,
 				"autoinc": false,
 				"defaultValueSQL": null,
 				"defaultValue": ""
+			},
+			{
+				"name": "CategoryID",
+				"type": 3,
+				"size": 11,
+				"scale": 0,
+				"typeName": "int(11)",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "QuantityPerUnit",
+				"type": 200,
+				"size": 20,
+				"scale": 0,
+				"typeName": "varchar(20)",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "UnitPrice",
+				"type": 14,
+				"size": 12,
+				"scale": 6,
+				"typeName": "decimal(12,6)",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": "0.000000",
+				"defaultValue": "0.000000"
+			},
+			{
+				"name": "UnitsInStock",
+				"type": 2,
+				"size": 6,
+				"scale": 0,
+				"typeName": "smallint(6)",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": "0",
+				"defaultValue": "0"
+			},
+			{
+				"name": "UnitsOnOrder",
+				"type": 2,
+				"size": 6,
+				"scale": 0,
+				"typeName": "smallint(6)",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": "0",
+				"defaultValue": "0"
+			},
+			{
+				"name": "ReorderLevel",
+				"type": 2,
+				"size": 6,
+				"scale": 0,
+				"typeName": "smallint(6)",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": "0",
+				"defaultValue": "0"
+			},
+			{
+				"name": "Discontinued",
+				"type": 16,
+				"size": 4,
+				"scale": 0,
+				"typeName": "tinyint(4)",
+				"nullable": false,
+				"autoinc": false,
+				"defaultValueSQL": "0",
+				"defaultValue": "0"
 			}
 		],
 		"primaryKeys": [
-			"id"
+			"ProductID"
 		],
 		"uniqueFields": [],
-		"name": "questions"
+		"name": "products"
 	},
 	"pages": [
 		{
@@ -175,7 +396,10 @@
 						"c3": {
 							"model": "c3",
 							"items": [
-								"integrated_edit_field"
+								"integrated_edit_field",
+								"integrated_edit_field1",
+								"integrated_edit_field2",
+								"integrated_edit_field4"
 							]
 						}
 					},
@@ -205,7 +429,22 @@
 					"type": "add_reset"
 				},
 				"integrated_edit_field": {
-					"field": "question",
+					"field": "ProductName",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field1": {
+					"field": "SupplierID",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field2": {
+					"field": "CategoryID",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field4": {
+					"field": "UnitPrice",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				}
@@ -247,8 +486,7 @@
 						"c1": {
 							"model": "c1",
 							"items": [
-								"add",
-								"delete"
+								"add"
 							]
 						},
 						"c2": {
@@ -378,7 +616,10 @@
 							"model": "c1",
 							"items": [
 								"simple_grid_field",
-								"simple_grid_field1"
+								"simple_grid_field1",
+								"simple_grid_field2",
+								"simple_grid_field3",
+								"simple_grid_field5"
 							]
 						}
 					},
@@ -427,17 +668,42 @@
 					"type": "details_found"
 				},
 				"simple_grid_field": {
-					"field": "id",
-					"type": "simple_grid_field"
+					"field": "ProductID",
+					"type": "simple_grid_field",
+					"inlineAdd": false,
+					"inlineEdit": false
 				},
 				"simple_grid_field1": {
-					"field": "question",
-					"type": "simple_grid_field"
+					"field": "ProductName",
+					"type": "simple_grid_field",
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field2": {
+					"field": "SupplierID",
+					"type": "simple_grid_field",
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field3": {
+					"field": "CategoryID",
+					"type": "simple_grid_field",
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field5": {
+					"field": "UnitPrice",
+					"type": "simple_grid_field",
+					"inlineAdd": false,
+					"inlineEdit": false
 				},
 				"search_panel": {
 					"type": "search_panel",
 					"items": [
 						"search_panel_field",
+						"search_panel_field5",
+						"search_panel_field3",
+						"search_panel_field2",
 						"search_panel_field1"
 					],
 					"_flexiblePanel": true
@@ -446,7 +712,6 @@
 					"type": "list_options",
 					"items": [
 						"export_selected",
-						"delete_selected",
 						"-1",
 						"show_search_panel",
 						"hide_search_panel",
@@ -463,29 +728,24 @@
 					"type": "hide_search_panel"
 				},
 				"search_panel_field": {
-					"field": "id",
+					"field": "ProductID",
 					"type": "search_panel_field"
 				},
 				"search_panel_field1": {
-					"field": "question",
+					"field": "ProductName",
 					"type": "search_panel_field"
 				},
-				"username_button": {
-					"type": "username_button",
-					"items": [
-						"userinfo_link",
-						"logout_link"
-					]
+				"search_panel_field2": {
+					"field": "SupplierID",
+					"type": "search_panel_field"
 				},
-				"loginform_login": {
-					"type": "loginform_login",
-					"popup": false
+				"search_panel_field3": {
+					"field": "CategoryID",
+					"type": "search_panel_field"
 				},
-				"userinfo_link": {
-					"type": "userinfo_link"
-				},
-				"logout_link": {
-					"type": "logout_link"
+				"search_panel_field5": {
+					"field": "UnitPrice",
+					"type": "search_panel_field"
 				},
 				"expand_menu_button": {
 					"type": "expand_menu_button"
@@ -537,11 +797,22 @@
 				"grid_view": {
 					"type": "grid_view"
 				},
-				"delete": {
-					"type": "delete"
+				"username_button": {
+					"type": "username_button",
+					"items": [
+						"userinfo_link",
+						"logout_link"
+					]
 				},
-				"delete_selected": {
-					"type": "delete_selected"
+				"loginform_login": {
+					"type": "loginform_login",
+					"popup": false
+				},
+				"userinfo_link": {
+					"type": "userinfo_link"
+				},
+				"logout_link": {
+					"type": "logout_link"
 				}
 			},
 			"dbProps": {},
@@ -647,7 +918,10 @@
 							"model": "c1",
 							"items": [
 								"simple_grid_field",
-								"simple_grid_field1"
+								"simple_grid_field1",
+								"simple_grid_field2",
+								"simple_grid_field3",
+								"simple_grid_field5"
 							]
 						}
 					},
@@ -666,11 +940,23 @@
 					"type": "print_pages"
 				},
 				"simple_grid_field": {
-					"field": "id",
+					"field": "ProductID",
 					"type": "simple_grid_field"
 				},
 				"simple_grid_field1": {
-					"field": "question",
+					"field": "ProductName",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field2": {
+					"field": "SupplierID",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field3": {
+					"field": "CategoryID",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field5": {
+					"field": "UnitPrice",
 					"type": "simple_grid_field"
 				}
 			},
@@ -753,7 +1039,10 @@
 							"model": "c1",
 							"items": [
 								"export_field",
-								"export_field1"
+								"export_field1",
+								"export_field2",
+								"export_field3",
+								"export_field5"
 							]
 						}
 					},
@@ -803,11 +1092,23 @@
 					"type": "export_cancel"
 				},
 				"export_field": {
-					"field": "id",
+					"field": "ProductID",
 					"type": "export_field"
 				},
 				"export_field1": {
-					"field": "question",
+					"field": "ProductName",
+					"type": "export_field"
+				},
+				"export_field2": {
+					"field": "SupplierID",
+					"type": "export_field"
+				},
+				"export_field3": {
+					"field": "CategoryID",
+					"type": "export_field"
+				},
+				"export_field5": {
+					"field": "UnitPrice",
 					"type": "export_field"
 				}
 			},
@@ -894,7 +1195,10 @@
 							"model": "c1",
 							"items": [
 								"import_field",
-								"import_field1"
+								"import_field1",
+								"import_field2",
+								"import_field3",
+								"import_field5"
 							]
 						}
 					},
@@ -907,11 +1211,23 @@
 					"type": "import_header"
 				},
 				"import_field": {
-					"field": "id",
+					"field": "ProductID",
 					"type": "import_field"
 				},
 				"import_field1": {
-					"field": "question",
+					"field": "ProductName",
+					"type": "import_field"
+				},
+				"import_field2": {
+					"field": "SupplierID",
+					"type": "import_field"
+				},
+				"import_field3": {
+					"field": "CategoryID",
+					"type": "import_field"
+				},
+				"import_field5": {
+					"field": "UnitPrice",
 					"type": "import_field"
 				}
 			},
@@ -1029,7 +1345,10 @@
 						"c3": {
 							"model": "c3",
 							"items": [
-								"integrated_edit_field"
+								"integrated_edit_field",
+								"integrated_edit_field1",
+								"integrated_edit_field2",
+								"integrated_edit_field4"
 							]
 						}
 					},
@@ -1066,9 +1385,28 @@
 					"type": "edit_close"
 				},
 				"integrated_edit_field": {
-					"field": "question",
+					"field": "ProductName",
 					"type": "integrated_edit_field",
-					"orientation": 0
+					"orientation": 0,
+					"updateOnEdit": false
+				},
+				"integrated_edit_field1": {
+					"field": "SupplierID",
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"updateOnEdit": false
+				},
+				"integrated_edit_field2": {
+					"field": "CategoryID",
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"updateOnEdit": false
+				},
+				"integrated_edit_field4": {
+					"field": "UnitPrice",
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"updateOnEdit": false
 				},
 				"edit_view": {
 					"type": "edit_view"
@@ -1187,7 +1525,10 @@
 							"model": "c3",
 							"items": [
 								"integrated_edit_field",
-								"integrated_edit_field1"
+								"integrated_edit_field1",
+								"integrated_edit_field2",
+								"integrated_edit_field3",
+								"integrated_edit_field5"
 							]
 						}
 					},
@@ -1208,12 +1549,27 @@
 					"type": "view_close"
 				},
 				"integrated_edit_field": {
-					"field": "id",
+					"field": "ProductID",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field1": {
-					"field": "question",
+					"field": "ProductName",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field2": {
+					"field": "SupplierID",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field3": {
+					"field": "CategoryID",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field5": {
+					"field": "UnitPrice",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
@@ -1246,6 +1602,6 @@
 		"addressFields": []
 	},
 	"caption": {
-		"English": "Questions"
+		"English": "Task2"
 	}
 }

@@ -1,0 +1,490 @@
+{
+	"type": 4,
+	"name": "Dashboard",
+	"shortTableName": "Dashboard",
+	"detailsBadgeColor": "dc143c",
+	"dashSearchFields": [
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "CustomerID"
+				}
+			],
+			"labels": {
+				"English": "Customer ID"
+			},
+			"field": "customers_CustomerID",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "id"
+				}
+			],
+			"labels": {
+				"English": "Id"
+			},
+			"field": "customers_id",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "CompanyName"
+				}
+			],
+			"labels": {
+				"English": "Company Name"
+			},
+			"field": "customers_CompanyName",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "ContactName"
+				}
+			],
+			"labels": {
+				"English": "Contact Name"
+			},
+			"field": "customers_ContactName",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "ContactTitle"
+				}
+			],
+			"labels": {
+				"English": "Contact Title"
+			},
+			"field": "customers_ContactTitle",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "Address"
+				}
+			],
+			"labels": {
+				"English": "Address"
+			},
+			"field": "customers_Address",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "City"
+				}
+			],
+			"labels": {
+				"English": "City"
+			},
+			"field": "customers_City",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "Region"
+				}
+			],
+			"labels": {
+				"English": "Region"
+			},
+			"field": "customers_Region",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "PostalCode"
+				}
+			],
+			"labels": {
+				"English": "Postal Code"
+			},
+			"field": "customers_PostalCode",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "Country"
+				}
+			],
+			"labels": {
+				"English": "Country"
+			},
+			"field": "customers_Country",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "Phone"
+				}
+			],
+			"labels": {
+				"English": "Phone"
+			},
+			"field": "customers_Phone",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "Fax"
+				}
+			],
+			"labels": {
+				"English": "Fax"
+			},
+			"field": "customers_Fax",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "Lat"
+				}
+			],
+			"labels": {
+				"English": "Lat"
+			},
+			"field": "customers_Lat",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "Lng"
+				}
+			],
+			"labels": {
+				"English": "Lng"
+			},
+			"field": "customers_Lng",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "apikey"
+				}
+			],
+			"labels": {
+				"English": "Apikey"
+			},
+			"field": "customers_apikey",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "ownerid"
+				}
+			],
+			"labels": {
+				"English": "Ownerid"
+			},
+			"field": "customers_ownerid",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "companylogo"
+				}
+			],
+			"labels": {
+				"English": "Companylogo"
+			},
+			"field": "customers_companylogo",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "BillingName"
+				}
+			],
+			"labels": {
+				"English": "Billing Name"
+			},
+			"field": "customers_BillingName",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "customers",
+					"field": "BillingAddress"
+				}
+			],
+			"labels": {
+				"English": "Billing Address"
+			},
+			"field": "customers_BillingAddress",
+			"allFieldsSearch": true
+		}
+	],
+	"pages": [
+		{
+			"id": "dashboard",
+			"type": "dashboard",
+			"layoutId": "leftbar",
+			"disabled": false,
+			"default": 0,
+			"forms": {
+				"grid": {
+					"modelId": "dashboard-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								},
+								{
+									"cell": "c"
+								}
+							],
+							"section": ""
+						},
+						{
+							"section": "",
+							"cells": [
+								{
+									"cell": "c2"
+								},
+								{
+									"cell": "c3"
+								}
+							]
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"dashboard-item"
+							]
+						},
+						"c": {
+							"model": "c1",
+							"items": [
+								"dashboard-item1"
+							],
+							"width": ""
+						},
+						"c2": {
+							"model": "c1",
+							"items": []
+						},
+						"c3": {
+							"model": "c1",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"left": {
+					"modelId": "leftbar-dashboard",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c0"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c0": {
+							"model": "c0",
+							"items": [
+								"logo"
+							]
+						},
+						"c1": {
+							"model": "c1",
+							"items": [
+								"menu"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"supertop": {
+					"modelId": "leftbar-top-dashboard",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								},
+								{
+									"cell": "c2"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"expand_menu_button",
+								"collapse_button",
+								"breadcrumb"
+							]
+						},
+						"c2": {
+							"model": "c2",
+							"items": [
+								"simple_search",
+								"username_button"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"top": {
+					"modelId": "dashboard-top",
+					"grid": [],
+					"cells": {},
+					"deferredItems": [],
+					"recsPerRow": 1
+				}
+			},
+			"items": {
+				"breadcrumb": {
+					"type": "breadcrumb"
+				},
+				"logo": {
+					"type": "logo"
+				},
+				"menu": {
+					"type": "menu"
+				},
+				"simple_search": {
+					"type": "simple_search"
+				},
+				"expand_menu_button": {
+					"type": "expand_menu_button"
+				},
+				"collapse_button": {
+					"type": "collapse_button"
+				},
+				"dashboard-item": {
+					"type": "dashboard-item",
+					"table": 1649626657,
+					"dashType": 0,
+					"dashName": "customers_grid",
+					"bsStyle": "primary",
+					"panelType": 1,
+					"icon": {
+						"fa": "bell"
+					},
+					"viewTab": true,
+					"editTab": true,
+					"addTab": true,
+					"initialTab": 0,
+					"hiddenDetails": {},
+					"detailsOptions": [],
+					"mapUpdateGridWhenMoved": true,
+					"height": "500px"
+				},
+				"dashboard-item1": {
+					"type": "dashboard-item",
+					"table": 1649626657,
+					"dashType": 3,
+					"dashName": "customers_record",
+					"bsStyle": "primary",
+					"panelType": 1,
+					"icon": {
+						"fa": "headphones"
+					},
+					"viewTab": true,
+					"editTab": true,
+					"addTab": true,
+					"initialTab": 0,
+					"hiddenDetails": {},
+					"detailsOptions": [],
+					"mapUpdateGridWhenMoved": true,
+					"height": "500px",
+					"reloadInterval": 0,
+					"detailsFilterByMaster": false,
+					"detailsMasterTable": ""
+				},
+				"username_button": {
+					"type": "username_button",
+					"items": [
+						"userinfo_link",
+						"logout_link"
+					]
+				},
+				"userinfo_link": {
+					"type": "userinfo_link"
+				},
+				"logout_link": {
+					"type": "logout_link"
+				}
+			},
+			"dbProps": {},
+			"version": 13,
+			"imageItem": {
+				"type": "page_image"
+			},
+			"imageBgColor": "#f2f2f2",
+			"controlsBgColor": "white",
+			"imagePosition": "right",
+			"listTotals": 1,
+			"title": {}
+		}
+	],
+	"geoCoding": {
+		"enabled": false,
+		"latField": "",
+		"lonField": "",
+		"addressFields": []
+	},
+	"caption": {
+		"English": "Dashboard"
+	}
+}

@@ -8,12 +8,14 @@
 	"keyFields": [
 		"OrderID"
 	],
-	"detailsBadgeColor": "db7093",
+	"detailsBadgeColor": "4682b4",
+	"detailsTables": [
+		4046201341,
+		1649626657
+	],
 	"fields": [
 		{
 			"name": "OrderID",
-			"sqlExpression": "OrderID",
-			"index": 1,
 			"strField": "OrderID",
 			"type": 3,
 			"autoinc": true,
@@ -30,8 +32,6 @@
 		},
 		{
 			"name": "CustomerID",
-			"sqlExpression": "CustomerID",
-			"index": 2,
 			"strField": "CustomerID",
 			"type": 200,
 			"viewFormats": [
@@ -47,8 +47,6 @@
 		},
 		{
 			"name": "EmployeeID",
-			"sqlExpression": "EmployeeID",
-			"index": 3,
 			"strField": "EmployeeID",
 			"type": 3,
 			"viewFormats": [
@@ -64,8 +62,6 @@
 		},
 		{
 			"name": "OrderDate",
-			"sqlExpression": "OrderDate",
-			"index": 4,
 			"strField": "OrderDate",
 			"type": 135,
 			"viewFormats": [
@@ -85,8 +81,6 @@
 		},
 		{
 			"name": "RequiredDate",
-			"sqlExpression": "RequiredDate",
-			"index": 5,
 			"strField": "RequiredDate",
 			"type": 135,
 			"viewFormats": [
@@ -106,8 +100,6 @@
 		},
 		{
 			"name": "ShippedDate",
-			"sqlExpression": "ShippedDate",
-			"index": 6,
 			"strField": "ShippedDate",
 			"type": 135,
 			"viewFormats": [
@@ -127,8 +119,6 @@
 		},
 		{
 			"name": "ShipVia",
-			"sqlExpression": "ShipVia",
-			"index": 7,
 			"strField": "ShipVia",
 			"type": 3,
 			"viewFormats": [
@@ -144,8 +134,6 @@
 		},
 		{
 			"name": "Freight",
-			"sqlExpression": "Freight",
-			"index": 8,
 			"strField": "Freight",
 			"type": 14,
 			"viewFormats": [
@@ -163,8 +151,6 @@
 		},
 		{
 			"name": "ShipName",
-			"sqlExpression": "ShipName",
-			"index": 9,
 			"strField": "ShipName",
 			"type": 200,
 			"viewFormats": [
@@ -180,8 +166,6 @@
 		},
 		{
 			"name": "ShipAddress",
-			"sqlExpression": "ShipAddress",
-			"index": 10,
 			"strField": "ShipAddress",
 			"type": 200,
 			"viewFormats": [
@@ -197,8 +181,6 @@
 		},
 		{
 			"name": "ShipCity",
-			"sqlExpression": "ShipCity",
-			"index": 11,
 			"strField": "ShipCity",
 			"type": 200,
 			"viewFormats": [
@@ -214,8 +196,6 @@
 		},
 		{
 			"name": "ShipRegion",
-			"sqlExpression": "ShipRegion",
-			"index": 12,
 			"strField": "ShipRegion",
 			"type": 200,
 			"viewFormats": [
@@ -231,8 +211,6 @@
 		},
 		{
 			"name": "ShipPostalCode",
-			"sqlExpression": "ShipPostalCode",
-			"index": 13,
 			"strField": "ShipPostalCode",
 			"type": 200,
 			"viewFormats": [
@@ -248,8 +226,6 @@
 		},
 		{
 			"name": "ShipCountry",
-			"sqlExpression": "ShipCountry",
-			"index": 14,
 			"strField": "ShipCountry",
 			"type": 3,
 			"viewFormats": [
@@ -265,8 +241,6 @@
 		},
 		{
 			"name": "Ended",
-			"sqlExpression": "Ended",
-			"index": 15,
 			"strField": "Ended",
 			"type": 3,
 			"viewFormats": [
@@ -282,8 +256,6 @@
 		},
 		{
 			"name": "Archived",
-			"sqlExpression": "Archived",
-			"index": 16,
 			"strField": "Archived",
 			"type": 3,
 			"viewFormats": [
@@ -299,8 +271,6 @@
 		},
 		{
 			"name": "ownerid",
-			"sqlExpression": "ownerid",
-			"index": 17,
 			"strField": "ownerid",
 			"type": 3,
 			"viewFormats": [
@@ -316,8 +286,6 @@
 		},
 		{
 			"name": "Total",
-			"sqlExpression": "Total",
-			"index": 18,
 			"strField": "Total",
 			"type": 14,
 			"viewFormats": [
@@ -335,8 +303,6 @@
 		},
 		{
 			"name": "agentid",
-			"sqlExpression": "agentid",
-			"index": 19,
 			"strField": "agentid",
 			"type": 3,
 			"viewFormats": [
@@ -349,12 +315,6 @@
 				"English": "Agentid"
 			},
 			"tableName": "orders"
-		}
-	],
-	"eventHandlers": [
-		{
-			"eventId": "EVENT_INIT_TABLE",
-			"code": "// Place event code here.\n// Use \"Add Action\" button to add code snippets.\n\n$query->addWhere(\"year(OrderDate) = \".$_SESSION[\"year\"]);"
 		}
 	],
 	"dbTableInfo": {
@@ -847,8 +807,7 @@
 						"c1": {
 							"model": "c1",
 							"items": [
-								"add",
-								"delete"
+								"add"
 							]
 						},
 						"c2": {
@@ -961,56 +920,656 @@
 					"deferredItems": [],
 					"recsPerRow": 1
 				},
-				"grid": {
-					"modelId": "simple-grid",
-					"grid": [
-						{
-							"cells": [
-								{
-									"cell": "c1"
-								}
-							],
-							"section": ""
-						}
-					],
-					"cells": {
-						"c1": {
-							"model": "c1",
-							"items": [
-								"simple_grid_field",
-								"simple_grid_field1",
-								"simple_grid_field2",
-								"simple_grid_field3",
-								"simple_grid_field4",
-								"simple_grid_field5",
-								"simple_grid_field6",
-								"simple_grid_field7",
-								"simple_grid_field8",
-								"simple_grid_field9",
-								"simple_grid_field10",
-								"simple_grid_field11",
-								"simple_grid_field12",
-								"simple_grid_field13",
-								"simple_grid_field14",
-								"simple_grid_field15",
-								"simple_grid_field16",
-								"simple_grid_field17",
-								"simple_grid_field18"
-							]
-						}
-					},
-					"deferredItems": [
-						"grid_checkbox",
-						"grid_checkbox_head",
-						"grid_edit",
-						"grid_view"
-					],
-					"recsPerRow": 1
-				},
 				"top": {
 					"modelId": "list-sidebar-top",
 					"grid": [],
 					"cells": {},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"grid": {
+					"modelId": "horizontal-grid",
+					"grid": [
+						{
+							"section": "head",
+							"cells": [
+								{
+									"cell": "headcell_icons"
+								},
+								{
+									"cell": "headcell_checkbox"
+								},
+								{
+									"cell": "headcell_details"
+								},
+								{
+									"cell": "headcell_field"
+								},
+								{
+									"cell": "headcell_field1"
+								},
+								{
+									"cell": "headcell_field2"
+								},
+								{
+									"cell": "headcell_field3"
+								},
+								{
+									"cell": "headcell_field4"
+								},
+								{
+									"cell": "headcell_field5"
+								},
+								{
+									"cell": "headcell_field6"
+								},
+								{
+									"cell": "headcell_field7"
+								},
+								{
+									"cell": "headcell_field8"
+								},
+								{
+									"cell": "headcell_field9"
+								},
+								{
+									"cell": "headcell_field10"
+								},
+								{
+									"cell": "headcell_field11"
+								},
+								{
+									"cell": "headcell_field12"
+								},
+								{
+									"cell": "headcell_field13"
+								},
+								{
+									"cell": "headcell_field14"
+								},
+								{
+									"cell": "headcell_field15"
+								},
+								{
+									"cell": "headcell_field16"
+								},
+								{
+									"cell": "headcell_field17"
+								},
+								{
+									"cell": "headcell_field18"
+								}
+							]
+						},
+						{
+							"section": "body",
+							"cells": [
+								{
+									"cell": "cell_icons"
+								},
+								{
+									"cell": "cell_checkbox"
+								},
+								{
+									"cell": "cell_details"
+								},
+								{
+									"cell": "cell_field"
+								},
+								{
+									"cell": "cell_field1"
+								},
+								{
+									"cell": "cell_field2"
+								},
+								{
+									"cell": "cell_field3"
+								},
+								{
+									"cell": "cell_field4"
+								},
+								{
+									"cell": "cell_field5"
+								},
+								{
+									"cell": "cell_field6"
+								},
+								{
+									"cell": "cell_field7"
+								},
+								{
+									"cell": "cell_field8"
+								},
+								{
+									"cell": "cell_field9"
+								},
+								{
+									"cell": "cell_field10"
+								},
+								{
+									"cell": "cell_field11"
+								},
+								{
+									"cell": "cell_field12"
+								},
+								{
+									"cell": "cell_field13"
+								},
+								{
+									"cell": "cell_field14"
+								},
+								{
+									"cell": "cell_field15"
+								},
+								{
+									"cell": "cell_field16"
+								},
+								{
+									"cell": "cell_field17"
+								},
+								{
+									"cell": "cell_field18"
+								}
+							]
+						},
+						{
+							"cells": [
+								{
+									"cell": "cell_dpreview",
+									"colspan": 22
+								}
+							],
+							"section": "body"
+						},
+						{
+							"section": "foot",
+							"cells": [
+								{
+									"cell": "footcell_icons"
+								},
+								{
+									"cell": "footcell_checkbox"
+								},
+								{
+									"cell": "footcell_details"
+								},
+								{
+									"cell": "footcell_field"
+								},
+								{
+									"cell": "footcell_field1"
+								},
+								{
+									"cell": "footcell_field2"
+								},
+								{
+									"cell": "footcell_field3"
+								},
+								{
+									"cell": "footcell_field4"
+								},
+								{
+									"cell": "footcell_field5"
+								},
+								{
+									"cell": "footcell_field6"
+								},
+								{
+									"cell": "footcell_field7"
+								},
+								{
+									"cell": "footcell_field8"
+								},
+								{
+									"cell": "footcell_field9"
+								},
+								{
+									"cell": "footcell_field10"
+								},
+								{
+									"cell": "footcell_field11"
+								},
+								{
+									"cell": "footcell_field12"
+								},
+								{
+									"cell": "footcell_field13"
+								},
+								{
+									"cell": "footcell_field14"
+								},
+								{
+									"cell": "footcell_field15"
+								},
+								{
+									"cell": "footcell_field16"
+								},
+								{
+									"cell": "footcell_field17"
+								},
+								{
+									"cell": "footcell_field18"
+								}
+							]
+						}
+					],
+					"cells": {
+						"headcell_field": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field19"
+							],
+							"field": "OrderID"
+						},
+						"cell_field": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field"
+							],
+							"field": "OrderID"
+						},
+						"footcell_field": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "OrderID"
+						},
+						"headcell_field1": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field20"
+							],
+							"field": "CustomerID"
+						},
+						"cell_field1": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field1"
+							],
+							"field": "CustomerID"
+						},
+						"footcell_field1": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "CustomerID"
+						},
+						"headcell_field2": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field21"
+							],
+							"field": "EmployeeID"
+						},
+						"cell_field2": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field2"
+							],
+							"field": "EmployeeID"
+						},
+						"footcell_field2": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "EmployeeID"
+						},
+						"headcell_field3": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field22"
+							],
+							"field": "OrderDate"
+						},
+						"cell_field3": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field3"
+							],
+							"field": "OrderDate"
+						},
+						"footcell_field3": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "OrderDate"
+						},
+						"headcell_field4": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field23"
+							],
+							"field": "RequiredDate"
+						},
+						"cell_field4": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field4"
+							],
+							"field": "RequiredDate"
+						},
+						"footcell_field4": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "RequiredDate"
+						},
+						"headcell_field5": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field24"
+							],
+							"field": "ShippedDate"
+						},
+						"cell_field5": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field5"
+							],
+							"field": "ShippedDate"
+						},
+						"footcell_field5": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "ShippedDate"
+						},
+						"headcell_field6": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field25"
+							],
+							"field": "ShipVia"
+						},
+						"cell_field6": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field6"
+							],
+							"field": "ShipVia"
+						},
+						"footcell_field6": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "ShipVia"
+						},
+						"headcell_field7": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field26"
+							],
+							"field": "Freight"
+						},
+						"cell_field7": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field7"
+							],
+							"field": "Freight"
+						},
+						"footcell_field7": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "Freight"
+						},
+						"headcell_field8": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field27"
+							],
+							"field": "ShipName"
+						},
+						"cell_field8": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field8"
+							],
+							"field": "ShipName"
+						},
+						"footcell_field8": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "ShipName"
+						},
+						"headcell_field9": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field28"
+							],
+							"field": "ShipAddress"
+						},
+						"cell_field9": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field9"
+							],
+							"field": "ShipAddress"
+						},
+						"footcell_field9": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "ShipAddress"
+						},
+						"headcell_field10": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field29"
+							],
+							"field": "ShipCity"
+						},
+						"cell_field10": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field10"
+							],
+							"field": "ShipCity"
+						},
+						"footcell_field10": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "ShipCity"
+						},
+						"headcell_field11": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field30"
+							],
+							"field": "ShipRegion"
+						},
+						"cell_field11": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field11"
+							],
+							"field": "ShipRegion"
+						},
+						"footcell_field11": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "ShipRegion"
+						},
+						"headcell_field12": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field31"
+							],
+							"field": "ShipPostalCode"
+						},
+						"cell_field12": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field12"
+							],
+							"field": "ShipPostalCode"
+						},
+						"footcell_field12": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "ShipPostalCode"
+						},
+						"headcell_field13": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field32"
+							],
+							"field": "ShipCountry"
+						},
+						"cell_field13": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field13"
+							],
+							"field": "ShipCountry"
+						},
+						"footcell_field13": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "ShipCountry"
+						},
+						"headcell_field14": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field33"
+							],
+							"field": "Ended"
+						},
+						"cell_field14": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field14"
+							],
+							"field": "Ended"
+						},
+						"footcell_field14": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "Ended"
+						},
+						"headcell_field15": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field34"
+							],
+							"field": "Archived"
+						},
+						"cell_field15": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field15"
+							],
+							"field": "Archived"
+						},
+						"footcell_field15": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "Archived"
+						},
+						"headcell_field16": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field35"
+							],
+							"field": "ownerid"
+						},
+						"cell_field16": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field16"
+							],
+							"field": "ownerid"
+						},
+						"footcell_field16": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "ownerid"
+						},
+						"headcell_field17": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field36"
+							],
+							"field": "Total"
+						},
+						"cell_field17": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field17"
+							],
+							"field": "Total"
+						},
+						"footcell_field17": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "Total"
+						},
+						"headcell_field18": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field37"
+							],
+							"field": "agentid"
+						},
+						"cell_field18": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field18"
+							],
+							"field": "agentid"
+						},
+						"footcell_field18": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "agentid"
+						},
+						"cell_dpreview": {
+							"model": "cell_dpreview",
+							"items": [
+								"details_preview",
+								"details_preview1"
+							]
+						},
+						"headcell_checkbox": {
+							"model": "headcell_checkbox",
+							"items": [
+								"grid_checkbox_head"
+							]
+						},
+						"cell_checkbox": {
+							"model": "cell_checkbox",
+							"items": [
+								"grid_checkbox"
+							]
+						},
+						"footcell_checkbox": {
+							"model": "footcell_checkbox",
+							"items": []
+						},
+						"headcell_icons": {
+							"model": "headcell_icons",
+							"items": []
+						},
+						"cell_icons": {
+							"model": "cell_icons",
+							"items": [
+								"grid_edit",
+								"grid_view"
+							]
+						},
+						"footcell_icons": {
+							"model": "footcell_icons",
+							"items": []
+						},
+						"headcell_details": {
+							"model": "headcell_details",
+							"items": []
+						},
+						"cell_details": {
+							"model": "cell_details",
+							"items": [
+								"grid_alldetails_link",
+								"grid_details_link",
+								"grid_details_link1"
+							]
+						},
+						"footcell_details": {
+							"model": "footcell_details",
+							"items": []
+						}
+					},
 					"deferredItems": [],
 					"recsPerRow": 1
 				}
@@ -1034,90 +1593,8 @@
 				"pagination": {
 					"type": "pagination"
 				},
-				"grid_checkbox": {
-					"type": "grid_checkbox"
-				},
-				"grid_checkbox_head": {
-					"type": "grid_checkbox_head"
-				},
 				"details_found": {
 					"type": "details_found"
-				},
-				"simple_grid_field": {
-					"field": "OrderID",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field1": {
-					"field": "CustomerID",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field2": {
-					"field": "EmployeeID",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field3": {
-					"field": "OrderDate",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field4": {
-					"field": "RequiredDate",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field5": {
-					"field": "ShippedDate",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field6": {
-					"field": "ShipVia",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field7": {
-					"field": "Freight",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field8": {
-					"field": "ShipName",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field9": {
-					"field": "ShipAddress",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field10": {
-					"field": "ShipCity",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field11": {
-					"field": "ShipRegion",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field12": {
-					"field": "ShipPostalCode",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field13": {
-					"field": "ShipCountry",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field14": {
-					"field": "Ended",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field15": {
-					"field": "Archived",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field16": {
-					"field": "ownerid",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field17": {
-					"field": "Total",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field18": {
-					"field": "agentid",
-					"type": "simple_grid_field"
 				},
 				"search_panel": {
 					"type": "search_panel",
@@ -1148,7 +1625,6 @@
 					"type": "list_options",
 					"items": [
 						"export_selected",
-						"delete_selected",
 						"-1",
 						"show_search_panel",
 						"hide_search_panel",
@@ -1253,6 +1729,7 @@
 					"type": "print_panel",
 					"items": [
 						"print_scope",
+						"print_details",
 						"print_records",
 						"print_button"
 					]
@@ -1284,18 +1761,6 @@
 				"-2": {
 					"type": "-"
 				},
-				"grid_edit": {
-					"type": "grid_edit"
-				},
-				"grid_view": {
-					"type": "grid_view"
-				},
-				"delete": {
-					"type": "delete"
-				},
-				"delete_selected": {
-					"type": "delete_selected"
-				},
 				"username_button": {
 					"type": "username_button",
 					"items": [
@@ -1312,6 +1777,216 @@
 				},
 				"logout_link": {
 					"type": "logout_link"
+				},
+				"print_details": {
+					"type": "print_details",
+					"tables": {
+						"1649626657": true,
+						"4046201341": true
+					}
+				},
+				"simple_grid_field": {
+					"field": "OrderID",
+					"type": "grid_field"
+				},
+				"simple_grid_field19": {
+					"type": "grid_field_label",
+					"field": "OrderID"
+				},
+				"simple_grid_field1": {
+					"field": "CustomerID",
+					"type": "grid_field"
+				},
+				"simple_grid_field20": {
+					"type": "grid_field_label",
+					"field": "CustomerID"
+				},
+				"simple_grid_field2": {
+					"field": "EmployeeID",
+					"type": "grid_field"
+				},
+				"simple_grid_field21": {
+					"type": "grid_field_label",
+					"field": "EmployeeID"
+				},
+				"simple_grid_field3": {
+					"field": "OrderDate",
+					"type": "grid_field"
+				},
+				"simple_grid_field22": {
+					"type": "grid_field_label",
+					"field": "OrderDate"
+				},
+				"simple_grid_field4": {
+					"field": "RequiredDate",
+					"type": "grid_field"
+				},
+				"simple_grid_field23": {
+					"type": "grid_field_label",
+					"field": "RequiredDate"
+				},
+				"simple_grid_field5": {
+					"field": "ShippedDate",
+					"type": "grid_field"
+				},
+				"simple_grid_field24": {
+					"type": "grid_field_label",
+					"field": "ShippedDate"
+				},
+				"simple_grid_field6": {
+					"field": "ShipVia",
+					"type": "grid_field"
+				},
+				"simple_grid_field25": {
+					"type": "grid_field_label",
+					"field": "ShipVia"
+				},
+				"simple_grid_field7": {
+					"field": "Freight",
+					"type": "grid_field"
+				},
+				"simple_grid_field26": {
+					"type": "grid_field_label",
+					"field": "Freight"
+				},
+				"simple_grid_field8": {
+					"field": "ShipName",
+					"type": "grid_field"
+				},
+				"simple_grid_field27": {
+					"type": "grid_field_label",
+					"field": "ShipName"
+				},
+				"simple_grid_field9": {
+					"field": "ShipAddress",
+					"type": "grid_field"
+				},
+				"simple_grid_field28": {
+					"type": "grid_field_label",
+					"field": "ShipAddress"
+				},
+				"simple_grid_field10": {
+					"field": "ShipCity",
+					"type": "grid_field"
+				},
+				"simple_grid_field29": {
+					"type": "grid_field_label",
+					"field": "ShipCity"
+				},
+				"simple_grid_field11": {
+					"field": "ShipRegion",
+					"type": "grid_field"
+				},
+				"simple_grid_field30": {
+					"type": "grid_field_label",
+					"field": "ShipRegion"
+				},
+				"simple_grid_field12": {
+					"field": "ShipPostalCode",
+					"type": "grid_field"
+				},
+				"simple_grid_field31": {
+					"type": "grid_field_label",
+					"field": "ShipPostalCode"
+				},
+				"simple_grid_field13": {
+					"field": "ShipCountry",
+					"type": "grid_field"
+				},
+				"simple_grid_field32": {
+					"type": "grid_field_label",
+					"field": "ShipCountry"
+				},
+				"simple_grid_field14": {
+					"field": "Ended",
+					"type": "grid_field"
+				},
+				"simple_grid_field33": {
+					"type": "grid_field_label",
+					"field": "Ended"
+				},
+				"simple_grid_field15": {
+					"field": "Archived",
+					"type": "grid_field"
+				},
+				"simple_grid_field34": {
+					"type": "grid_field_label",
+					"field": "Archived"
+				},
+				"simple_grid_field16": {
+					"field": "ownerid",
+					"type": "grid_field"
+				},
+				"simple_grid_field35": {
+					"type": "grid_field_label",
+					"field": "ownerid"
+				},
+				"simple_grid_field17": {
+					"field": "Total",
+					"type": "grid_field"
+				},
+				"simple_grid_field36": {
+					"type": "grid_field_label",
+					"field": "Total"
+				},
+				"simple_grid_field18": {
+					"field": "agentid",
+					"type": "grid_field"
+				},
+				"simple_grid_field37": {
+					"type": "grid_field_label",
+					"field": "agentid"
+				},
+				"details_preview": {
+					"type": "details_preview",
+					"table": 4046201341,
+					"items": [],
+					"proceedLink": true,
+					"popup": false,
+					"pageId": "list"
+				},
+				"details_preview1": {
+					"type": "details_preview",
+					"table": 1649626657,
+					"items": [],
+					"proceedLink": true,
+					"popup": false,
+					"pageId": "list"
+				},
+				"grid_checkbox": {
+					"type": "grid_checkbox"
+				},
+				"grid_checkbox_head": {
+					"type": "grid_checkbox_head"
+				},
+				"grid_edit": {
+					"type": "grid_edit"
+				},
+				"grid_view": {
+					"type": "grid_view"
+				},
+				"grid_alldetails_link": {
+					"type": "grid_alldetails_link"
+				},
+				"grid_details_link": {
+					"type": "grid_details_link",
+					"table": 4046201341,
+					"badge": true,
+					"hideIfNone": false,
+					"showCount": true,
+					"icon": {},
+					"text": {
+						"type": 0,
+						"text": "Details"
+					}
+				},
+				"grid_details_link1": {
+					"type": "grid_details_link",
+					"table": 1649626657,
+					"badge": true,
+					"showCount": true,
+					"hideIfNone": false,
+					"icon": {}
 				}
 			},
 			"dbProps": {},
@@ -1410,6 +2085,14 @@
 								}
 							],
 							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "c2"
+								}
+							],
+							"section": ""
 						}
 					],
 					"cells": {
@@ -1435,6 +2118,13 @@
 								"simple_grid_field16",
 								"simple_grid_field17",
 								"simple_grid_field18"
+							]
+						},
+						"c2": {
+							"model": "c2",
+							"items": [
+								"details_preview",
+								"details_preview1"
 							]
 						}
 					},
@@ -1527,6 +2217,18 @@
 				"simple_grid_field18": {
 					"field": "agentid",
 					"type": "simple_grid_field"
+				},
+				"details_preview": {
+					"type": "details_preview",
+					"table": 4046201341,
+					"items": [],
+					"popup": false
+				},
+				"details_preview1": {
+					"type": "details_preview",
+					"table": 1649626657,
+					"items": [],
+					"popup": false
 				}
 			},
 			"dbProps": {},
@@ -2454,6 +3156,422 @@
 				},
 				"view_edit": {
 					"type": "view_edit"
+				}
+			},
+			"dbProps": {},
+			"version": 13,
+			"imageItem": {
+				"type": "page_image"
+			},
+			"imageBgColor": "#f2f2f2",
+			"controlsBgColor": "white",
+			"imagePosition": "right",
+			"listTotals": 1,
+			"title": {}
+		},
+		{
+			"id": "masterlist",
+			"type": "masterlist",
+			"layoutId": "masterlist",
+			"disabled": false,
+			"default": 0,
+			"forms": {
+				"above-grid": {
+					"modelId": "empty-above-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"below-grid": {
+					"modelId": "empty-above-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"top": {
+					"modelId": "masterlist-top",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"back_master",
+								"masterlist_header"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"grid": {
+					"modelId": "simple-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"simple_grid_field",
+								"simple_grid_field1",
+								"simple_grid_field2",
+								"simple_grid_field3",
+								"simple_grid_field4",
+								"simple_grid_field5",
+								"simple_grid_field6",
+								"simple_grid_field7",
+								"simple_grid_field8",
+								"simple_grid_field9",
+								"simple_grid_field10",
+								"simple_grid_field11",
+								"simple_grid_field12",
+								"simple_grid_field13",
+								"simple_grid_field14",
+								"simple_grid_field15",
+								"simple_grid_field16",
+								"simple_grid_field17",
+								"simple_grid_field18"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				}
+			},
+			"items": {
+				"masterlist_header": {
+					"type": "masterlist_header"
+				},
+				"back_master": {
+					"type": "back_master"
+				},
+				"simple_grid_field": {
+					"field": "OrderID",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field1": {
+					"field": "CustomerID",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field2": {
+					"field": "EmployeeID",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field3": {
+					"field": "OrderDate",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field4": {
+					"field": "RequiredDate",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field5": {
+					"field": "ShippedDate",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field6": {
+					"field": "ShipVia",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field7": {
+					"field": "Freight",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field8": {
+					"field": "ShipName",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field9": {
+					"field": "ShipAddress",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field10": {
+					"field": "ShipCity",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field11": {
+					"field": "ShipRegion",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field12": {
+					"field": "ShipPostalCode",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field13": {
+					"field": "ShipCountry",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field14": {
+					"field": "Ended",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field15": {
+					"field": "Archived",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field16": {
+					"field": "ownerid",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field17": {
+					"field": "Total",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field18": {
+					"field": "agentid",
+					"type": "simple_grid_field"
+				}
+			},
+			"dbProps": {},
+			"version": 13,
+			"imageItem": {
+				"type": "page_image"
+			},
+			"imageBgColor": "#f2f2f2",
+			"controlsBgColor": "white",
+			"imagePosition": "right",
+			"listTotals": 1,
+			"title": {}
+		},
+		{
+			"id": "masterprint",
+			"type": "masterprint",
+			"layoutId": "masterprint",
+			"disabled": false,
+			"default": 0,
+			"forms": {
+				"above-grid": {
+					"modelId": "empty-above-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"below-grid": {
+					"modelId": "empty-above-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"top": {
+					"modelId": "masterlist-top",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"masterprint_header"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"grid": {
+					"modelId": "simple-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"simple_grid_field",
+								"simple_grid_field1",
+								"simple_grid_field2",
+								"simple_grid_field3",
+								"simple_grid_field4",
+								"simple_grid_field5",
+								"simple_grid_field6",
+								"simple_grid_field7",
+								"simple_grid_field8",
+								"simple_grid_field9",
+								"simple_grid_field10",
+								"simple_grid_field11",
+								"simple_grid_field12",
+								"simple_grid_field13",
+								"simple_grid_field14",
+								"simple_grid_field15",
+								"simple_grid_field16",
+								"simple_grid_field17",
+								"simple_grid_field18"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				}
+			},
+			"items": {
+				"masterprint_header": {
+					"type": "masterprint_header"
+				},
+				"simple_grid_field": {
+					"field": "OrderID",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field1": {
+					"field": "CustomerID",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field2": {
+					"field": "EmployeeID",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field3": {
+					"field": "OrderDate",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field4": {
+					"field": "RequiredDate",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field5": {
+					"field": "ShippedDate",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field6": {
+					"field": "ShipVia",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field7": {
+					"field": "Freight",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field8": {
+					"field": "ShipName",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field9": {
+					"field": "ShipAddress",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field10": {
+					"field": "ShipCity",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field11": {
+					"field": "ShipRegion",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field12": {
+					"field": "ShipPostalCode",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field13": {
+					"field": "ShipCountry",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field14": {
+					"field": "Ended",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field15": {
+					"field": "Archived",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field16": {
+					"field": "ownerid",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field17": {
+					"field": "Total",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field18": {
+					"field": "agentid",
+					"type": "simple_grid_field"
 				}
 			},
 			"dbProps": {},

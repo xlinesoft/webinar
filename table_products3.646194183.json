@@ -1,18 +1,22 @@
 {
-	"sql": "SELECT\r\n\tEmployeeID,\r\n\tLastName,\r\n\tFirstName,\r\n\tTitle,\r\n\tTitleOfCourtesy,\r\n\tBirthDate,\r\n\tHireDate,\r\n\tAddress,\r\n\tCity,\r\n\tRegion,\r\n\tPostalCode,\r\n\tCountry,\r\n\tHomePhone,\r\n\tExtension,\r\n\tPhoto,\r\n\tNotes,\r\n\tReportsTo,\r\n\townerid\r\nFROM\r\n\temployees",
+	"sql": "SELECT\r\n\tProductID,\r\n\tProductName,\r\n\tSupplierID,\r\n\tCategoryID,\r\n\tQuantityPerUnit,\r\n\tUnitPrice,\r\n\tUnitsInStock,\r\n\tUnitsOnOrder,\r\n\tReorderLevel,\r\n\tDiscontinued\r\nFROM\r\n\tproducts",
+	"type": 1,
 	"connId": "conn",
-	"originalTable": "employees",
-	"name": "employees",
-	"shortTableName": "employees",
+	"originalTable": "products",
+	"name": "task3",
+	"shortTableName": "products3",
 	"dbType": 0,
+	"pageSizeRecords": 5,
 	"keyFields": [
-		"EmployeeID"
+		"ProductID"
 	],
-	"detailsBadgeColor": "cfae83",
+	"detailsBadgeColor": "7b68ee",
 	"fields": [
 		{
-			"name": "EmployeeID",
-			"strField": "EmployeeID",
+			"name": "ProductID",
+			"sqlExpression": "ProductID",
+			"index": 1,
+			"strField": "ProductID",
 			"type": 3,
 			"autoinc": true,
 			"viewFormats": [
@@ -22,13 +26,15 @@
 				{}
 			],
 			"label": {
-				"English": "Employee ID"
+				"English": "Product ID"
 			},
-			"tableName": "employees"
+			"tableName": "products"
 		},
 		{
-			"name": "LastName",
-			"strField": "LastName",
+			"name": "ProductName",
+			"sqlExpression": "ProductName",
+			"index": 2,
+			"strField": "ProductName",
 			"type": 200,
 			"viewFormats": [
 				{}
@@ -37,257 +43,15 @@
 				{}
 			],
 			"label": {
-				"English": "Last Name"
+				"English": "Product Name"
 			},
-			"tableName": "employees"
+			"tableName": "products"
 		},
 		{
-			"name": "FirstName",
-			"strField": "FirstName",
-			"type": 200,
-			"viewFormats": [
-				{}
-			],
-			"editFormats": [
-				{}
-			],
-			"label": {
-				"English": "First Name"
-			},
-			"tableName": "employees"
-		},
-		{
-			"name": "Title",
-			"strField": "Title",
-			"type": 200,
-			"viewFormats": [
-				{}
-			],
-			"editFormats": [
-				{}
-			],
-			"label": {
-				"English": "Title"
-			},
-			"tableName": "employees"
-		},
-		{
-			"name": "TitleOfCourtesy",
-			"strField": "TitleOfCourtesy",
-			"type": 200,
-			"viewFormats": [
-				{}
-			],
-			"editFormats": [
-				{}
-			],
-			"label": {
-				"English": "Title Of Courtesy"
-			},
-			"tableName": "employees"
-		},
-		{
-			"name": "BirthDate",
-			"strField": "BirthDate",
-			"type": 135,
-			"viewFormats": [
-				{
-					"format": "Short Date"
-				}
-			],
-			"editFormats": [
-				{
-					"format": "Date"
-				}
-			],
-			"label": {
-				"English": "Birth Date"
-			},
-			"tableName": "employees"
-		},
-		{
-			"name": "HireDate",
-			"strField": "HireDate",
-			"type": 135,
-			"viewFormats": [
-				{
-					"format": "Short Date"
-				}
-			],
-			"editFormats": [
-				{
-					"format": "Date"
-				}
-			],
-			"label": {
-				"English": "Hire Date"
-			},
-			"tableName": "employees"
-		},
-		{
-			"name": "Address",
-			"strField": "Address",
-			"type": 200,
-			"viewFormats": [
-				{}
-			],
-			"editFormats": [
-				{}
-			],
-			"label": {
-				"English": "Address"
-			},
-			"tableName": "employees"
-		},
-		{
-			"name": "City",
-			"strField": "City",
-			"type": 200,
-			"viewFormats": [
-				{}
-			],
-			"editFormats": [
-				{}
-			],
-			"label": {
-				"English": "City"
-			},
-			"tableName": "employees"
-		},
-		{
-			"name": "Region",
-			"strField": "Region",
-			"type": 200,
-			"viewFormats": [
-				{}
-			],
-			"editFormats": [
-				{}
-			],
-			"label": {
-				"English": "Region"
-			},
-			"tableName": "employees"
-		},
-		{
-			"name": "PostalCode",
-			"strField": "PostalCode",
-			"type": 200,
-			"viewFormats": [
-				{}
-			],
-			"editFormats": [
-				{}
-			],
-			"label": {
-				"English": "Postal Code"
-			},
-			"tableName": "employees"
-		},
-		{
-			"name": "Country",
-			"strField": "Country",
-			"type": 200,
-			"viewFormats": [
-				{}
-			],
-			"editFormats": [
-				{}
-			],
-			"label": {
-				"English": "Country"
-			},
-			"tableName": "employees"
-		},
-		{
-			"name": "HomePhone",
-			"strField": "HomePhone",
-			"type": 200,
-			"viewFormats": [
-				{}
-			],
-			"editFormats": [
-				{}
-			],
-			"label": {
-				"English": "Home Phone"
-			},
-			"tableName": "employees"
-		},
-		{
-			"name": "Extension",
-			"strField": "Extension",
-			"type": 200,
-			"viewFormats": [
-				{}
-			],
-			"editFormats": [
-				{}
-			],
-			"label": {
-				"English": "Extension"
-			},
-			"tableName": "employees"
-		},
-		{
-			"name": "Photo",
-			"strField": "Photo",
-			"googleLikeSearch": false,
-			"type": 128,
-			"viewFormats": [
-				{
-					"format": "Database Image"
-				}
-			],
-			"editFormats": [
-				{
-					"format": "Database image"
-				}
-			],
-			"label": {
-				"English": "Photo"
-			},
-			"tableName": "employees"
-		},
-		{
-			"name": "Notes",
-			"strField": "Notes",
-			"type": 201,
-			"viewFormats": [
-				{}
-			],
-			"editFormats": [
-				{
-					"format": "Text area"
-				}
-			],
-			"label": {
-				"English": "Notes"
-			},
-			"tableName": "employees"
-		},
-		{
-			"name": "ReportsTo",
-			"strField": "ReportsTo",
-			"type": 135,
-			"viewFormats": [
-				{
-					"format": "Short Date"
-				}
-			],
-			"editFormats": [
-				{
-					"format": "Date"
-				}
-			],
-			"label": {
-				"English": "Reports To"
-			},
-			"tableName": "employees"
-		},
-		{
-			"name": "ownerid",
-			"strField": "ownerid",
+			"name": "SupplierID",
+			"sqlExpression": "SupplierID",
+			"index": 3,
+			"strField": "SupplierID",
 			"type": 3,
 			"viewFormats": [
 				{}
@@ -296,9 +60,138 @@
 				{}
 			],
 			"label": {
-				"English": "Ownerid"
+				"English": "Supplier ID"
 			},
-			"tableName": "employees"
+			"tableName": "products"
+		},
+		{
+			"name": "CategoryID",
+			"sqlExpression": "CategoryID",
+			"index": 4,
+			"strField": "CategoryID",
+			"type": 3,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{
+					"format": "Lookup wizard",
+					"lookupType": 2,
+					"lookupTable": "categories",
+					"lookupTableConnection": "conn",
+					"lookupLinkField": "CategoryID",
+					"lookupDisplayField": "CategoryName",
+					"lookupWhere": "CategoryID not in \r\n( select categoryid from products where categoryid )"
+				}
+			],
+			"label": {
+				"English": "Category ID"
+			},
+			"tableName": "products"
+		},
+		{
+			"name": "QuantityPerUnit",
+			"sqlExpression": "QuantityPerUnit",
+			"index": 5,
+			"strField": "QuantityPerUnit",
+			"type": 200,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Quantity Per Unit"
+			},
+			"tableName": "products"
+		},
+		{
+			"name": "UnitPrice",
+			"sqlExpression": "UnitPrice",
+			"index": 6,
+			"strField": "UnitPrice",
+			"type": 14,
+			"viewFormats": [
+				{
+					"format": "Number"
+				}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Unit Price"
+			},
+			"tableName": "products"
+		},
+		{
+			"name": "UnitsInStock",
+			"sqlExpression": "UnitsInStock",
+			"index": 7,
+			"strField": "UnitsInStock",
+			"type": 2,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Units In Stock"
+			},
+			"tableName": "products"
+		},
+		{
+			"name": "UnitsOnOrder",
+			"sqlExpression": "UnitsOnOrder",
+			"index": 8,
+			"strField": "UnitsOnOrder",
+			"type": 2,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Units On Order"
+			},
+			"tableName": "products"
+		},
+		{
+			"name": "ReorderLevel",
+			"sqlExpression": "ReorderLevel",
+			"index": 9,
+			"strField": "ReorderLevel",
+			"type": 2,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Reorder Level"
+			},
+			"tableName": "products"
+		},
+		{
+			"name": "Discontinued",
+			"sqlExpression": "Discontinued",
+			"index": 10,
+			"strField": "Discontinued",
+			"type": 2,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Discontinued"
+			},
+			"tableName": "products"
 		}
 	],
 	"dbTableInfo": {
@@ -306,209 +199,121 @@
 		"foreignKeys": [],
 		"fields": [
 			{
-				"name": "EmployeeID",
+				"name": "ProductID",
 				"type": 3,
-				"size": 11,
+				"size": 0,
 				"scale": 0,
-				"typeName": "int(11)",
+				"typeName": "int",
 				"nullable": false,
 				"autoinc": true,
 				"defaultValueSQL": null,
 				"defaultValue": ""
 			},
 			{
-				"name": "LastName",
+				"name": "ProductName",
+				"type": 200,
+				"size": 40,
+				"scale": 0,
+				"typeName": "varchar(40)",
+				"nullable": false,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "SupplierID",
+				"type": 3,
+				"size": 0,
+				"scale": 0,
+				"typeName": "int",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "CategoryID",
+				"type": 3,
+				"size": 0,
+				"scale": 0,
+				"typeName": "int",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "QuantityPerUnit",
 				"type": 200,
 				"size": 20,
 				"scale": 0,
 				"typeName": "varchar(20)",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "UnitPrice",
+				"type": 14,
+				"size": 12,
+				"scale": 6,
+				"typeName": "decimal(12,6)",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": "0.000000",
+				"defaultValue": "0.000000"
+			},
+			{
+				"name": "UnitsInStock",
+				"type": 2,
+				"size": 0,
+				"scale": 0,
+				"typeName": "smallint",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": "0",
+				"defaultValue": "0"
+			},
+			{
+				"name": "UnitsOnOrder",
+				"type": 2,
+				"size": 0,
+				"scale": 0,
+				"typeName": "smallint",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": "0",
+				"defaultValue": "0"
+			},
+			{
+				"name": "ReorderLevel",
+				"type": 2,
+				"size": 0,
+				"scale": 0,
+				"typeName": "smallint",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": "0",
+				"defaultValue": "0"
+			},
+			{
+				"name": "Discontinued",
+				"type": 16,
+				"size": 0,
+				"scale": 0,
+				"typeName": "tinyint",
 				"nullable": false,
 				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
-			},
-			{
-				"name": "FirstName",
-				"type": 200,
-				"size": 10,
-				"scale": 0,
-				"typeName": "varchar(10)",
-				"nullable": false,
-				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
-			},
-			{
-				"name": "Title",
-				"type": 200,
-				"size": 30,
-				"scale": 0,
-				"typeName": "varchar(30)",
-				"nullable": true,
-				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
-			},
-			{
-				"name": "TitleOfCourtesy",
-				"type": 200,
-				"size": 25,
-				"scale": 0,
-				"typeName": "varchar(25)",
-				"nullable": true,
-				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
-			},
-			{
-				"name": "BirthDate",
-				"type": 135,
-				"size": 0,
-				"scale": 0,
-				"typeName": "datetime",
-				"nullable": true,
-				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
-			},
-			{
-				"name": "HireDate",
-				"type": 135,
-				"size": 0,
-				"scale": 0,
-				"typeName": "datetime",
-				"nullable": true,
-				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
-			},
-			{
-				"name": "Address",
-				"type": 200,
-				"size": 60,
-				"scale": 0,
-				"typeName": "varchar(60)",
-				"nullable": true,
-				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
-			},
-			{
-				"name": "City",
-				"type": 200,
-				"size": 11,
-				"scale": 0,
-				"typeName": "varchar(11)",
-				"nullable": true,
-				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
-			},
-			{
-				"name": "Region",
-				"type": 200,
-				"size": 15,
-				"scale": 0,
-				"typeName": "varchar(15)",
-				"nullable": true,
-				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
-			},
-			{
-				"name": "PostalCode",
-				"type": 200,
-				"size": 10,
-				"scale": 0,
-				"typeName": "varchar(10)",
-				"nullable": true,
-				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
-			},
-			{
-				"name": "Country",
-				"type": 200,
-				"size": 15,
-				"scale": 0,
-				"typeName": "varchar(15)",
-				"nullable": true,
-				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
-			},
-			{
-				"name": "HomePhone",
-				"type": 200,
-				"size": 24,
-				"scale": 0,
-				"typeName": "varchar(24)",
-				"nullable": true,
-				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
-			},
-			{
-				"name": "Extension",
-				"type": 200,
-				"size": 4,
-				"scale": 0,
-				"typeName": "varchar(4)",
-				"nullable": true,
-				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
-			},
-			{
-				"name": "Photo",
-				"type": 128,
-				"size": 0,
-				"scale": 0,
-				"typeName": "blob",
-				"nullable": true,
-				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
-			},
-			{
-				"name": "Notes",
-				"type": 201,
-				"size": 0,
-				"scale": 0,
-				"typeName": "text",
-				"nullable": true,
-				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
-			},
-			{
-				"name": "ReportsTo",
-				"type": 135,
-				"size": 0,
-				"scale": 0,
-				"typeName": "datetime",
-				"nullable": true,
-				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
-			},
-			{
-				"name": "ownerid",
-				"type": 3,
-				"size": 11,
-				"scale": 0,
-				"typeName": "int(11)",
-				"nullable": true,
-				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
+				"defaultValueSQL": "0",
+				"defaultValue": "0"
 			}
 		],
 		"primaryKeys": [
-			"EmployeeID"
+			"ProductID"
 		],
 		"uniqueFields": [],
-		"name": "employees"
+		"name": "products"
 	},
 	"pages": [
 		{
@@ -608,8 +413,8 @@
 							"items": [
 								"integrated_edit_field",
 								"integrated_edit_field1",
-								"integrated_edit_field7",
-								"integrated_edit_field10"
+								"integrated_edit_field2",
+								"integrated_edit_field4"
 							]
 						}
 					},
@@ -639,22 +444,22 @@
 					"type": "add_reset"
 				},
 				"integrated_edit_field": {
-					"field": "LastName",
+					"field": "ProductName",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field1": {
-					"field": "FirstName",
+					"field": "SupplierID",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
-				"integrated_edit_field7": {
-					"field": "City",
+				"integrated_edit_field2": {
+					"field": "CategoryID",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
-				"integrated_edit_field10": {
-					"field": "Country",
+				"integrated_edit_field4": {
+					"field": "UnitPrice",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				}
@@ -696,7 +501,8 @@
 						"c1": {
 							"model": "c1",
 							"items": [
-								"add"
+								"add",
+								"print_records"
 							]
 						},
 						"c2": {
@@ -828,8 +634,8 @@
 								"simple_grid_field",
 								"simple_grid_field1",
 								"simple_grid_field2",
-								"simple_grid_field8",
-								"simple_grid_field11"
+								"simple_grid_field3",
+								"simple_grid_field5"
 							]
 						}
 					},
@@ -878,31 +684,31 @@
 					"type": "details_found"
 				},
 				"simple_grid_field": {
-					"field": "EmployeeID",
+					"field": "ProductID",
 					"type": "simple_grid_field",
 					"inlineAdd": false,
 					"inlineEdit": false
 				},
 				"simple_grid_field1": {
-					"field": "LastName",
+					"field": "ProductName",
 					"type": "simple_grid_field",
 					"inlineAdd": false,
 					"inlineEdit": false
 				},
 				"simple_grid_field2": {
-					"field": "FirstName",
+					"field": "SupplierID",
 					"type": "simple_grid_field",
 					"inlineAdd": false,
 					"inlineEdit": false
 				},
-				"simple_grid_field8": {
-					"field": "City",
+				"simple_grid_field3": {
+					"field": "CategoryID",
 					"type": "simple_grid_field",
 					"inlineAdd": false,
 					"inlineEdit": false
 				},
-				"simple_grid_field11": {
-					"field": "Country",
+				"simple_grid_field5": {
+					"field": "UnitPrice",
 					"type": "simple_grid_field",
 					"inlineAdd": false,
 					"inlineEdit": false
@@ -911,8 +717,8 @@
 					"type": "search_panel",
 					"items": [
 						"search_panel_field",
-						"search_panel_field11",
-						"search_panel_field8",
+						"search_panel_field5",
+						"search_panel_field3",
 						"search_panel_field2",
 						"search_panel_field1"
 					],
@@ -938,23 +744,23 @@
 					"type": "hide_search_panel"
 				},
 				"search_panel_field": {
-					"field": "EmployeeID",
+					"field": "ProductID",
 					"type": "search_panel_field"
 				},
 				"search_panel_field1": {
-					"field": "LastName",
+					"field": "ProductName",
 					"type": "search_panel_field"
 				},
 				"search_panel_field2": {
-					"field": "FirstName",
+					"field": "SupplierID",
 					"type": "search_panel_field"
 				},
-				"search_panel_field8": {
-					"field": "City",
+				"search_panel_field3": {
+					"field": "CategoryID",
 					"type": "search_panel_field"
 				},
-				"search_panel_field11": {
-					"field": "Country",
+				"search_panel_field5": {
+					"field": "UnitPrice",
 					"type": "search_panel_field"
 				},
 				"expand_menu_button": {
@@ -970,7 +776,6 @@
 					"type": "print_panel",
 					"items": [
 						"print_scope",
-						"print_records",
 						"print_button"
 					]
 				},
@@ -1130,8 +935,8 @@
 								"simple_grid_field",
 								"simple_grid_field1",
 								"simple_grid_field2",
-								"simple_grid_field8",
-								"simple_grid_field11"
+								"simple_grid_field3",
+								"simple_grid_field5"
 							]
 						}
 					},
@@ -1150,23 +955,23 @@
 					"type": "print_pages"
 				},
 				"simple_grid_field": {
-					"field": "EmployeeID",
+					"field": "ProductID",
 					"type": "simple_grid_field"
 				},
 				"simple_grid_field1": {
-					"field": "LastName",
+					"field": "ProductName",
 					"type": "simple_grid_field"
 				},
 				"simple_grid_field2": {
-					"field": "FirstName",
+					"field": "SupplierID",
 					"type": "simple_grid_field"
 				},
-				"simple_grid_field8": {
-					"field": "City",
+				"simple_grid_field3": {
+					"field": "CategoryID",
 					"type": "simple_grid_field"
 				},
-				"simple_grid_field11": {
-					"field": "Country",
+				"simple_grid_field5": {
+					"field": "UnitPrice",
 					"type": "simple_grid_field"
 				}
 			},
@@ -1251,8 +1056,8 @@
 								"export_field",
 								"export_field1",
 								"export_field2",
-								"export_field8",
-								"export_field11"
+								"export_field3",
+								"export_field5"
 							]
 						}
 					},
@@ -1302,23 +1107,23 @@
 					"type": "export_cancel"
 				},
 				"export_field": {
-					"field": "EmployeeID",
+					"field": "ProductID",
 					"type": "export_field"
 				},
 				"export_field1": {
-					"field": "LastName",
+					"field": "ProductName",
 					"type": "export_field"
 				},
 				"export_field2": {
-					"field": "FirstName",
+					"field": "SupplierID",
 					"type": "export_field"
 				},
-				"export_field8": {
-					"field": "City",
+				"export_field3": {
+					"field": "CategoryID",
 					"type": "export_field"
 				},
-				"export_field11": {
-					"field": "Country",
+				"export_field5": {
+					"field": "UnitPrice",
 					"type": "export_field"
 				}
 			},
@@ -1407,8 +1212,8 @@
 								"import_field",
 								"import_field1",
 								"import_field2",
-								"import_field8",
-								"import_field11"
+								"import_field3",
+								"import_field5"
 							]
 						}
 					},
@@ -1421,23 +1226,23 @@
 					"type": "import_header"
 				},
 				"import_field": {
-					"field": "EmployeeID",
+					"field": "ProductID",
 					"type": "import_field"
 				},
 				"import_field1": {
-					"field": "LastName",
+					"field": "ProductName",
 					"type": "import_field"
 				},
 				"import_field2": {
-					"field": "FirstName",
+					"field": "SupplierID",
 					"type": "import_field"
 				},
-				"import_field8": {
-					"field": "City",
+				"import_field3": {
+					"field": "CategoryID",
 					"type": "import_field"
 				},
-				"import_field11": {
-					"field": "Country",
+				"import_field5": {
+					"field": "UnitPrice",
 					"type": "import_field"
 				}
 			},
@@ -1557,8 +1362,8 @@
 							"items": [
 								"integrated_edit_field",
 								"integrated_edit_field1",
-								"integrated_edit_field7",
-								"integrated_edit_field10"
+								"integrated_edit_field2",
+								"integrated_edit_field4"
 							]
 						}
 					},
@@ -1595,25 +1400,25 @@
 					"type": "edit_close"
 				},
 				"integrated_edit_field": {
-					"field": "LastName",
+					"field": "ProductName",
 					"type": "integrated_edit_field",
 					"orientation": 0,
 					"updateOnEdit": false
 				},
 				"integrated_edit_field1": {
-					"field": "FirstName",
+					"field": "SupplierID",
 					"type": "integrated_edit_field",
 					"orientation": 0,
 					"updateOnEdit": false
 				},
-				"integrated_edit_field7": {
-					"field": "City",
+				"integrated_edit_field2": {
+					"field": "CategoryID",
 					"type": "integrated_edit_field",
 					"orientation": 0,
 					"updateOnEdit": false
 				},
-				"integrated_edit_field10": {
-					"field": "Country",
+				"integrated_edit_field4": {
+					"field": "UnitPrice",
 					"type": "integrated_edit_field",
 					"orientation": 0,
 					"updateOnEdit": false
@@ -1737,8 +1542,8 @@
 								"integrated_edit_field",
 								"integrated_edit_field1",
 								"integrated_edit_field2",
-								"integrated_edit_field8",
-								"integrated_edit_field11"
+								"integrated_edit_field3",
+								"integrated_edit_field5"
 							]
 						}
 					},
@@ -1759,27 +1564,27 @@
 					"type": "view_close"
 				},
 				"integrated_edit_field": {
-					"field": "EmployeeID",
+					"field": "ProductID",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field1": {
-					"field": "LastName",
+					"field": "ProductName",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field2": {
-					"field": "FirstName",
+					"field": "SupplierID",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
-				"integrated_edit_field8": {
-					"field": "City",
+				"integrated_edit_field3": {
+					"field": "CategoryID",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
-				"integrated_edit_field11": {
-					"field": "Country",
+				"integrated_edit_field5": {
+					"field": "UnitPrice",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
@@ -1812,6 +1617,6 @@
 		"addressFields": []
 	},
 	"caption": {
-		"English": "Employees"
+		"English": "Task3"
 	}
 }

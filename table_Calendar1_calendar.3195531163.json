@@ -1,0 +1,1726 @@
+{
+	"sql": "SELECT\r\n\tID,\r\n\tcalendarDate,\r\n\tcalendarSubject,\r\n\tcalendarDesc,\r\n\tcalendarCategory,\r\n\tcalendarTime,\r\n\tcalendarFullday,\r\n\tcalendarEndDate,\r\n\tcalendarEndTime\r\nFROM\r\n\tcalendar1",
+	"connId": "conn",
+	"originalTable": "calendar1",
+	"name": "Calendar1 calendar",
+	"shortTableName": "Calendar1_calendar",
+	"dbType": 0,
+	"hideEmptyFieldsOnView": true,
+	"keyFields": [
+		"ID"
+	],
+	"detailsBadgeColor": "b22222",
+	"fields": [
+		{
+			"name": "ID",
+			"sqlExpression": "ID",
+			"strField": "ID",
+			"type": 3,
+			"autoinc": true,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "ID"
+			},
+			"tableName": "calendar1"
+		},
+		{
+			"name": "calendarDate",
+			"sqlExpression": "calendarDate",
+			"strField": "calendarDate",
+			"type": 7,
+			"separateEditViewFormats": true,
+			"viewFormats": [
+				{
+					"format": "Long Date"
+				},
+				{
+					"format": "Short Date",
+					"pageType": "calendar"
+				},
+				{
+					"format": "Short Date",
+					"pageType": "export"
+				}
+			],
+			"editFormats": [
+				{
+					"dateEditType": 11
+				},
+				{
+					"format": "Date",
+					"pageType": "add",
+					"dateEditType": 11
+				},
+				{
+					"format": "Date",
+					"pageType": "search",
+					"dateEditType": 11
+				}
+			],
+			"label": {
+				"English": "Date"
+			},
+			"tableName": "calendar1"
+		},
+		{
+			"name": "calendarSubject",
+			"sqlExpression": "calendarSubject",
+			"strField": "calendarSubject",
+			"type": 200,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Title"
+			},
+			"tableName": "calendar1"
+		},
+		{
+			"name": "calendarDesc",
+			"sqlExpression": "calendarDesc",
+			"strField": "calendarDesc",
+			"type": 201,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{
+					"format": "Text area"
+				}
+			],
+			"label": {
+				"English": "Description"
+			},
+			"tableName": "calendar1"
+		},
+		{
+			"name": "calendarCategory",
+			"sqlExpression": "calendarCategory",
+			"strField": "calendarCategory",
+			"type": 200,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{
+					"format": "Lookup wizard",
+					"lookupType": 0,
+					"lookupValues": [
+						"",
+						"important",
+						"critical"
+					]
+				}
+			],
+			"label": {
+				"English": "Category"
+			},
+			"tableName": "calendar1"
+		},
+		{
+			"name": "calendarTime",
+			"sqlExpression": "calendarTime",
+			"strField": "calendarTime",
+			"type": 200,
+			"viewFormats": [
+				{
+					"format": "Time",
+					"timeShowSeconds": false
+				}
+			],
+			"editFormats": [
+				{
+					"format": "Time",
+					"timeUseTimepicker": true,
+					"timeMinutesStep": 15
+				}
+			],
+			"label": {
+				"English": "Time"
+			},
+			"tableName": "calendar1"
+		},
+		{
+			"name": "calendarFullday",
+			"sqlExpression": "calendarFullday",
+			"strField": "calendarFullday",
+			"type": 3,
+			"viewFormats": [
+				{
+					"format": "Checkbox"
+				}
+			],
+			"editFormats": [
+				{
+					"format": "Checkbox"
+				}
+			],
+			"label": {
+				"English": "All day"
+			},
+			"tableName": "calendar1"
+		},
+		{
+			"name": "calendarEndDate",
+			"sqlExpression": "calendarEndDate",
+			"strField": "calendarEndDate",
+			"type": 7,
+			"viewFormats": [
+				{
+					"format": "Short Date"
+				}
+			],
+			"editFormats": [
+				{
+					"format": "Date",
+					"dateEditType": 11
+				}
+			],
+			"label": {
+				"English": "End date"
+			},
+			"tableName": "calendar1"
+		},
+		{
+			"name": "calendarEndTime",
+			"sqlExpression": "calendarEndTime",
+			"strField": "calendarEndTime",
+			"type": 200,
+			"viewFormats": [
+				{
+					"format": "Time",
+					"timeShowSeconds": false
+				}
+			],
+			"editFormats": [
+				{
+					"format": "Time",
+					"timeUseTimepicker": true,
+					"timeMinutesStep": 15
+				}
+			],
+			"label": {
+				"English": "End time"
+			},
+			"tableName": "calendar1"
+		}
+	],
+	"calendarSettings": {
+		"categoryColors": [
+			{
+				"value": "important",
+				"color": "8a2be2"
+			},
+			{
+				"value": "critical",
+				"color": "dc143c"
+			}
+		],
+		"dateField": "calendarDate",
+		"subjectField": "calendarSubject",
+		"descriptionField": "calendarDesc",
+		"categoryField": "calendarCategory",
+		"fullDayField": "calendarFullday",
+		"timeField": "calendarTime",
+		"endDateField": "calendarEndDate",
+		"endTimeField": "calendarEndTime"
+	},
+	"dbTableInfo": {
+		"type": 0,
+		"foreignKeys": [],
+		"fields": [
+			{
+				"name": "ID",
+				"type": 3,
+				"size": 11,
+				"scale": 0,
+				"typeName": "int(11)",
+				"nullable": false,
+				"autoinc": true,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "calendarDate",
+				"type": 7,
+				"size": 0,
+				"scale": 0,
+				"typeName": "date",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "calendarSubject",
+				"type": 200,
+				"size": 200,
+				"scale": 0,
+				"typeName": "varchar(200)",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "calendarDesc",
+				"type": 201,
+				"size": 0,
+				"scale": 0,
+				"typeName": "longtext",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "calendarCategory",
+				"type": 200,
+				"size": 30,
+				"scale": 0,
+				"typeName": "varchar(30)",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "calendarTime",
+				"type": 200,
+				"size": 10,
+				"scale": 0,
+				"typeName": "varchar(10)",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "calendarFullday",
+				"type": 3,
+				"size": 11,
+				"scale": 0,
+				"typeName": "int(11)",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "calendarEndDate",
+				"type": 7,
+				"size": 0,
+				"scale": 0,
+				"typeName": "date",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "calendarEndTime",
+				"type": 200,
+				"size": 10,
+				"scale": 0,
+				"typeName": "varchar(10)",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			}
+		],
+		"primaryKeys": [
+			"ID"
+		],
+		"uniqueFields": [],
+		"name": "calendar1"
+	},
+	"pages": [
+		{
+			"id": "export",
+			"type": "export",
+			"layoutId": "first",
+			"disabled": false,
+			"default": 0,
+			"forms": {
+				"supertop": {
+					"modelId": "panel-top",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"top": {
+					"modelId": "export-header",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"export_header"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"grid": {
+					"modelId": "export-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"export_field",
+								"export_field1",
+								"export_field2",
+								"export_field3",
+								"export_field4",
+								"export_field5",
+								"export_field6",
+								"export_field7",
+								"export_field8"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"footer": {
+					"modelId": "export-footer",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								},
+								{
+									"cell": "c2"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": []
+						},
+						"c2": {
+							"model": "c2",
+							"items": [
+								"export_export",
+								"export_cancel"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				}
+			},
+			"items": {
+				"export_header": {
+					"type": "export_header"
+				},
+				"export_export": {
+					"type": "export_export"
+				},
+				"export_cancel": {
+					"type": "export_cancel"
+				},
+				"export_field": {
+					"field": "ID",
+					"type": "export_field"
+				},
+				"export_field1": {
+					"field": "calendarDate",
+					"type": "export_field"
+				},
+				"export_field2": {
+					"field": "calendarSubject",
+					"type": "export_field"
+				},
+				"export_field3": {
+					"field": "calendarDesc",
+					"type": "export_field"
+				},
+				"export_field4": {
+					"field": "calendarCategory",
+					"type": "export_field"
+				},
+				"export_field5": {
+					"field": "calendarTime",
+					"type": "export_field"
+				},
+				"export_field6": {
+					"field": "calendarFullday",
+					"type": "export_field"
+				},
+				"export_field7": {
+					"field": "calendarEndDate",
+					"type": "export_field"
+				},
+				"export_field8": {
+					"field": "calendarEndTime",
+					"type": "export_field"
+				}
+			},
+			"dbProps": {},
+			"version": 13,
+			"imageItem": {
+				"type": "page_image"
+			},
+			"imageBgColor": "#f2f2f2",
+			"controlsBgColor": "white",
+			"imagePosition": "right",
+			"listTotals": 1,
+			"title": {},
+			"exportFormat": 2,
+			"exportDelimiter": ",",
+			"exportSelectDelimiter": false,
+			"exportSelectFields": false
+		},
+		{
+			"id": "import",
+			"type": "import",
+			"layoutId": "first",
+			"disabled": false,
+			"default": 0,
+			"forms": {
+				"supertop": {
+					"modelId": "panel-top",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"top": {
+					"modelId": "import-header",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"import_header"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"grid": {
+					"modelId": "import-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"import_field",
+								"import_field1",
+								"import_field2",
+								"import_field3",
+								"import_field4",
+								"import_field5",
+								"import_field6",
+								"import_field7",
+								"import_field8"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				}
+			},
+			"items": {
+				"import_header": {
+					"type": "import_header"
+				},
+				"import_field": {
+					"field": "ID",
+					"type": "import_field"
+				},
+				"import_field1": {
+					"field": "calendarDate",
+					"type": "import_field"
+				},
+				"import_field2": {
+					"field": "calendarSubject",
+					"type": "import_field"
+				},
+				"import_field3": {
+					"field": "calendarDesc",
+					"type": "import_field"
+				},
+				"import_field4": {
+					"field": "calendarCategory",
+					"type": "import_field"
+				},
+				"import_field5": {
+					"field": "calendarTime",
+					"type": "import_field"
+				},
+				"import_field6": {
+					"field": "calendarFullday",
+					"type": "import_field"
+				},
+				"import_field7": {
+					"field": "calendarEndDate",
+					"type": "import_field"
+				},
+				"import_field8": {
+					"field": "calendarEndTime",
+					"type": "import_field"
+				}
+			},
+			"dbProps": {},
+			"version": 13,
+			"imageItem": {
+				"type": "page_image"
+			},
+			"imageBgColor": "#f2f2f2",
+			"controlsBgColor": "white",
+			"imagePosition": "right",
+			"listTotals": 1,
+			"title": {}
+		},
+		{
+			"id": "calendar",
+			"type": "calendar",
+			"layoutId": "leftbar",
+			"disabled": false,
+			"default": 0,
+			"forms": {
+				"above-grid": {
+					"modelId": "calendar-above-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								},
+								{
+									"cell": "c2"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"add"
+							]
+						},
+						"c2": {
+							"model": "c2",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"below-grid": {
+					"modelId": "empty-above-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"left": {
+					"modelId": "leftbar-menu",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c0"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c0": {
+							"model": "c0",
+							"items": [
+								"logo"
+							]
+						},
+						"c1": {
+							"model": "c1",
+							"items": [
+								"menu"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"supertop": {
+					"modelId": "leftbar-top",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								},
+								{
+									"cell": "c2"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"expand_menu_button",
+								"collapse_button",
+								"breadcrumb"
+							]
+						},
+						"c2": {
+							"model": "c2",
+							"items": [
+								"simple_search",
+								"list_options",
+								"loginform_login",
+								"username_button"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"grid": {
+					"modelId": "calendar",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"calendar"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"top": {
+					"modelId": "list-sidebar-top",
+					"grid": [],
+					"cells": {},
+					"deferredItems": [],
+					"recsPerRow": 1
+				}
+			},
+			"items": {
+				"breadcrumb": {
+					"type": "breadcrumb"
+				},
+				"logo": {
+					"type": "logo"
+				},
+				"menu": {
+					"type": "menu"
+				},
+				"simple_search": {
+					"type": "simple_search"
+				},
+				"calendar": {
+					"type": "calendar"
+				},
+				"expand_menu_button": {
+					"type": "expand_menu_button"
+				},
+				"collapse_button": {
+					"type": "collapse_button"
+				},
+				"add": {
+					"type": "add"
+				},
+				"list_options": {
+					"type": "list_options",
+					"items": [
+						"export",
+						"import"
+					]
+				},
+				"export": {
+					"type": "export"
+				},
+				"import": {
+					"type": "import"
+				},
+				"username_button": {
+					"type": "username_button",
+					"items": [
+						"userinfo_link",
+						"logout_link"
+					]
+				},
+				"loginform_login": {
+					"type": "loginform_login",
+					"popup": false
+				},
+				"userinfo_link": {
+					"type": "userinfo_link"
+				},
+				"logout_link": {
+					"type": "logout_link"
+				}
+			},
+			"dbProps": {},
+			"version": 13,
+			"pageWidth": "full",
+			"imageItem": {
+				"type": "page_image"
+			},
+			"imageBgColor": "#f2f2f2",
+			"controlsBgColor": "white",
+			"imagePosition": "right",
+			"listTotals": 1,
+			"title": {}
+		},
+		{
+			"id": "add_calendar",
+			"type": "add",
+			"layoutId": "nomenu",
+			"disabled": false,
+			"default": 0,
+			"forms": {
+				"above-grid": {
+					"modelId": "add-above-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"add_message"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"below-grid": {
+					"modelId": "add-below-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"add_save",
+								"add_reset",
+								"add_back_list",
+								"add_cancel"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"top": {
+					"modelId": "add-header",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"add_header"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"grid": {
+					"modelId": "calendar-add",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "cal11"
+								},
+								{
+									"cell": "cal12"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "cal21"
+								},
+								{
+									"cell": "cal22"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "cal31"
+								},
+								{
+									"cell": "cal32"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "cal41"
+								},
+								{
+									"cell": "cal42"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"cal11": {
+							"model": "cal11",
+							"items": [
+								"calendar_subject"
+							]
+						},
+						"cal12": {
+							"model": "cal12",
+							"items": []
+						},
+						"cal21": {
+							"model": "cal21",
+							"items": [
+								"calendar_date"
+							]
+						},
+						"cal22": {
+							"model": "cal22",
+							"items": [
+								"calendar_time"
+							]
+						},
+						"cal31": {
+							"model": "cal31",
+							"items": [
+								"calendar_enddate"
+							]
+						},
+						"cal32": {
+							"model": "cal32",
+							"items": [
+								"calendar_endtime"
+							]
+						},
+						"cal41": {
+							"model": "cal41",
+							"items": [
+								"calendar_fullday"
+							]
+						},
+						"cal42": {
+							"model": "cal42",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"columnCount": 1,
+					"inlineLabels": false,
+					"separateLabels": false
+				}
+			},
+			"items": {
+				"add_header": {
+					"type": "add_header"
+				},
+				"add_back_list": {
+					"type": "add_back_list"
+				},
+				"add_cancel": {
+					"type": "add_cancel"
+				},
+				"add_message": {
+					"type": "add_message"
+				},
+				"add_save": {
+					"type": "add_save"
+				},
+				"add_reset": {
+					"type": "add_reset"
+				},
+				"calendar_subject": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarSubject"
+				},
+				"calendar_date": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarDate"
+				},
+				"calendar_time": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarTime"
+				},
+				"calendar_enddate": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarEndDate"
+				},
+				"calendar_endtime": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarEndTime"
+				},
+				"calendar_fullday": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarFullday"
+				}
+			},
+			"dbProps": {},
+			"version": 13,
+			"imageItem": {
+				"type": "page_image"
+			},
+			"imageBgColor": "#f2f2f2",
+			"controlsBgColor": "white",
+			"imagePosition": "right",
+			"listTotals": 1,
+			"title": {
+				"English": "New event"
+			}
+		},
+		{
+			"id": "edit_calendar",
+			"type": "edit",
+			"layoutId": "nomenu",
+			"disabled": false,
+			"default": 0,
+			"forms": {
+				"above-grid": {
+					"modelId": "edit-above-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"edit_message"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"below-grid": {
+					"modelId": "edit-below-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								},
+								{
+									"cell": "c2"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"edit_save",
+								"calendar_delete",
+								"edit_back_list",
+								"edit_close"
+							]
+						},
+						"c2": {
+							"model": "c2",
+							"items": [
+								"hamburger"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"top": {
+					"modelId": "edit-header",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"edit_header"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"grid": {
+					"modelId": "calendar-edit",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "cal11"
+								},
+								{
+									"cell": "cal12"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "cal51",
+									"colspan": 2
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "cal21"
+								},
+								{
+									"cell": "cal22"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "cal31"
+								},
+								{
+									"cell": "cal32"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "cal41"
+								},
+								{
+									"cell": "cal42"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"cal11": {
+							"model": "cal11",
+							"items": [
+								"calendar_subject"
+							]
+						},
+						"cal12": {
+							"model": "cal12",
+							"items": [
+								"calendar_category"
+							]
+						},
+						"cal21": {
+							"model": "cal21",
+							"items": [
+								"calendar_date"
+							]
+						},
+						"cal22": {
+							"model": "cal22",
+							"items": [
+								"calendar_time"
+							]
+						},
+						"cal31": {
+							"model": "cal31",
+							"items": [
+								"calendar_enddate"
+							]
+						},
+						"cal32": {
+							"model": "cal32",
+							"items": [
+								"calendar_endtime"
+							]
+						},
+						"cal41": {
+							"model": "cal41",
+							"items": [
+								"calendar_fullday"
+							]
+						},
+						"cal42": {
+							"model": "cal42",
+							"items": []
+						},
+						"cal51": {
+							"model": "cal51",
+							"items": [
+								"calendar_description"
+							]
+						}
+					},
+					"deferredItems": [],
+					"columnCount": 1,
+					"inlineLabels": false,
+					"separateLabels": false
+				}
+			},
+			"items": {
+				"edit_header": {
+					"type": "edit_header"
+				},
+				"hamburger": {
+					"type": "hamburger",
+					"items": [
+						"edit_reset",
+						"edit_view"
+					]
+				},
+				"edit_reset": {
+					"type": "edit_reset"
+				},
+				"edit_message": {
+					"type": "edit_message"
+				},
+				"edit_save": {
+					"type": "edit_save"
+				},
+				"edit_back_list": {
+					"type": "edit_back_list"
+				},
+				"edit_close": {
+					"type": "edit_close"
+				},
+				"calendar_delete": {
+					"type": "calendar_delete"
+				},
+				"edit_view": {
+					"type": "edit_view"
+				},
+				"calendar_subject": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarSubject"
+				},
+				"calendar_date": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarDate"
+				},
+				"calendar_time": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarTime"
+				},
+				"calendar_enddate": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarEndDate"
+				},
+				"calendar_endtime": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarEndTime"
+				},
+				"calendar_fullday": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarFullday"
+				},
+				"calendar_description": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarDesc"
+				},
+				"calendar_category": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarCategory"
+				}
+			},
+			"dbProps": {},
+			"version": 13,
+			"imageItem": {
+				"type": "page_image"
+			},
+			"imageBgColor": "#f2f2f2",
+			"controlsBgColor": "white",
+			"imagePosition": "right",
+			"listTotals": 1,
+			"title": {
+				"English": "Modify event"
+			}
+		},
+		{
+			"id": "view_calendar",
+			"type": "view",
+			"layoutId": "nomenu",
+			"disabled": false,
+			"default": 0,
+			"forms": {
+				"above-grid": {
+					"modelId": "view-above-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1",
+									"colspan": 2
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"below-grid": {
+					"modelId": "view-below-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								},
+								{
+									"cell": "c2"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"calendar_edit",
+								"calendar_delete",
+								"view_back_list",
+								"view_close"
+							]
+						},
+						"c2": {
+							"model": "c2",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"top": {
+					"modelId": "view-header",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"view_header"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"grid": {
+					"modelId": "calendar-edit",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "cal11"
+								},
+								{
+									"cell": "cal12"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "cal51",
+									"colspan": 2
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "cal21"
+								},
+								{
+									"cell": "cal22"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "cal31"
+								},
+								{
+									"cell": "cal32"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "cal41"
+								},
+								{
+									"cell": "cal42"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"cal11": {
+							"model": "cal11",
+							"items": [
+								"calendar_subject"
+							]
+						},
+						"cal12": {
+							"model": "cal12",
+							"items": [
+								"calendar_category"
+							]
+						},
+						"cal21": {
+							"model": "cal21",
+							"items": [
+								"calendar_date"
+							]
+						},
+						"cal22": {
+							"model": "cal22",
+							"items": [
+								"calendar_time"
+							]
+						},
+						"cal31": {
+							"model": "cal31",
+							"items": [
+								"calendar_enddate"
+							]
+						},
+						"cal32": {
+							"model": "cal32",
+							"items": [
+								"calendar_endtime"
+							]
+						},
+						"cal41": {
+							"model": "cal41",
+							"items": [
+								"calendar_fullday"
+							]
+						},
+						"cal42": {
+							"model": "cal42",
+							"items": []
+						},
+						"cal51": {
+							"model": "cal51",
+							"items": [
+								"calendar_description"
+							]
+						}
+					},
+					"deferredItems": [],
+					"columnCount": 1,
+					"inlineLabels": false,
+					"separateLabels": false
+				}
+			},
+			"items": {
+				"view_header": {
+					"type": "view_header"
+				},
+				"view_back_list": {
+					"type": "view_back_list"
+				},
+				"view_close": {
+					"type": "view_close"
+				},
+				"calendar_edit": {
+					"type": "calendar_edit"
+				},
+				"calendar_delete": {
+					"type": "calendar_delete"
+				},
+				"calendar_subject": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarSubject"
+				},
+				"calendar_date": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarDate"
+				},
+				"calendar_time": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarTime"
+				},
+				"calendar_enddate": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarEndDate"
+				},
+				"calendar_endtime": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarEndTime"
+				},
+				"calendar_fullday": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarFullday"
+				},
+				"calendar_description": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarDesc"
+				},
+				"calendar_category": {
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"feature": "calendar",
+					"field": "calendarCategory"
+				}
+			},
+			"dbProps": {},
+			"version": 13,
+			"imageItem": {
+				"type": "page_image"
+			},
+			"imageBgColor": "#f2f2f2",
+			"controlsBgColor": "white",
+			"imagePosition": "right",
+			"listTotals": 1,
+			"title": {
+				"English": "Event"
+			}
+		}
+	],
+	"geoCoding": {
+		"enabled": false,
+		"latField": "",
+		"lonField": "",
+		"addressFields": []
+	},
+	"caption": {
+		"English": "Calendar1 Calendar"
+	}
+}

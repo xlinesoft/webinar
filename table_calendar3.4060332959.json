@@ -1,15 +1,14 @@
 {
-	"sql": "SELECT\r\n\tID,\r\n\tganttName,\r\n\tganttCategory,\r\n\tganttStartDate,\r\n\tganttEndDate,\r\n\tganttParent,\r\n\tganttProgress\r\nFROM\r\n\ttasks1",
+	"sql": "SELECT\r\n\tID,\r\n\tcalendarDate,\r\n\tcalendarSubject,\r\n\tcalendarDesc,\r\n\tcalendarCategory,\r\n\tcalendarTime,\r\n\tcalendarFullday,\r\n\tcalendarEndDate,\r\n\tcalendarEndTime\r\nFROM\r\n\tcalendar3",
 	"connId": "conn",
-	"originalTable": "tasks1",
-	"name": "Tasks1 chart",
-	"shortTableName": "Tasks1_chart",
+	"originalTable": "calendar3",
+	"name": "calendar3",
+	"shortTableName": "calendar3",
 	"dbType": 0,
-	"hideEmptyFieldsOnView": true,
 	"keyFields": [
 		"ID"
 	],
-	"detailsBadgeColor": "dc143c",
+	"detailsBadgeColor": "7b68ee",
 	"fields": [
 		{
 			"name": "ID",
@@ -26,52 +25,12 @@
 			"label": {
 				"English": "ID"
 			},
-			"tableName": "tasks1"
+			"tableName": "calendar3"
 		},
 		{
-			"name": "ganttName",
-			"sqlExpression": "ganttName",
-			"strField": "ganttName",
-			"type": 200,
-			"viewFormats": [
-				{}
-			],
-			"editFormats": [
-				{}
-			],
-			"label": {
-				"English": "Title"
-			},
-			"tableName": "tasks1"
-		},
-		{
-			"name": "ganttCategory",
-			"sqlExpression": "ganttCategory",
-			"strField": "ganttCategory",
-			"type": 200,
-			"viewFormats": [
-				{}
-			],
-			"editFormats": [
-				{
-					"format": "Lookup wizard",
-					"lookupType": 0,
-					"lookupValues": [
-						"",
-						"important",
-						"critical"
-					]
-				}
-			],
-			"label": {
-				"English": "Category"
-			},
-			"tableName": "tasks1"
-		},
-		{
-			"name": "ganttStartDate",
-			"sqlExpression": "ganttStartDate",
-			"strField": "ganttStartDate",
+			"name": "calendarDate",
+			"sqlExpression": "calendarDate",
+			"strField": "calendarDate",
 			"type": 7,
 			"viewFormats": [
 				{
@@ -85,14 +44,96 @@
 				}
 			],
 			"label": {
-				"English": "Start date"
+				"English": "Calendar Date"
 			},
-			"tableName": "tasks1"
+			"tableName": "calendar3"
 		},
 		{
-			"name": "ganttEndDate",
-			"sqlExpression": "ganttEndDate",
-			"strField": "ganttEndDate",
+			"name": "calendarSubject",
+			"sqlExpression": "calendarSubject",
+			"strField": "calendarSubject",
+			"type": 200,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Calendar Subject"
+			},
+			"tableName": "calendar3"
+		},
+		{
+			"name": "calendarDesc",
+			"sqlExpression": "calendarDesc",
+			"strField": "calendarDesc",
+			"type": 201,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{
+					"format": "Text area"
+				}
+			],
+			"label": {
+				"English": "Calendar Desc"
+			},
+			"tableName": "calendar3"
+		},
+		{
+			"name": "calendarCategory",
+			"sqlExpression": "calendarCategory",
+			"strField": "calendarCategory",
+			"type": 200,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Calendar Category"
+			},
+			"tableName": "calendar3"
+		},
+		{
+			"name": "calendarTime",
+			"sqlExpression": "calendarTime",
+			"strField": "calendarTime",
+			"type": 200,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Calendar Time"
+			},
+			"tableName": "calendar3"
+		},
+		{
+			"name": "calendarFullday",
+			"sqlExpression": "calendarFullday",
+			"strField": "calendarFullday",
+			"type": 3,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Calendar Fullday"
+			},
+			"tableName": "calendar3"
+		},
+		{
+			"name": "calendarEndDate",
+			"sqlExpression": "calendarEndDate",
+			"strField": "calendarEndDate",
 			"type": 7,
 			"viewFormats": [
 				{
@@ -106,40 +147,15 @@
 				}
 			],
 			"label": {
-				"English": "End date"
+				"English": "Calendar End Date"
 			},
-			"tableName": "tasks1"
+			"tableName": "calendar3"
 		},
 		{
-			"name": "ganttParent",
-			"sqlExpression": "ganttParent",
-			"strField": "ganttParent",
-			"type": 3,
-			"viewFormats": [
-				{}
-			],
-			"editFormats": [
-				{
-					"format": "Lookup wizard",
-					"lookupType": 2,
-					"lookupTable": "Tasks1 chart",
-					"lookupTableConnection": "conn",
-					"lookupLinkField": "ID",
-					"lookupDisplayField": "ganttName",
-					"lookupOrderBy": "ganttName",
-					"lookupWhere": "`ID` <> :{ID}"
-				}
-			],
-			"label": {
-				"English": "Parent task"
-			},
-			"tableName": "tasks1"
-		},
-		{
-			"name": "ganttProgress",
-			"sqlExpression": "ganttProgress",
-			"strField": "ganttProgress",
-			"type": 3,
+			"name": "calendarEndTime",
+			"sqlExpression": "calendarEndTime",
+			"strField": "calendarEndTime",
+			"type": 200,
 			"viewFormats": [
 				{}
 			],
@@ -147,37 +163,11 @@
 				{}
 			],
 			"label": {
-				"English": "Progress (1-100)"
+				"English": "Calendar End Time"
 			},
-			"tableName": "tasks1"
+			"tableName": "calendar3"
 		}
 	],
-	"ganttSettings": {
-		"categoryColors": [
-			{
-				"value": "important",
-				"color": "8a2be2"
-			},
-			{
-				"value": "critical",
-				"color": "dc143c"
-			},
-			{
-				"value": "new category",
-				"color": "bc8f8f"
-			},
-			{
-				"value": "another category",
-				"color": "4682b4"
-			}
-		],
-		"startDateField": "ganttStartDate",
-		"endDateField": "ganttEndDate",
-		"nameField": "ganttName",
-		"progressField": "ganttProgress",
-		"parentField": "ganttParent",
-		"categoryField": "ganttCategory"
-	},
 	"dbTableInfo": {
 		"type": 0,
 		"foreignKeys": [],
@@ -185,16 +175,27 @@
 			{
 				"name": "ID",
 				"type": 3,
-				"size": 0,
+				"size": 11,
 				"scale": 0,
-				"typeName": "int",
+				"typeName": "int(11)",
 				"nullable": false,
 				"autoinc": true,
 				"defaultValueSQL": null,
 				"defaultValue": ""
 			},
 			{
-				"name": "ganttName",
+				"name": "calendarDate",
+				"type": 7,
+				"size": 0,
+				"scale": 0,
+				"typeName": "date",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "calendarSubject",
 				"type": 200,
 				"size": 200,
 				"scale": 0,
@@ -205,7 +206,18 @@
 				"defaultValue": ""
 			},
 			{
-				"name": "ganttCategory",
+				"name": "calendarDesc",
+				"type": 201,
+				"size": 0,
+				"scale": 0,
+				"typeName": "longtext",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "calendarCategory",
 				"type": 200,
 				"size": 30,
 				"scale": 0,
@@ -216,7 +228,29 @@
 				"defaultValue": ""
 			},
 			{
-				"name": "ganttStartDate",
+				"name": "calendarTime",
+				"type": 200,
+				"size": 10,
+				"scale": 0,
+				"typeName": "varchar(10)",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "calendarFullday",
+				"type": 3,
+				"size": 11,
+				"scale": 0,
+				"typeName": "int(11)",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "calendarEndDate",
 				"type": 7,
 				"size": 0,
 				"scale": 0,
@@ -227,33 +261,11 @@
 				"defaultValue": ""
 			},
 			{
-				"name": "ganttEndDate",
-				"type": 7,
-				"size": 0,
+				"name": "calendarEndTime",
+				"type": 200,
+				"size": 10,
 				"scale": 0,
-				"typeName": "date",
-				"nullable": true,
-				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
-			},
-			{
-				"name": "ganttParent",
-				"type": 3,
-				"size": 0,
-				"scale": 0,
-				"typeName": "int",
-				"nullable": true,
-				"autoinc": false,
-				"defaultValueSQL": null,
-				"defaultValue": ""
-			},
-			{
-				"name": "ganttProgress",
-				"type": 3,
-				"size": 0,
-				"scale": 0,
-				"typeName": "int",
+				"typeName": "varchar(10)",
 				"nullable": true,
 				"autoinc": false,
 				"defaultValueSQL": null,
@@ -264,7 +276,7 @@
 			"ID"
 		],
 		"uniqueFields": [],
-		"name": "tasks1"
+		"name": "calendar3"
 	},
 	"pages": [
 		{
@@ -367,7 +379,9 @@
 								"integrated_edit_field2",
 								"integrated_edit_field3",
 								"integrated_edit_field4",
-								"integrated_edit_field5"
+								"integrated_edit_field5",
+								"integrated_edit_field6",
+								"integrated_edit_field7"
 							]
 						}
 					},
@@ -397,32 +411,42 @@
 					"type": "add_reset"
 				},
 				"integrated_edit_field": {
-					"field": "ganttName",
+					"field": "calendarDate",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field1": {
-					"field": "ganttCategory",
+					"field": "calendarSubject",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field2": {
-					"field": "ganttStartDate",
+					"field": "calendarDesc",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field3": {
-					"field": "ganttEndDate",
+					"field": "calendarCategory",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field4": {
-					"field": "ganttParent",
+					"field": "calendarTime",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field5": {
-					"field": "ganttProgress",
+					"field": "calendarFullday",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field6": {
+					"field": "calendarEndDate",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field7": {
+					"field": "calendarEndTime",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				}
@@ -436,9 +460,7 @@
 			"controlsBgColor": "white",
 			"imagePosition": "right",
 			"listTotals": 1,
-			"title": {
-				"English": "New task"
-			}
+			"title": {}
 		},
 		{
 			"id": "export",
@@ -513,7 +535,9 @@
 								"export_field3",
 								"export_field4",
 								"export_field5",
-								"export_field6"
+								"export_field6",
+								"export_field7",
+								"export_field8"
 							]
 						}
 					},
@@ -567,27 +591,35 @@
 					"type": "export_field"
 				},
 				"export_field1": {
-					"field": "ganttName",
+					"field": "calendarDate",
 					"type": "export_field"
 				},
 				"export_field2": {
-					"field": "ganttCategory",
+					"field": "calendarSubject",
 					"type": "export_field"
 				},
 				"export_field3": {
-					"field": "ganttStartDate",
+					"field": "calendarDesc",
 					"type": "export_field"
 				},
 				"export_field4": {
-					"field": "ganttEndDate",
+					"field": "calendarCategory",
 					"type": "export_field"
 				},
 				"export_field5": {
-					"field": "ganttParent",
+					"field": "calendarTime",
 					"type": "export_field"
 				},
 				"export_field6": {
-					"field": "ganttProgress",
+					"field": "calendarFullday",
+					"type": "export_field"
+				},
+				"export_field7": {
+					"field": "calendarEndDate",
+					"type": "export_field"
+				},
+				"export_field8": {
+					"field": "calendarEndTime",
 					"type": "export_field"
 				}
 			},
@@ -679,7 +711,9 @@
 								"import_field3",
 								"import_field4",
 								"import_field5",
-								"import_field6"
+								"import_field6",
+								"import_field7",
+								"import_field8"
 							]
 						}
 					},
@@ -696,27 +730,35 @@
 					"type": "import_field"
 				},
 				"import_field1": {
-					"field": "ganttName",
+					"field": "calendarDate",
 					"type": "import_field"
 				},
 				"import_field2": {
-					"field": "ganttCategory",
+					"field": "calendarSubject",
 					"type": "import_field"
 				},
 				"import_field3": {
-					"field": "ganttStartDate",
+					"field": "calendarDesc",
 					"type": "import_field"
 				},
 				"import_field4": {
-					"field": "ganttEndDate",
+					"field": "calendarCategory",
 					"type": "import_field"
 				},
 				"import_field5": {
-					"field": "ganttParent",
+					"field": "calendarTime",
 					"type": "import_field"
 				},
 				"import_field6": {
-					"field": "ganttProgress",
+					"field": "calendarFullday",
+					"type": "import_field"
+				},
+				"import_field7": {
+					"field": "calendarEndDate",
+					"type": "import_field"
+				},
+				"import_field8": {
+					"field": "calendarEndTime",
 					"type": "import_field"
 				}
 			},
@@ -781,8 +823,6 @@
 							"model": "c1",
 							"items": [
 								"edit_save",
-								"gantt_add_child",
-								"gantt_delete",
 								"edit_back_list",
 								"edit_close"
 							]
@@ -841,7 +881,9 @@
 								"integrated_edit_field2",
 								"integrated_edit_field3",
 								"integrated_edit_field4",
-								"integrated_edit_field5"
+								"integrated_edit_field5",
+								"integrated_edit_field6",
+								"integrated_edit_field7"
 							]
 						}
 					},
@@ -878,43 +920,47 @@
 					"type": "edit_close"
 				},
 				"integrated_edit_field": {
-					"field": "ganttName",
+					"field": "calendarDate",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field1": {
-					"field": "ganttCategory",
+					"field": "calendarSubject",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field2": {
-					"field": "ganttStartDate",
+					"field": "calendarDesc",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field3": {
-					"field": "ganttEndDate",
+					"field": "calendarCategory",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field4": {
-					"field": "ganttParent",
+					"field": "calendarTime",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field5": {
-					"field": "ganttProgress",
+					"field": "calendarFullday",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field6": {
+					"field": "calendarEndDate",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field7": {
+					"field": "calendarEndTime",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"edit_view": {
 					"type": "edit_view"
-				},
-				"gantt_delete": {
-					"type": "gantt_delete"
-				},
-				"gantt_add_child": {
-					"type": "gantt_add_child"
 				}
 			},
 			"dbProps": {},
@@ -926,9 +972,7 @@
 			"controlsBgColor": "white",
 			"imagePosition": "right",
 			"listTotals": 1,
-			"title": {
-				"English": "Modify task"
-			}
+			"title": {}
 		},
 		{
 			"id": "view",
@@ -978,8 +1022,6 @@
 						"c1": {
 							"model": "c1",
 							"items": [
-								"gantt_add_child",
-								"gantt_delete",
 								"view_back_list",
 								"view_close"
 							]
@@ -1039,7 +1081,9 @@
 								"integrated_edit_field3",
 								"integrated_edit_field4",
 								"integrated_edit_field5",
-								"integrated_edit_field6"
+								"integrated_edit_field6",
+								"integrated_edit_field7",
+								"integrated_edit_field8"
 							]
 						}
 					},
@@ -1065,32 +1109,42 @@
 					"orientation": 0
 				},
 				"integrated_edit_field1": {
-					"field": "ganttName",
+					"field": "calendarDate",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field2": {
-					"field": "ganttCategory",
+					"field": "calendarSubject",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field3": {
-					"field": "ganttStartDate",
+					"field": "calendarDesc",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field4": {
-					"field": "ganttEndDate",
+					"field": "calendarCategory",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field5": {
-					"field": "ganttParent",
+					"field": "calendarTime",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field6": {
-					"field": "ganttProgress",
+					"field": "calendarFullday",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field7": {
+					"field": "calendarEndDate",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field8": {
+					"field": "calendarEndTime",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
@@ -1102,12 +1156,6 @@
 				},
 				"view_edit": {
 					"type": "view_edit"
-				},
-				"gantt_delete": {
-					"type": "gantt_delete"
-				},
-				"gantt_add_child": {
-					"type": "gantt_add_child"
 				}
 			},
 			"dbProps": {},
@@ -1119,19 +1167,17 @@
 			"controlsBgColor": "white",
 			"imagePosition": "right",
 			"listTotals": 1,
-			"title": {
-				"English": "Task"
-			}
+			"title": {}
 		},
 		{
-			"id": "gantt",
-			"type": "gantt",
+			"id": "list",
+			"type": "list",
 			"layoutId": "leftbar",
 			"disabled": false,
 			"default": 0,
 			"forms": {
 				"above-grid": {
-					"modelId": "calendar-above-grid",
+					"modelId": "list-above-grid",
 					"grid": [
 						{
 							"cells": [
@@ -1149,19 +1195,24 @@
 						"c1": {
 							"model": "c1",
 							"items": [
-								"add"
+								"add",
+								"delete"
 							]
 						},
 						"c2": {
 							"model": "c2",
-							"items": []
+							"items": [
+								"details_found",
+								"page_size",
+								"print_panel"
+							]
 						}
 					},
 					"deferredItems": [],
 					"recsPerRow": 1
 				},
 				"below-grid": {
-					"modelId": "empty-above-grid",
+					"modelId": "list-below-grid",
 					"grid": [
 						{
 							"cells": [
@@ -1175,7 +1226,9 @@
 					"cells": {
 						"c1": {
 							"model": "c1",
-							"items": []
+							"items": [
+								"pagination"
+							]
 						}
 					},
 					"deferredItems": [],
@@ -1211,7 +1264,8 @@
 						"c1": {
 							"model": "c1",
 							"items": [
-								"menu"
+								"menu",
+								"search_panel"
 							]
 						}
 					},
@@ -1256,7 +1310,7 @@
 					"recsPerRow": 1
 				},
 				"grid": {
-					"modelId": "gantt",
+					"modelId": "simple-grid",
 					"grid": [
 						{
 							"cells": [
@@ -1271,11 +1325,24 @@
 						"c1": {
 							"model": "c1",
 							"items": [
-								"gantt"
+								"simple_grid_field",
+								"simple_grid_field1",
+								"simple_grid_field2",
+								"simple_grid_field3",
+								"simple_grid_field4",
+								"simple_grid_field5",
+								"simple_grid_field6",
+								"simple_grid_field7",
+								"simple_grid_field8"
 							]
 						}
 					},
-					"deferredItems": [],
+					"deferredItems": [
+						"grid_checkbox",
+						"grid_checkbox_head",
+						"grid_edit",
+						"grid_view"
+					],
 					"recsPerRow": 1
 				},
 				"top": {
@@ -1287,6 +1354,9 @@
 				}
 			},
 			"items": {
+				"page_size": {
+					"type": "page_size"
+				},
 				"breadcrumb": {
 					"type": "breadcrumb"
 				},
@@ -1299,24 +1369,124 @@
 				"simple_search": {
 					"type": "simple_search"
 				},
-				"gantt": {
-					"type": "gantt"
+				"pagination": {
+					"type": "pagination"
 				},
-				"username_button": {
-					"type": "username_button",
+				"grid_checkbox": {
+					"type": "grid_checkbox"
+				},
+				"grid_checkbox_head": {
+					"type": "grid_checkbox_head"
+				},
+				"details_found": {
+					"type": "details_found"
+				},
+				"simple_grid_field": {
+					"field": "ID",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field1": {
+					"field": "calendarDate",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field2": {
+					"field": "calendarSubject",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field3": {
+					"field": "calendarDesc",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field4": {
+					"field": "calendarCategory",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field5": {
+					"field": "calendarTime",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field6": {
+					"field": "calendarFullday",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field7": {
+					"field": "calendarEndDate",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field8": {
+					"field": "calendarEndTime",
+					"type": "simple_grid_field"
+				},
+				"search_panel": {
+					"type": "search_panel",
 					"items": [
-						"userinfo_link",
-						"logout_link"
+						"search_panel_field",
+						"search_panel_field8",
+						"search_panel_field7",
+						"search_panel_field6",
+						"search_panel_field5",
+						"search_panel_field4",
+						"search_panel_field3",
+						"search_panel_field2",
+						"search_panel_field1"
+					],
+					"_flexiblePanel": true
+				},
+				"list_options": {
+					"type": "list_options",
+					"items": [
+						"export_selected",
+						"delete_selected",
+						"-1",
+						"show_search_panel",
+						"hide_search_panel",
+						"-",
+						"export",
+						"-2",
+						"import"
 					]
 				},
-				"loginform_login": {
-					"type": "loginform_login"
+				"show_search_panel": {
+					"type": "show_search_panel"
 				},
-				"userinfo_link": {
-					"type": "userinfo_link"
+				"hide_search_panel": {
+					"type": "hide_search_panel"
 				},
-				"logout_link": {
-					"type": "logout_link"
+				"search_panel_field": {
+					"field": "ID",
+					"type": "search_panel_field"
+				},
+				"search_panel_field1": {
+					"field": "calendarDate",
+					"type": "search_panel_field"
+				},
+				"search_panel_field2": {
+					"field": "calendarSubject",
+					"type": "search_panel_field"
+				},
+				"search_panel_field3": {
+					"field": "calendarDesc",
+					"type": "search_panel_field"
+				},
+				"search_panel_field4": {
+					"field": "calendarCategory",
+					"type": "search_panel_field"
+				},
+				"search_panel_field5": {
+					"field": "calendarTime",
+					"type": "search_panel_field"
+				},
+				"search_panel_field6": {
+					"field": "calendarFullday",
+					"type": "search_panel_field"
+				},
+				"search_panel_field7": {
+					"field": "calendarEndDate",
+					"type": "search_panel_field"
+				},
+				"search_panel_field8": {
+					"field": "calendarEndTime",
+					"type": "search_panel_field"
 				},
 				"expand_menu_button": {
 					"type": "expand_menu_button"
@@ -1327,23 +1497,238 @@
 				"add": {
 					"type": "add"
 				},
-				"list_options": {
-					"type": "list_options",
-					"items": [
-						"export",
-						"import"
-					]
-				},
 				"export": {
 					"type": "export"
 				},
+				"-": {
+					"type": "-"
+				},
+				"export_selected": {
+					"type": "export_selected"
+				},
+				"-1": {
+					"type": "-"
+				},
 				"import": {
 					"type": "import"
+				},
+				"-2": {
+					"type": "-"
+				},
+				"grid_edit": {
+					"type": "grid_edit"
+				},
+				"grid_view": {
+					"type": "grid_view"
+				},
+				"print_panel": {
+					"type": "print_panel",
+					"items": [
+						"print_scope",
+						"print_records",
+						"print_button"
+					]
+				},
+				"print_scope": {
+					"type": "print_scope"
+				},
+				"print_button": {
+					"type": "print_button"
+				},
+				"print_records": {
+					"type": "print_records"
+				},
+				"delete": {
+					"type": "delete"
+				},
+				"delete_selected": {
+					"type": "delete_selected"
+				},
+				"username_button": {
+					"type": "username_button",
+					"items": [
+						"userinfo_link",
+						"logout_link"
+					]
+				},
+				"loginform_login": {
+					"type": "loginform_login",
+					"popup": false
+				},
+				"userinfo_link": {
+					"type": "userinfo_link"
+				},
+				"logout_link": {
+					"type": "logout_link"
 				}
 			},
 			"dbProps": {},
 			"version": 13,
-			"pageWidth": "full",
+			"imageItem": {
+				"type": "page_image"
+			},
+			"imageBgColor": "#f2f2f2",
+			"controlsBgColor": "white",
+			"imagePosition": "right",
+			"listTotals": 1,
+			"title": {}
+		},
+		{
+			"id": "print",
+			"type": "print",
+			"layoutId": "basic",
+			"disabled": false,
+			"default": 0,
+			"forms": {
+				"above-grid": {
+					"modelId": "print-above-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"print_pages"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"below-grid": {
+					"modelId": "print-below-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"top": {
+					"modelId": "print-header",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c2"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c2": {
+							"model": "c2",
+							"items": [
+								"print_header",
+								"print_subheader"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"grid": {
+					"modelId": "simple-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"simple_grid_field",
+								"simple_grid_field1",
+								"simple_grid_field2",
+								"simple_grid_field3",
+								"simple_grid_field4",
+								"simple_grid_field5",
+								"simple_grid_field6",
+								"simple_grid_field7",
+								"simple_grid_field8"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				}
+			},
+			"items": {
+				"print_header": {
+					"type": "print_header"
+				},
+				"print_subheader": {
+					"type": "print_subheader"
+				},
+				"print_pages": {
+					"type": "print_pages"
+				},
+				"simple_grid_field": {
+					"field": "ID",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field1": {
+					"field": "calendarDate",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field2": {
+					"field": "calendarSubject",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field3": {
+					"field": "calendarDesc",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field4": {
+					"field": "calendarCategory",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field5": {
+					"field": "calendarTime",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field6": {
+					"field": "calendarFullday",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field7": {
+					"field": "calendarEndDate",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field8": {
+					"field": "calendarEndTime",
+					"type": "simple_grid_field"
+				}
+			},
+			"dbProps": {},
+			"version": 13,
 			"imageItem": {
 				"type": "page_image"
 			},
@@ -1361,6 +1746,6 @@
 		"addressFields": []
 	},
 	"caption": {
-		"English": "Tasks1 Chart"
+		"English": "Calendar3"
 	}
 }

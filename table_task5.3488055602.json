@@ -1,0 +1,460 @@
+{
+	"type": 4,
+	"name": "task5",
+	"shortTableName": "task5",
+	"detailsBadgeColor": "9acd32",
+	"dashSearchFields": [
+		{
+			"refs": [
+				{
+					"table": "employees",
+					"field": "EmployeeID"
+				}
+			],
+			"labels": {
+				"English": "Employee ID"
+			},
+			"field": "employees_EmployeeID",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "employees",
+					"field": "LastName"
+				}
+			],
+			"labels": {
+				"English": "Last Name"
+			},
+			"field": "employees_LastName",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "employees",
+					"field": "FirstName"
+				}
+			],
+			"labels": {
+				"English": "First Name"
+			},
+			"field": "employees_FirstName",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "employees",
+					"field": "Title"
+				}
+			],
+			"labels": {
+				"English": "Title"
+			},
+			"field": "employees_Title",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "employees",
+					"field": "TitleOfCourtesy"
+				}
+			],
+			"labels": {
+				"English": "Title Of Courtesy"
+			},
+			"field": "employees_TitleOfCourtesy",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "employees",
+					"field": "BirthDate"
+				}
+			],
+			"labels": {
+				"English": "Birth Date"
+			},
+			"field": "employees_BirthDate",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "employees",
+					"field": "HireDate"
+				}
+			],
+			"labels": {
+				"English": "Hire Date"
+			},
+			"field": "employees_HireDate",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "employees",
+					"field": "Address"
+				}
+			],
+			"labels": {
+				"English": "Address"
+			},
+			"field": "employees_Address",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "employees",
+					"field": "City"
+				}
+			],
+			"labels": {
+				"English": "City"
+			},
+			"field": "employees_City",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "employees",
+					"field": "Region"
+				}
+			],
+			"labels": {
+				"English": "Region"
+			},
+			"field": "employees_Region",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "employees",
+					"field": "PostalCode"
+				}
+			],
+			"labels": {
+				"English": "Postal Code"
+			},
+			"field": "employees_PostalCode",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "employees",
+					"field": "Country"
+				}
+			],
+			"labels": {
+				"English": "Country"
+			},
+			"field": "employees_Country",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "employees",
+					"field": "HomePhone"
+				}
+			],
+			"labels": {
+				"English": "Home Phone"
+			},
+			"field": "employees_HomePhone",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "employees",
+					"field": "Extension"
+				}
+			],
+			"labels": {
+				"English": "Extension"
+			},
+			"field": "employees_Extension",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "employees",
+					"field": "Notes"
+				}
+			],
+			"labels": {
+				"English": "Notes"
+			},
+			"field": "employees_Notes",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "employees",
+					"field": "ReportsTo"
+				}
+			],
+			"labels": {
+				"English": "Reports To"
+			},
+			"field": "employees_ReportsTo",
+			"allFieldsSearch": true
+		},
+		{
+			"refs": [
+				{
+					"table": "employees",
+					"field": "ownerid"
+				}
+			],
+			"labels": {
+				"English": "Ownerid"
+			},
+			"field": "employees_ownerid",
+			"allFieldsSearch": true
+		}
+	],
+	"pages": [
+		{
+			"id": "dashboard",
+			"type": "dashboard",
+			"layoutId": "leftbar",
+			"disabled": false,
+			"default": 0,
+			"forms": {
+				"grid": {
+					"modelId": "dashboard-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								},
+								{
+									"cell": "c"
+								}
+							],
+							"section": ""
+						},
+						{
+							"section": "",
+							"cells": [
+								{
+									"cell": "c2"
+								},
+								{
+									"cell": "c3"
+								}
+							]
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"dashboard-item"
+							]
+						},
+						"c": {
+							"model": "c1",
+							"items": [
+								"dashboard-item1"
+							]
+						},
+						"c2": {
+							"model": "c1",
+							"items": []
+						},
+						"c3": {
+							"model": "c1",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"left": {
+					"modelId": "leftbar-dashboard",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c0"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c0": {
+							"model": "c0",
+							"items": [
+								"logo"
+							]
+						},
+						"c1": {
+							"model": "c1",
+							"items": [
+								"menu"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"supertop": {
+					"modelId": "leftbar-top-dashboard",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								},
+								{
+									"cell": "c2"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"expand_menu_button",
+								"collapse_button",
+								"breadcrumb"
+							]
+						},
+						"c2": {
+							"model": "c2",
+							"items": [
+								"simple_search",
+								"username_button"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"top": {
+					"modelId": "dashboard-top",
+					"grid": [],
+					"cells": {},
+					"deferredItems": [],
+					"recsPerRow": 1
+				}
+			},
+			"items": {
+				"breadcrumb": {
+					"type": "breadcrumb"
+				},
+				"logo": {
+					"type": "logo"
+				},
+				"menu": {
+					"type": "menu"
+				},
+				"simple_search": {
+					"type": "simple_search"
+				},
+				"expand_menu_button": {
+					"type": "expand_menu_button"
+				},
+				"collapse_button": {
+					"type": "collapse_button"
+				},
+				"dashboard-item": {
+					"type": "dashboard-item",
+					"table": 3129131776,
+					"dashType": 0,
+					"dashName": "employees_grid",
+					"bsStyle": "primary",
+					"panelType": 1,
+					"icon": {
+						"glyph": "star-empty"
+					},
+					"viewTab": true,
+					"editTab": true,
+					"addTab": true,
+					"initialTab": 0,
+					"hiddenDetails": {},
+					"detailsOptions": [],
+					"mapUpdateGridWhenMoved": true,
+					"height": "500px"
+				},
+				"dashboard-item1": {
+					"type": "dashboard-item",
+					"table": 3129131776,
+					"dashType": 3,
+					"dashName": "employees_record",
+					"bsStyle": "primary",
+					"panelType": 1,
+					"icon": {
+						"fa": "flag"
+					},
+					"viewTab": true,
+					"editTab": true,
+					"addTab": true,
+					"initialTab": 0,
+					"hiddenDetails": {},
+					"detailsOptions": [],
+					"mapUpdateGridWhenMoved": true,
+					"height": "500px"
+				},
+				"username_button": {
+					"type": "username_button",
+					"items": [
+						"userinfo_link",
+						"logout_link"
+					]
+				},
+				"userinfo_link": {
+					"type": "userinfo_link"
+				},
+				"logout_link": {
+					"type": "logout_link"
+				}
+			},
+			"dbProps": {},
+			"version": 13,
+			"imageItem": {
+				"type": "page_image"
+			},
+			"imageBgColor": "#f2f2f2",
+			"controlsBgColor": "white",
+			"imagePosition": "right",
+			"listTotals": 1,
+			"title": {}
+		}
+	],
+	"geoCoding": {
+		"enabled": false,
+		"latField": "",
+		"lonField": "",
+		"addressFields": []
+	},
+	"caption": {
+		"English": "task5"
+	}
+}

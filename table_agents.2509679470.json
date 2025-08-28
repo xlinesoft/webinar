@@ -8,11 +8,12 @@
 	"keyFields": [
 		"id"
 	],
-	"detailsBadgeColor": "dc143c",
+	"detailsBadgeColor": "cd5c5c",
 	"fields": [
 		{
 			"name": "id",
 			"sqlExpression": "id",
+			"index": 1,
 			"strField": "id",
 			"type": 3,
 			"autoinc": true,
@@ -30,6 +31,7 @@
 		{
 			"name": "name",
 			"sqlExpression": "name",
+			"index": 2,
 			"strField": "name",
 			"type": 200,
 			"viewFormats": [
@@ -46,6 +48,7 @@
 		{
 			"name": "phone",
 			"sqlExpression": "phone",
+			"index": 3,
 			"strField": "phone",
 			"type": 200,
 			"viewFormats": [
@@ -62,6 +65,7 @@
 		{
 			"name": "email",
 			"sqlExpression": "email",
+			"index": 4,
 			"strField": "email",
 			"type": 200,
 			"viewFormats": [
@@ -217,15 +221,15 @@
 						{
 							"cells": [
 								{
-									"cell": "c3"
+									"cell": "c1"
 								}
 							],
 							"section": ""
 						}
 					],
 					"cells": {
-						"c3": {
-							"model": "c3",
+						"c1": {
+							"model": "c1",
 							"items": [
 								"integrated_edit_field",
 								"integrated_edit_field1",
@@ -259,17 +263,17 @@
 					"type": "add_reset"
 				},
 				"integrated_edit_field": {
-					"field": "name",
+					"field": "email",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field1": {
-					"field": "phone",
+					"field": "name",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
 				"integrated_edit_field2": {
-					"field": "email",
+					"field": "phone",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				}
@@ -311,8 +315,7 @@
 						"c1": {
 							"model": "c1",
 							"items": [
-								"add",
-								"delete"
+								"add"
 							]
 						},
 						"c2": {
@@ -425,6 +428,13 @@
 					"deferredItems": [],
 					"recsPerRow": 1
 				},
+				"top": {
+					"modelId": "list-sidebar-top",
+					"grid": [],
+					"cells": {},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
 				"grid": {
 					"modelId": "simple-grid",
 					"grid": [
@@ -455,13 +465,6 @@
 						"grid_view"
 					],
 					"recsPerRow": 1
-				},
-				"top": {
-					"modelId": "list-sidebar-top",
-					"grid": [],
-					"cells": {},
-					"deferredItems": [],
-					"recsPerRow": 1
 				}
 			},
 			"items": {
@@ -483,30 +486,8 @@
 				"pagination": {
 					"type": "pagination"
 				},
-				"grid_checkbox": {
-					"type": "grid_checkbox"
-				},
-				"grid_checkbox_head": {
-					"type": "grid_checkbox_head"
-				},
 				"details_found": {
 					"type": "details_found"
-				},
-				"simple_grid_field": {
-					"field": "id",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field1": {
-					"field": "name",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field2": {
-					"field": "phone",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field3": {
-					"field": "email",
-					"type": "simple_grid_field"
 				},
 				"search_panel": {
 					"type": "search_panel",
@@ -522,7 +503,6 @@
 					"type": "list_options",
 					"items": [
 						"export_selected",
-						"delete_selected",
 						"-1",
 						"show_search_panel",
 						"hide_search_panel",
@@ -537,22 +517,6 @@
 				},
 				"hide_search_panel": {
 					"type": "hide_search_panel"
-				},
-				"search_panel_field": {
-					"field": "id",
-					"type": "search_panel_field"
-				},
-				"search_panel_field1": {
-					"field": "name",
-					"type": "search_panel_field"
-				},
-				"search_panel_field2": {
-					"field": "phone",
-					"type": "search_panel_field"
-				},
-				"search_panel_field3": {
-					"field": "email",
-					"type": "search_panel_field"
 				},
 				"expand_menu_button": {
 					"type": "expand_menu_button"
@@ -598,17 +562,49 @@
 				"-2": {
 					"type": "-"
 				},
+				"grid_checkbox": {
+					"type": "grid_checkbox"
+				},
+				"grid_checkbox_head": {
+					"type": "grid_checkbox_head"
+				},
 				"grid_edit": {
 					"type": "grid_edit"
 				},
 				"grid_view": {
 					"type": "grid_view"
 				},
-				"delete": {
-					"type": "delete"
+				"search_panel_field": {
+					"field": "id",
+					"type": "search_panel_field"
 				},
-				"delete_selected": {
-					"type": "delete_selected"
+				"simple_grid_field": {
+					"field": "id",
+					"type": "simple_grid_field"
+				},
+				"search_panel_field1": {
+					"field": "email",
+					"type": "search_panel_field"
+				},
+				"simple_grid_field1": {
+					"field": "email",
+					"type": "simple_grid_field"
+				},
+				"search_panel_field2": {
+					"field": "name",
+					"type": "search_panel_field"
+				},
+				"simple_grid_field2": {
+					"field": "name",
+					"type": "simple_grid_field"
+				},
+				"search_panel_field3": {
+					"field": "phone",
+					"type": "search_panel_field"
+				},
+				"simple_grid_field3": {
+					"field": "phone",
+					"type": "simple_grid_field"
 				},
 				"username_button": {
 					"type": "username_button",
@@ -756,15 +752,15 @@
 					"type": "simple_grid_field"
 				},
 				"simple_grid_field1": {
-					"field": "name",
+					"field": "email",
 					"type": "simple_grid_field"
 				},
 				"simple_grid_field2": {
-					"field": "phone",
+					"field": "name",
 					"type": "simple_grid_field"
 				},
 				"simple_grid_field3": {
-					"field": "email",
+					"field": "phone",
 					"type": "simple_grid_field"
 				}
 			},
@@ -830,32 +826,6 @@
 					"deferredItems": [],
 					"recsPerRow": 1
 				},
-				"grid": {
-					"modelId": "export-grid",
-					"grid": [
-						{
-							"cells": [
-								{
-									"cell": "c1"
-								}
-							],
-							"section": ""
-						}
-					],
-					"cells": {
-						"c1": {
-							"model": "c1",
-							"items": [
-								"export_field",
-								"export_field1",
-								"export_field2",
-								"export_field3"
-							]
-						}
-					},
-					"deferredItems": [],
-					"recsPerRow": 1
-				},
 				"footer": {
 					"modelId": "export-footer",
 					"grid": [
@@ -886,6 +856,32 @@
 					},
 					"deferredItems": [],
 					"recsPerRow": 1
+				},
+				"grid": {
+					"modelId": "export-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"export_field",
+								"export_field1",
+								"export_field2",
+								"export_field3"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
 				}
 			},
 			"items": {
@@ -903,15 +899,15 @@
 					"type": "export_field"
 				},
 				"export_field1": {
-					"field": "name",
+					"field": "email",
 					"type": "export_field"
 				},
 				"export_field2": {
-					"field": "phone",
+					"field": "name",
 					"type": "export_field"
 				},
 				"export_field3": {
-					"field": "email",
+					"field": "phone",
 					"type": "export_field"
 				}
 			},
@@ -1133,15 +1129,15 @@
 						{
 							"cells": [
 								{
-									"cell": "c3"
+									"cell": "c1"
 								}
 							],
 							"section": ""
 						}
 					],
 					"cells": {
-						"c3": {
-							"model": "c3",
+						"c1": {
+							"model": "c1",
 							"items": [
 								"integrated_edit_field",
 								"integrated_edit_field1",
@@ -1181,23 +1177,23 @@
 				"edit_close": {
 					"type": "edit_close"
 				},
+				"edit_view": {
+					"type": "edit_view"
+				},
 				"integrated_edit_field": {
-					"field": "name",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field1": {
-					"field": "phone",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field2": {
 					"field": "email",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
-				"edit_view": {
-					"type": "edit_view"
+				"integrated_edit_field1": {
+					"field": "name",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field2": {
+					"field": "phone",
+					"type": "integrated_edit_field",
+					"orientation": 0
 				}
 			},
 			"dbProps": {},
@@ -1313,9 +1309,9 @@
 							"model": "c3",
 							"items": [
 								"integrated_edit_field",
+								"integrated_edit_field3",
 								"integrated_edit_field1",
-								"integrated_edit_field2",
-								"integrated_edit_field3"
+								"integrated_edit_field2"
 							]
 						}
 					},

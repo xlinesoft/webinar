@@ -1,0 +1,7 @@
+{
+	"type": "EVENT_BUTTON",
+	"name": "Button",
+	"serverCode": "// Put your code here.\n\n",
+	"beforeJsCode": "// Put your code here.\npageObj.reload({a:'reload'});",
+	"afterJsCode": "// Put your code here.\n"
+}

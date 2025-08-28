@@ -8,11 +8,21 @@
 	"keyFields": [
 		"OrderDetailsID"
 	],
-	"detailsBadgeColor": "2f4f4f",
+	"masterTables": [
+		{
+			"table": 3845127662,
+			"masterKeys": [
+				"OrderID"
+			],
+			"detailsKeys": [
+				"OrderID"
+			]
+		}
+	],
+	"detailsBadgeColor": "cd5c5c",
 	"fields": [
 		{
 			"name": "OrderID",
-			"sqlExpression": "OrderID",
 			"strField": "OrderID",
 			"type": 3,
 			"viewFormats": [
@@ -28,7 +38,6 @@
 		},
 		{
 			"name": "ProductID",
-			"sqlExpression": "ProductID",
 			"strField": "ProductID",
 			"type": 3,
 			"viewFormats": [
@@ -44,7 +53,6 @@
 		},
 		{
 			"name": "UnitPrice",
-			"sqlExpression": "UnitPrice",
 			"strField": "UnitPrice",
 			"type": 14,
 			"viewFormats": [
@@ -62,7 +70,6 @@
 		},
 		{
 			"name": "Quantity",
-			"sqlExpression": "Quantity",
 			"strField": "Quantity",
 			"type": 2,
 			"viewFormats": [
@@ -78,7 +85,6 @@
 		},
 		{
 			"name": "Discount",
-			"sqlExpression": "Discount",
 			"strField": "Discount",
 			"type": 14,
 			"viewFormats": [
@@ -96,7 +102,6 @@
 		},
 		{
 			"name": "CategoryID",
-			"sqlExpression": "CategoryID",
 			"strField": "CategoryID",
 			"type": 3,
 			"viewFormats": [
@@ -112,7 +117,6 @@
 		},
 		{
 			"name": "OrderDetailsID",
-			"sqlExpression": "OrderDetailsID",
 			"strField": "OrderDetailsID",
 			"type": 3,
 			"autoinc": true,
@@ -129,7 +133,6 @@
 		},
 		{
 			"name": "Status",
-			"sqlExpression": "Status",
 			"strField": "Status",
 			"type": 200,
 			"viewFormats": [
@@ -447,8 +450,7 @@
 						"c1": {
 							"model": "c1",
 							"items": [
-								"add",
-								"delete"
+								"add"
 							]
 						},
 						"c2": {
@@ -598,8 +600,24 @@
 				},
 				"top": {
 					"modelId": "list-sidebar-top",
-					"grid": [],
-					"cells": {},
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c2"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c2": {
+							"model": "c2",
+							"items": [
+								"master_info"
+							]
+						}
+					},
 					"deferredItems": [],
 					"recsPerRow": 1
 				}
@@ -682,7 +700,6 @@
 					"type": "list_options",
 					"items": [
 						"export_selected",
-						"delete_selected",
 						"-1",
 						"show_search_panel",
 						"hide_search_panel",
@@ -780,12 +797,6 @@
 				"grid_view": {
 					"type": "grid_view"
 				},
-				"delete": {
-					"type": "delete"
-				},
-				"delete_selected": {
-					"type": "delete_selected"
-				},
 				"username_button": {
 					"type": "username_button",
 					"items": [
@@ -802,6 +813,12 @@
 				},
 				"logout_link": {
 					"type": "logout_link"
+				},
+				"master_info": {
+					"type": "master_info",
+					"tables": {
+						"3845127662": "true"
+					}
 				}
 			},
 			"dbProps": {},
@@ -876,6 +893,14 @@
 								}
 							],
 							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "c4"
+								}
+							],
+							"section": ""
 						}
 					],
 					"cells": {
@@ -884,6 +909,12 @@
 							"items": [
 								"print_header",
 								"print_subheader"
+							]
+						},
+						"c4": {
+							"model": "c4",
+							"items": [
+								"master_info"
 							]
 						}
 					},
@@ -962,6 +993,12 @@
 				"simple_grid_field7": {
 					"field": "Status",
 					"type": "simple_grid_field"
+				},
+				"master_info": {
+					"type": "master_info",
+					"tables": {
+						"3845127662": "true"
+					}
 				}
 			},
 			"dbProps": {},

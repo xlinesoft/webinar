@@ -1,0 +1,7 @@
+{
+	"type": "EVENT_FIELD",
+	"name": "Event",
+	"serverCode": "\nif ( $params[\"value\"] > 5 ) {\n    $_SESSION[\"var\"]=\"a\";\n} else { \n    $_SESSION[\"var\"]=\"t\";\n}\n\n\n\n// get the list of new categories from the server\n\n$sql = DB::PrepareSQL(\"select CategoryID, CategoryName from categories where CategoryName like '%:1%'\", $_SESSION[\"var\"] );\n$rs = DB::Query($sql);\n$arr = array(); \nwhile( $data = $rs->fetchAssoc() ) {\n    $arr[] = $data;\n}\n\n// pass it to ClientAfter event\n$result[\"data\"] = $arr;\n\n",
+	"beforeJsCode": "\n// Sample:\nparams[\"value\"] = this.getValue();\n\n// Uncomment the following line to skip \"Server\" and \"Client After\" steps.\n// return false;\n",
+	"afterJsCode": "\n// delete all existing elements from the dropdown \n$(\"select[id^='value_CategoryID'] option\").remove();\n\n// loop through results and add them one by one to the dropdown box\nfor (const record of result[\"data\"]) { \n    \n    $(\"select[id^='value_CategoryID']\").append($('<option>', {\n        value: record[\"CategoryID\"],\n        text: record[\"CategoryName\"]\n    }));\n}\n\n\n"
+}

@@ -1,14 +1,26 @@
 {
-	"sql": "SELECT\r\n\tCustomerID,\r\n\tid,\r\n\tCompanyName,\r\n\tContactName,\r\n\tContactTitle,\r\n\tAddress,\r\n\tCity,\r\n\tRegion,\r\n\tPostalCode,\r\n\tCountry,\r\n\tPhone,\r\n\tFax,\r\n\tLat,\r\n\tLng,\r\n\tapikey,\r\n\townerid,\r\n\tuserpic,\r\n\tcompanylogo,\r\n\tBillingName,\r\n\tBillingAddress,\r\n\tpassword\r\nFROM\r\n\tcustomers",
+	"sql": "SELECT\n\tCustomerID,\n\tid,\n\tCompanyName,\n\tContactName,\n\tContactTitle,\n\tAddress,\n\tCity,\n\tRegion,\n\tPostalCode,\n\tCountry,\n\tPhone,\n\tFax,\n\tLat,\n\tLng,\n\tapikey,\n\townerid,\n\tuserpic,\n\tcompanylogo,\n\tBillingName,\n\tBillingAddress,\n\tpassword,\n\ttwo_factor,\n\temail,\n\temail1,\n\temail2\nFROM\n\tcustomers\n",
 	"connId": "conn",
 	"originalTable": "customers",
 	"name": "customers",
 	"shortTableName": "customers",
 	"dbType": 0,
+	"pageSizeRecords": 5,
 	"keyFields": [
 		"id"
 	],
-	"detailsBadgeColor": "e67349",
+	"masterTables": [
+		{
+			"table": 3845127662,
+			"masterKeys": [
+				"CustomerID"
+			],
+			"detailsKeys": [
+				"CustomerID"
+			]
+		}
+	],
+	"detailsBadgeColor": "daa520",
 	"fields": [
 		{
 			"name": "CustomerID",
@@ -23,7 +35,7 @@
 				{}
 			],
 			"label": {
-				"English": "Customer ID 22"
+				"English": "Customer ID"
 			},
 			"tableName": "customers"
 		},
@@ -363,6 +375,40 @@
 			"tableName": "customers"
 		},
 		{
+			"name": "two_factor",
+			"sqlExpression": "two_factor",
+			"index": 22,
+			"strField": "two_factor",
+			"type": 3,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Two Factor"
+			},
+			"tableName": "customers"
+		},
+		{
+			"name": "email",
+			"sqlExpression": "email",
+			"index": 23,
+			"strField": "email",
+			"type": 200,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Email"
+			},
+			"tableName": "customers"
+		},
+		{
 			"name": "password",
 			"sqlExpression": "password",
 			"index": 21,
@@ -376,6 +422,40 @@
 			],
 			"label": {
 				"English": "Password"
+			},
+			"tableName": "customers"
+		},
+		{
+			"name": "email1",
+			"sqlExpression": "email1",
+			"index": 24,
+			"strField": "email1",
+			"type": 200,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Email1"
+			},
+			"tableName": "customers"
+		},
+		{
+			"name": "email2",
+			"sqlExpression": "email2",
+			"index": 25,
+			"strField": "email2",
+			"type": 200,
+			"viewFormats": [
+				{}
+			],
+			"editFormats": [
+				{}
+			],
+			"label": {
+				"English": "Email2"
 			},
 			"tableName": "customers"
 		}
@@ -398,9 +478,9 @@
 			{
 				"name": "id",
 				"type": 3,
-				"size": 11,
+				"size": 0,
 				"scale": 0,
-				"typeName": "int(11)",
+				"typeName": "int",
 				"nullable": false,
 				"autoinc": true,
 				"defaultValueSQL": null,
@@ -480,8 +560,8 @@
 				"typeName": "varchar(11)",
 				"nullable": true,
 				"autoinc": false,
-				"defaultValueSQL": "0",
-				"defaultValue": ""
+				"defaultValueSQL": "'0'",
+				"defaultValue": "0"
 			},
 			{
 				"name": "Country",
@@ -552,9 +632,9 @@
 			{
 				"name": "ownerid",
 				"type": 3,
-				"size": 11,
+				"size": 0,
 				"scale": 0,
-				"typeName": "int(11)",
+				"typeName": "int",
 				"nullable": true,
 				"autoinc": false,
 				"defaultValueSQL": null,
@@ -610,6 +690,50 @@
 				"size": 250,
 				"scale": 0,
 				"typeName": "varchar(250)",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "two_factor",
+				"type": 3,
+				"size": 0,
+				"scale": 0,
+				"typeName": "int",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "email",
+				"type": 200,
+				"size": 255,
+				"scale": 0,
+				"typeName": "varchar(255)",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "email1",
+				"type": 200,
+				"size": 255,
+				"scale": 0,
+				"typeName": "varchar(255)",
+				"nullable": true,
+				"autoinc": false,
+				"defaultValueSQL": null,
+				"defaultValue": ""
+			},
+			{
+				"name": "email2",
+				"type": 200,
+				"size": 255,
+				"scale": 0,
+				"typeName": "varchar(255)",
 				"nullable": true,
 				"autoinc": false,
 				"defaultValueSQL": null,
@@ -728,16 +852,12 @@
 								"integrated_edit_field7",
 								"integrated_edit_field8",
 								"integrated_edit_field9",
+								"integrated_edit_field14",
 								"integrated_edit_field10",
 								"integrated_edit_field11",
 								"integrated_edit_field12",
 								"integrated_edit_field13",
-								"integrated_edit_field14",
-								"integrated_edit_field15",
-								"integrated_edit_field16",
-								"integrated_edit_field17",
-								"integrated_edit_field18",
-								"integrated_edit_field19"
+								"integrated_edit_field15"
 							]
 						}
 					},
@@ -816,53 +936,33 @@
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
-				"integrated_edit_field10": {
-					"field": "Fax",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field11": {
-					"field": "Lat",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field12": {
-					"field": "Lng",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field13": {
-					"field": "apikey",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
 				"integrated_edit_field14": {
 					"field": "ownerid",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
-				"integrated_edit_field15": {
-					"field": "userpic",
+				"integrated_edit_field10": {
+					"field": "two_factor",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
-				"integrated_edit_field16": {
-					"field": "companylogo",
+				"integrated_edit_field11": {
+					"field": "email",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
-				"integrated_edit_field17": {
-					"field": "BillingName",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field18": {
-					"field": "BillingAddress",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field19": {
+				"integrated_edit_field12": {
 					"field": "password",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field13": {
+					"field": "email1",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field15": {
+					"field": "email2",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				}
@@ -898,14 +998,24 @@
 								}
 							],
 							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "c3"
+								},
+								{
+									"cell": "c4"
+								}
+							],
+							"section": ""
 						}
 					],
 					"cells": {
 						"c1": {
 							"model": "c1",
 							"items": [
-								"add",
-								"delete"
+								"add"
 							]
 						},
 						"c2": {
@@ -915,6 +1025,14 @@
 								"page_size",
 								"print_panel"
 							]
+						},
+						"c3": {
+							"model": "c3",
+							"items": []
+						},
+						"c4": {
+							"model": "c4",
+							"items": []
 						}
 					},
 					"deferredItems": [],
@@ -1010,6 +1128,8 @@
 							"items": [
 								"simple_search",
 								"list_options",
+								"loginform_login1",
+								"username_button1",
 								"loginform_login",
 								"username_button"
 							]
@@ -1018,58 +1138,576 @@
 					"deferredItems": [],
 					"recsPerRow": 1
 				},
-				"grid": {
-					"modelId": "simple-grid",
+				"top": {
+					"modelId": "list-sidebar-top",
 					"grid": [
 						{
 							"cells": [
 								{
-									"cell": "c1"
+									"cell": "c2"
 								}
 							],
 							"section": ""
 						}
 					],
 					"cells": {
-						"c1": {
-							"model": "c1",
+						"c2": {
+							"model": "c2",
 							"items": [
-								"simple_grid_field",
-								"simple_grid_field1",
-								"simple_grid_field2",
-								"simple_grid_field3",
-								"simple_grid_field4",
-								"simple_grid_field5",
-								"simple_grid_field6",
-								"simple_grid_field7",
-								"simple_grid_field8",
-								"simple_grid_field9",
-								"simple_grid_field10",
-								"simple_grid_field11",
-								"simple_grid_field12",
-								"simple_grid_field13",
-								"simple_grid_field14",
-								"simple_grid_field15",
-								"simple_grid_field16",
-								"simple_grid_field17",
-								"simple_grid_field18",
-								"simple_grid_field19",
-								"simple_grid_field20"
+								"master_info"
 							]
 						}
 					},
-					"deferredItems": [
-						"grid_checkbox",
-						"grid_checkbox_head",
-						"grid_edit",
-						"grid_view"
-					],
+					"deferredItems": [],
 					"recsPerRow": 1
 				},
-				"top": {
-					"modelId": "list-sidebar-top",
-					"grid": [],
-					"cells": {},
+				"grid": {
+					"modelId": "horizontal-grid",
+					"grid": [
+						{
+							"section": "head",
+							"cells": [
+								{
+									"cell": "headcell_icons"
+								},
+								{
+									"cell": "headcell_checkbox"
+								},
+								{
+									"cell": "headcell_field"
+								},
+								{
+									"cell": "headcell_field1"
+								},
+								{
+									"cell": "headcell_field2"
+								},
+								{
+									"cell": "headcell_field3"
+								},
+								{
+									"cell": "headcell_field4"
+								},
+								{
+									"cell": "headcell_field5"
+								},
+								{
+									"cell": "headcell_field6"
+								},
+								{
+									"cell": "headcell_field7"
+								},
+								{
+									"cell": "headcell_field8"
+								},
+								{
+									"cell": "headcell_field9"
+								},
+								{
+									"cell": "headcell_field10"
+								},
+								{
+									"cell": "headcell_field11"
+								},
+								{
+									"cell": "headcell_field12"
+								},
+								{
+									"cell": "headcell_field13"
+								},
+								{
+									"cell": "headcell_field14"
+								},
+								{
+									"cell": "headcell_field15"
+								},
+								{
+									"cell": "headcell_field16"
+								}
+							]
+						},
+						{
+							"section": "body",
+							"cells": [
+								{
+									"cell": "cell_icons"
+								},
+								{
+									"cell": "cell_checkbox"
+								},
+								{
+									"cell": "cell_field"
+								},
+								{
+									"cell": "cell_field1"
+								},
+								{
+									"cell": "cell_field2"
+								},
+								{
+									"cell": "cell_field3"
+								},
+								{
+									"cell": "cell_field4"
+								},
+								{
+									"cell": "cell_field5"
+								},
+								{
+									"cell": "cell_field6"
+								},
+								{
+									"cell": "cell_field7"
+								},
+								{
+									"cell": "cell_field8"
+								},
+								{
+									"cell": "cell_field9"
+								},
+								{
+									"cell": "cell_field10"
+								},
+								{
+									"cell": "cell_field11"
+								},
+								{
+									"cell": "cell_field12"
+								},
+								{
+									"cell": "cell_field13"
+								},
+								{
+									"cell": "cell_field14"
+								},
+								{
+									"cell": "cell_field15"
+								},
+								{
+									"cell": "cell_field16"
+								}
+							]
+						},
+						{
+							"section": "foot",
+							"cells": [
+								{
+									"cell": "footcell_icons"
+								},
+								{
+									"cell": "footcell_checkbox"
+								},
+								{
+									"cell": "footcell_field"
+								},
+								{
+									"cell": "footcell_field1"
+								},
+								{
+									"cell": "footcell_field2"
+								},
+								{
+									"cell": "footcell_field3"
+								},
+								{
+									"cell": "footcell_field4"
+								},
+								{
+									"cell": "footcell_field5"
+								},
+								{
+									"cell": "footcell_field6"
+								},
+								{
+									"cell": "footcell_field7"
+								},
+								{
+									"cell": "footcell_field8"
+								},
+								{
+									"cell": "footcell_field9"
+								},
+								{
+									"cell": "footcell_field10"
+								},
+								{
+									"cell": "footcell_field11"
+								},
+								{
+									"cell": "footcell_field12"
+								},
+								{
+									"cell": "footcell_field13"
+								},
+								{
+									"cell": "footcell_field14"
+								},
+								{
+									"cell": "footcell_field15"
+								},
+								{
+									"cell": "footcell_field16"
+								}
+							]
+						}
+					],
+					"cells": {
+						"headcell_field": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field17"
+							],
+							"field": "CustomerID"
+						},
+						"cell_field": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field",
+								"custom_button"
+							],
+							"field": "CustomerID"
+						},
+						"footcell_field": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "CustomerID"
+						},
+						"headcell_field1": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field18"
+							],
+							"field": "id"
+						},
+						"cell_field1": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field1"
+							],
+							"field": "id"
+						},
+						"footcell_field1": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "id"
+						},
+						"headcell_field2": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field19"
+							],
+							"field": "CompanyName"
+						},
+						"cell_field2": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field2"
+							],
+							"field": "CompanyName"
+						},
+						"footcell_field2": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "CompanyName"
+						},
+						"headcell_field3": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field20"
+							],
+							"field": "ContactName"
+						},
+						"cell_field3": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field3"
+							],
+							"field": "ContactName"
+						},
+						"footcell_field3": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "ContactName"
+						},
+						"headcell_field4": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field21"
+							],
+							"field": "ContactTitle"
+						},
+						"cell_field4": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field4"
+							],
+							"field": "ContactTitle"
+						},
+						"footcell_field4": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "ContactTitle"
+						},
+						"headcell_field5": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field22"
+							],
+							"field": "Address"
+						},
+						"cell_field5": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field5"
+							],
+							"field": "Address"
+						},
+						"footcell_field5": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "Address"
+						},
+						"headcell_field6": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field23"
+							],
+							"field": "City"
+						},
+						"cell_field6": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field6"
+							],
+							"field": "City"
+						},
+						"footcell_field6": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "City"
+						},
+						"headcell_field7": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field24"
+							],
+							"field": "Region"
+						},
+						"cell_field7": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field7"
+							],
+							"field": "Region"
+						},
+						"footcell_field7": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "Region"
+						},
+						"headcell_field8": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field25"
+							],
+							"field": "PostalCode"
+						},
+						"cell_field8": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field8"
+							],
+							"field": "PostalCode"
+						},
+						"footcell_field8": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "PostalCode"
+						},
+						"headcell_field9": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field26"
+							],
+							"field": "Country"
+						},
+						"cell_field9": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field9"
+							],
+							"field": "Country"
+						},
+						"footcell_field9": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "Country"
+						},
+						"headcell_field10": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field27"
+							],
+							"field": "Phone"
+						},
+						"cell_field10": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field10"
+							],
+							"field": "Phone"
+						},
+						"footcell_field10": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "Phone"
+						},
+						"headcell_field11": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field28"
+							],
+							"field": "ownerid"
+						},
+						"cell_field11": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field15"
+							],
+							"field": "ownerid"
+						},
+						"footcell_field11": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "ownerid"
+						},
+						"headcell_field12": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field29"
+							],
+							"field": "two_factor"
+						},
+						"cell_field12": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field11"
+							],
+							"field": "two_factor"
+						},
+						"footcell_field12": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "two_factor"
+						},
+						"headcell_field13": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field30"
+							],
+							"field": "email"
+						},
+						"cell_field13": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field12"
+							],
+							"field": "email"
+						},
+						"footcell_field13": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "email"
+						},
+						"headcell_field14": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field31"
+							],
+							"field": "password"
+						},
+						"cell_field14": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field13"
+							],
+							"field": "password"
+						},
+						"footcell_field14": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "password"
+						},
+						"headcell_field15": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field32"
+							],
+							"field": "email1"
+						},
+						"cell_field15": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field14"
+							],
+							"field": "email1"
+						},
+						"footcell_field15": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "email1"
+						},
+						"headcell_field16": {
+							"model": "headcell_field",
+							"items": [
+								"simple_grid_field33"
+							],
+							"field": "email2"
+						},
+						"cell_field16": {
+							"model": "cell_field",
+							"items": [
+								"simple_grid_field16"
+							],
+							"field": "email2"
+						},
+						"footcell_field16": {
+							"model": "footcell_field",
+							"items": [],
+							"field": "email2"
+						},
+						"headcell_checkbox": {
+							"model": "headcell_checkbox",
+							"items": [
+								"grid_checkbox_head"
+							]
+						},
+						"cell_checkbox": {
+							"model": "cell_checkbox",
+							"items": [
+								"grid_checkbox"
+							]
+						},
+						"footcell_checkbox": {
+							"model": "footcell_checkbox",
+							"items": []
+						},
+						"headcell_icons": {
+							"model": "headcell_icons",
+							"items": []
+						},
+						"cell_icons": {
+							"model": "cell_icons",
+							"items": [
+								"grid_edit",
+								"grid_view"
+							]
+						},
+						"footcell_icons": {
+							"model": "footcell_icons",
+							"items": []
+						}
+					},
 					"deferredItems": [],
 					"recsPerRow": 1
 				}
@@ -1093,117 +1731,19 @@
 				"pagination": {
 					"type": "pagination"
 				},
-				"grid_checkbox": {
-					"type": "grid_checkbox"
-				},
-				"grid_checkbox_head": {
-					"type": "grid_checkbox_head"
-				},
 				"details_found": {
 					"type": "details_found"
-				},
-				"simple_grid_field": {
-					"field": "CustomerID",
-					"type": "simple_grid_field",
-					"label": {
-						"field": "CustomerID",
-						"table": "customers",
-						"type": 3
-					}
-				},
-				"simple_grid_field1": {
-					"field": "id",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field2": {
-					"field": "CompanyName",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field3": {
-					"field": "ContactName",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field4": {
-					"field": "ContactTitle",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field5": {
-					"field": "Address",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field6": {
-					"field": "City",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field7": {
-					"field": "Region",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field8": {
-					"field": "PostalCode",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field9": {
-					"field": "Country",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field10": {
-					"field": "Phone",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field11": {
-					"field": "Fax",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field12": {
-					"field": "Lat",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field13": {
-					"field": "Lng",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field14": {
-					"field": "apikey",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field15": {
-					"field": "ownerid",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field16": {
-					"field": "userpic",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field17": {
-					"field": "companylogo",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field18": {
-					"field": "BillingName",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field19": {
-					"field": "BillingAddress",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field20": {
-					"field": "password",
-					"type": "simple_grid_field"
 				},
 				"search_panel": {
 					"type": "search_panel",
 					"items": [
 						"search_panel_field",
-						"search_panel_field19",
-						"search_panel_field18",
-						"search_panel_field17",
 						"search_panel_field16",
-						"search_panel_field15",
 						"search_panel_field14",
 						"search_panel_field13",
 						"search_panel_field12",
 						"search_panel_field11",
+						"search_panel_field15",
 						"search_panel_field10",
 						"search_panel_field9",
 						"search_panel_field8",
@@ -1221,10 +1761,15 @@
 					"type": "list_options",
 					"items": [
 						"export_selected",
-						"delete_selected",
+						"-5",
+						"advsearch_link",
 						"-1",
 						"show_search_panel",
 						"hide_search_panel",
+						"-3",
+						"save_search",
+						"-4",
+						"saved_searches",
 						"-",
 						"export",
 						"-2",
@@ -1239,83 +1784,75 @@
 				},
 				"search_panel_field": {
 					"field": "CustomerID",
-					"type": "search_panel_field"
+					"type": "search_panel_field",
+					"alwaysOnPanel": false,
+					"required": false
 				},
 				"search_panel_field1": {
 					"field": "id",
-					"type": "search_panel_field"
+					"type": "search_panel_field",
+					"alwaysOnPanel": false,
+					"required": false
 				},
 				"search_panel_field2": {
 					"field": "CompanyName",
-					"type": "search_panel_field"
+					"type": "search_panel_field",
+					"alwaysOnPanel": false,
+					"required": false
 				},
 				"search_panel_field3": {
 					"field": "ContactName",
-					"type": "search_panel_field"
+					"type": "search_panel_field",
+					"alwaysOnPanel": false,
+					"required": false
 				},
 				"search_panel_field4": {
 					"field": "ContactTitle",
-					"type": "search_panel_field"
+					"type": "search_panel_field",
+					"alwaysOnPanel": false,
+					"required": false
 				},
 				"search_panel_field5": {
 					"field": "Address",
-					"type": "search_panel_field"
+					"type": "search_panel_field",
+					"alwaysOnPanel": false,
+					"required": false
 				},
 				"search_panel_field6": {
 					"field": "City",
-					"type": "search_panel_field"
+					"type": "search_panel_field",
+					"alwaysOnPanel": false,
+					"required": false
 				},
 				"search_panel_field7": {
 					"field": "Region",
-					"type": "search_panel_field"
+					"type": "search_panel_field",
+					"alwaysOnPanel": false,
+					"required": false
 				},
 				"search_panel_field8": {
 					"field": "PostalCode",
-					"type": "search_panel_field"
+					"type": "search_panel_field",
+					"alwaysOnPanel": false,
+					"required": false
 				},
 				"search_panel_field9": {
 					"field": "Country",
-					"type": "search_panel_field"
+					"type": "search_panel_field",
+					"alwaysOnPanel": false,
+					"required": false
 				},
 				"search_panel_field10": {
 					"field": "Phone",
-					"type": "search_panel_field"
-				},
-				"search_panel_field11": {
-					"field": "Fax",
-					"type": "search_panel_field"
-				},
-				"search_panel_field12": {
-					"field": "Lat",
-					"type": "search_panel_field"
-				},
-				"search_panel_field13": {
-					"field": "Lng",
-					"type": "search_panel_field"
-				},
-				"search_panel_field14": {
-					"field": "apikey",
-					"type": "search_panel_field"
+					"type": "search_panel_field",
+					"alwaysOnPanel": false,
+					"required": false
 				},
 				"search_panel_field15": {
 					"field": "ownerid",
-					"type": "search_panel_field"
-				},
-				"search_panel_field16": {
-					"field": "companylogo",
-					"type": "search_panel_field"
-				},
-				"search_panel_field17": {
-					"field": "BillingName",
-					"type": "search_panel_field"
-				},
-				"search_panel_field18": {
-					"field": "BillingAddress",
-					"type": "search_panel_field"
-				},
-				"search_panel_field19": {
-					"field": "password",
-					"type": "search_panel_field"
+					"type": "search_panel_field",
+					"alwaysOnPanel": false,
+					"required": false
 				},
 				"expand_menu_button": {
 					"type": "expand_menu_button"
@@ -1324,7 +1861,8 @@
 					"type": "collapse_button"
 				},
 				"add": {
-					"type": "add"
+					"type": "add",
+					"popup": false
 				},
 				"print_panel": {
 					"type": "print_panel",
@@ -1361,26 +1899,52 @@
 				"-2": {
 					"type": "-"
 				},
-				"grid_edit": {
-					"type": "grid_edit"
-				},
-				"grid_view": {
-					"type": "grid_view"
-				},
-				"delete": {
-					"type": "delete"
-				},
-				"delete_selected": {
-					"type": "delete_selected"
+				"loginform_login": {
+					"type": "deleted",
+					"itemId": "loginform_login"
 				},
 				"username_button": {
+					"type": "deleted",
+					"itemId": "username_button"
+				},
+				"search_panel_field11": {
+					"field": "two_factor",
+					"type": "search_panel_field",
+					"alwaysOnPanel": false,
+					"required": false
+				},
+				"search_panel_field12": {
+					"field": "email",
+					"type": "search_panel_field",
+					"alwaysOnPanel": false,
+					"required": false
+				},
+				"search_panel_field13": {
+					"field": "password",
+					"type": "search_panel_field",
+					"alwaysOnPanel": false,
+					"required": false
+				},
+				"search_panel_field14": {
+					"field": "email1",
+					"type": "search_panel_field",
+					"alwaysOnPanel": false,
+					"required": false
+				},
+				"search_panel_field16": {
+					"field": "email2",
+					"type": "search_panel_field",
+					"alwaysOnPanel": false,
+					"required": false
+				},
+				"username_button1": {
 					"type": "username_button",
 					"items": [
 						"userinfo_link",
 						"logout_link"
 					]
 				},
-				"loginform_login": {
+				"loginform_login1": {
 					"type": "loginform_login",
 					"popup": false
 				},
@@ -1389,10 +1953,254 @@
 				},
 				"logout_link": {
 					"type": "logout_link"
+				},
+				"save_search": {
+					"type": "save_search"
+				},
+				"-3": {
+					"type": "-"
+				},
+				"saved_searches": {
+					"type": "saved_searches"
+				},
+				"-4": {
+					"type": "-"
+				},
+				"advsearch_link": {
+					"type": "advsearch_link"
+				},
+				"-5": {
+					"type": "-"
+				},
+				"master_info": {
+					"type": "master_info",
+					"tables": {
+						"3845127662": "true"
+					}
+				},
+				"simple_grid_field": {
+					"field": "CustomerID",
+					"type": "grid_field",
+					"clickSort": true,
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field17": {
+					"type": "grid_field_label",
+					"field": "CustomerID",
+					"clickSort": true
+				},
+				"simple_grid_field1": {
+					"field": "id",
+					"type": "grid_field",
+					"clickSort": true,
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field18": {
+					"type": "grid_field_label",
+					"field": "id",
+					"clickSort": true
+				},
+				"simple_grid_field2": {
+					"field": "CompanyName",
+					"type": "grid_field",
+					"clickSort": true,
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field19": {
+					"type": "grid_field_label",
+					"field": "CompanyName",
+					"clickSort": true
+				},
+				"simple_grid_field3": {
+					"field": "ContactName",
+					"type": "grid_field",
+					"clickSort": true,
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field20": {
+					"type": "grid_field_label",
+					"field": "ContactName",
+					"clickSort": true
+				},
+				"simple_grid_field4": {
+					"field": "ContactTitle",
+					"type": "grid_field",
+					"clickSort": true,
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field21": {
+					"type": "grid_field_label",
+					"field": "ContactTitle",
+					"clickSort": true
+				},
+				"custom_button": {
+					"type": "custom_button",
+					"eventGid": 1034594571,
+					"label": {
+						"text": "Button",
+						"type": 0
+					},
+					"icon": {}
+				},
+				"simple_grid_field5": {
+					"field": "Address",
+					"type": "grid_field",
+					"clickSort": true,
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field22": {
+					"type": "grid_field_label",
+					"field": "Address",
+					"clickSort": true
+				},
+				"simple_grid_field6": {
+					"field": "City",
+					"type": "grid_field",
+					"clickSort": true,
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field23": {
+					"type": "grid_field_label",
+					"field": "City",
+					"clickSort": true
+				},
+				"simple_grid_field7": {
+					"field": "Region",
+					"type": "grid_field",
+					"clickSort": true,
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field24": {
+					"type": "grid_field_label",
+					"field": "Region",
+					"clickSort": true
+				},
+				"simple_grid_field8": {
+					"field": "PostalCode",
+					"type": "grid_field",
+					"clickSort": true,
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field25": {
+					"type": "grid_field_label",
+					"field": "PostalCode",
+					"clickSort": true
+				},
+				"simple_grid_field9": {
+					"field": "Country",
+					"type": "grid_field",
+					"clickSort": true,
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field26": {
+					"type": "grid_field_label",
+					"field": "Country",
+					"clickSort": true
+				},
+				"simple_grid_field10": {
+					"field": "Phone",
+					"type": "grid_field",
+					"clickSort": true,
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field27": {
+					"type": "grid_field_label",
+					"field": "Phone",
+					"clickSort": true
+				},
+				"simple_grid_field15": {
+					"field": "ownerid",
+					"type": "grid_field",
+					"clickSort": true,
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field28": {
+					"type": "grid_field_label",
+					"field": "ownerid",
+					"clickSort": true
+				},
+				"simple_grid_field11": {
+					"field": "two_factor",
+					"type": "grid_field",
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field29": {
+					"type": "grid_field_label",
+					"field": "two_factor"
+				},
+				"simple_grid_field12": {
+					"field": "email",
+					"type": "grid_field",
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field30": {
+					"type": "grid_field_label",
+					"field": "email"
+				},
+				"simple_grid_field13": {
+					"field": "password",
+					"type": "grid_field",
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field31": {
+					"type": "grid_field_label",
+					"field": "password"
+				},
+				"simple_grid_field14": {
+					"field": "email1",
+					"type": "grid_field",
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field32": {
+					"type": "grid_field_label",
+					"field": "email1"
+				},
+				"simple_grid_field16": {
+					"field": "email2",
+					"type": "grid_field",
+					"inlineAdd": false,
+					"inlineEdit": false
+				},
+				"simple_grid_field33": {
+					"type": "grid_field_label",
+					"field": "email2"
+				},
+				"grid_checkbox": {
+					"type": "grid_checkbox"
+				},
+				"grid_checkbox_head": {
+					"type": "grid_checkbox_head"
+				},
+				"grid_edit": {
+					"type": "grid_edit",
+					"popup": false
+				},
+				"grid_view": {
+					"type": "grid_view",
+					"popup": false
 				}
 			},
 			"dbProps": {},
 			"version": 13,
+			"reorderRows": false,
+			"reorderRowsField": "",
+			"addToBottom": false,
 			"imageItem": {
 				"type": "page_image"
 			},
@@ -1463,6 +2271,14 @@
 								}
 							],
 							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "c4"
+								}
+							],
+							"section": ""
 						}
 					],
 					"cells": {
@@ -1471,6 +2287,12 @@
 							"items": [
 								"print_header",
 								"print_subheader"
+							]
+						},
+						"c4": {
+							"model": "c4",
+							"items": [
+								"master_info"
 							]
 						}
 					},
@@ -1504,16 +2326,12 @@
 								"simple_grid_field8",
 								"simple_grid_field9",
 								"simple_grid_field10",
+								"simple_grid_field15",
 								"simple_grid_field11",
 								"simple_grid_field12",
 								"simple_grid_field13",
 								"simple_grid_field14",
-								"simple_grid_field15",
-								"simple_grid_field16",
-								"simple_grid_field17",
-								"simple_grid_field18",
-								"simple_grid_field19",
-								"simple_grid_field20"
+								"simple_grid_field16"
 							]
 						}
 					},
@@ -1575,45 +2393,35 @@
 					"field": "Phone",
 					"type": "simple_grid_field"
 				},
-				"simple_grid_field11": {
-					"field": "Fax",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field12": {
-					"field": "Lat",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field13": {
-					"field": "Lng",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field14": {
-					"field": "apikey",
-					"type": "simple_grid_field"
-				},
 				"simple_grid_field15": {
 					"field": "ownerid",
 					"type": "simple_grid_field"
 				},
-				"simple_grid_field16": {
-					"field": "userpic",
+				"simple_grid_field11": {
+					"field": "two_factor",
 					"type": "simple_grid_field"
 				},
-				"simple_grid_field17": {
-					"field": "companylogo",
+				"simple_grid_field12": {
+					"field": "email",
 					"type": "simple_grid_field"
 				},
-				"simple_grid_field18": {
-					"field": "BillingName",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field19": {
-					"field": "BillingAddress",
-					"type": "simple_grid_field"
-				},
-				"simple_grid_field20": {
+				"simple_grid_field13": {
 					"field": "password",
 					"type": "simple_grid_field"
+				},
+				"simple_grid_field14": {
+					"field": "email1",
+					"type": "simple_grid_field"
+				},
+				"simple_grid_field16": {
+					"field": "email2",
+					"type": "simple_grid_field"
+				},
+				"master_info": {
+					"type": "master_info",
+					"tables": {
+						"3845127662": "true"
+					}
 				}
 			},
 			"dbProps": {},
@@ -1705,15 +2513,12 @@
 								"export_field8",
 								"export_field9",
 								"export_field10",
+								"export_field15",
 								"export_field11",
 								"export_field12",
 								"export_field13",
 								"export_field14",
-								"export_field15",
-								"export_field16",
-								"export_field17",
-								"export_field18",
-								"export_field19"
+								"export_field16"
 							]
 						}
 					},
@@ -1806,40 +2611,28 @@
 					"field": "Phone",
 					"type": "export_field"
 				},
-				"export_field11": {
-					"field": "Fax",
-					"type": "export_field"
-				},
-				"export_field12": {
-					"field": "Lat",
-					"type": "export_field"
-				},
-				"export_field13": {
-					"field": "Lng",
-					"type": "export_field"
-				},
-				"export_field14": {
-					"field": "apikey",
-					"type": "export_field"
-				},
 				"export_field15": {
 					"field": "ownerid",
 					"type": "export_field"
 				},
-				"export_field16": {
-					"field": "companylogo",
+				"export_field11": {
+					"field": "two_factor",
 					"type": "export_field"
 				},
-				"export_field17": {
-					"field": "BillingName",
+				"export_field12": {
+					"field": "email",
 					"type": "export_field"
 				},
-				"export_field18": {
-					"field": "BillingAddress",
-					"type": "export_field"
-				},
-				"export_field19": {
+				"export_field13": {
 					"field": "password",
+					"type": "export_field"
+				},
+				"export_field14": {
+					"field": "email1",
+					"type": "export_field"
+				},
+				"export_field16": {
+					"field": "email2",
 					"type": "export_field"
 				}
 			},
@@ -1936,15 +2729,12 @@
 								"import_field8",
 								"import_field9",
 								"import_field10",
+								"import_field15",
 								"import_field11",
 								"import_field12",
 								"import_field13",
 								"import_field14",
-								"import_field15",
-								"import_field16",
-								"import_field17",
-								"import_field18",
-								"import_field19"
+								"import_field16"
 							]
 						}
 					},
@@ -2000,40 +2790,28 @@
 					"field": "Phone",
 					"type": "import_field"
 				},
-				"import_field11": {
-					"field": "Fax",
-					"type": "import_field"
-				},
-				"import_field12": {
-					"field": "Lat",
-					"type": "import_field"
-				},
-				"import_field13": {
-					"field": "Lng",
-					"type": "import_field"
-				},
-				"import_field14": {
-					"field": "apikey",
-					"type": "import_field"
-				},
 				"import_field15": {
 					"field": "ownerid",
 					"type": "import_field"
 				},
-				"import_field16": {
-					"field": "companylogo",
+				"import_field11": {
+					"field": "two_factor",
 					"type": "import_field"
 				},
-				"import_field17": {
-					"field": "BillingName",
+				"import_field12": {
+					"field": "email",
 					"type": "import_field"
 				},
-				"import_field18": {
-					"field": "BillingAddress",
-					"type": "import_field"
-				},
-				"import_field19": {
+				"import_field13": {
 					"field": "password",
+					"type": "import_field"
+				},
+				"import_field14": {
+					"field": "email1",
+					"type": "import_field"
+				},
+				"import_field16": {
+					"field": "email2",
 					"type": "import_field"
 				}
 			},
@@ -2105,6 +2883,8 @@
 						"c2": {
 							"model": "c2",
 							"items": [
+								"prev",
+								"next",
 								"hamburger"
 							]
 						}
@@ -2161,16 +2941,12 @@
 								"integrated_edit_field7",
 								"integrated_edit_field8",
 								"integrated_edit_field9",
+								"integrated_edit_field14",
 								"integrated_edit_field10",
 								"integrated_edit_field11",
 								"integrated_edit_field12",
 								"integrated_edit_field13",
-								"integrated_edit_field14",
-								"integrated_edit_field15",
-								"integrated_edit_field16",
-								"integrated_edit_field17",
-								"integrated_edit_field18",
-								"integrated_edit_field19"
+								"integrated_edit_field15"
 							]
 						}
 					},
@@ -2209,105 +2985,107 @@
 				"integrated_edit_field": {
 					"field": "CustomerID",
 					"type": "integrated_edit_field",
-					"orientation": 0
+					"orientation": 0,
+					"updateOnEdit": false
 				},
 				"integrated_edit_field1": {
 					"field": "CompanyName",
 					"type": "integrated_edit_field",
-					"orientation": 0
+					"orientation": 0,
+					"updateOnEdit": false
 				},
 				"integrated_edit_field2": {
 					"field": "ContactName",
 					"type": "integrated_edit_field",
-					"orientation": 0
+					"orientation": 0,
+					"updateOnEdit": false
 				},
 				"integrated_edit_field3": {
 					"field": "ContactTitle",
 					"type": "integrated_edit_field",
-					"orientation": 0
+					"orientation": 0,
+					"updateOnEdit": false
 				},
 				"integrated_edit_field4": {
 					"field": "Address",
 					"type": "integrated_edit_field",
-					"orientation": 0
+					"orientation": 0,
+					"updateOnEdit": false
 				},
 				"integrated_edit_field5": {
 					"field": "City",
 					"type": "integrated_edit_field",
-					"orientation": 0
+					"orientation": 0,
+					"updateOnEdit": false
 				},
 				"integrated_edit_field6": {
 					"field": "Region",
 					"type": "integrated_edit_field",
-					"orientation": 0
+					"orientation": 0,
+					"updateOnEdit": false
 				},
 				"integrated_edit_field7": {
 					"field": "PostalCode",
 					"type": "integrated_edit_field",
-					"orientation": 0
+					"orientation": 0,
+					"updateOnEdit": false
 				},
 				"integrated_edit_field8": {
 					"field": "Country",
 					"type": "integrated_edit_field",
-					"orientation": 0
+					"orientation": 0,
+					"updateOnEdit": false
 				},
 				"integrated_edit_field9": {
 					"field": "Phone",
 					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field10": {
-					"field": "Fax",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field11": {
-					"field": "Lat",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field12": {
-					"field": "Lng",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field13": {
-					"field": "apikey",
-					"type": "integrated_edit_field",
-					"orientation": 0
+					"orientation": 0,
+					"updateOnEdit": false
 				},
 				"integrated_edit_field14": {
 					"field": "ownerid",
 					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field15": {
-					"field": "userpic",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field16": {
-					"field": "companylogo",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field17": {
-					"field": "BillingName",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field18": {
-					"field": "BillingAddress",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field19": {
-					"field": "password",
-					"type": "integrated_edit_field",
-					"orientation": 0
+					"orientation": 0,
+					"updateOnEdit": false
 				},
 				"edit_view": {
 					"type": "edit_view"
+				},
+				"next": {
+					"type": "next"
+				},
+				"prev": {
+					"type": "prev"
+				},
+				"integrated_edit_field10": {
+					"field": "two_factor",
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"updateOnEdit": false
+				},
+				"integrated_edit_field11": {
+					"field": "email",
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"updateOnEdit": false
+				},
+				"integrated_edit_field12": {
+					"field": "password",
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"updateOnEdit": false
+				},
+				"integrated_edit_field13": {
+					"field": "email1",
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"updateOnEdit": false
+				},
+				"integrated_edit_field15": {
+					"field": "email2",
+					"type": "integrated_edit_field",
+					"orientation": 0,
+					"updateOnEdit": false
 				}
 			},
 			"dbProps": {},
@@ -2376,6 +3154,8 @@
 						"c2": {
 							"model": "c2",
 							"items": [
+								"prev",
+								"next",
 								"hamburger"
 							]
 						}
@@ -2433,16 +3213,12 @@
 								"integrated_edit_field8",
 								"integrated_edit_field9",
 								"integrated_edit_field10",
+								"integrated_edit_field15",
 								"integrated_edit_field11",
 								"integrated_edit_field12",
 								"integrated_edit_field13",
 								"integrated_edit_field14",
-								"integrated_edit_field15",
-								"integrated_edit_field16",
-								"integrated_edit_field17",
-								"integrated_edit_field18",
-								"integrated_edit_field19",
-								"integrated_edit_field20"
+								"integrated_edit_field16"
 							]
 						}
 					},
@@ -2517,53 +3293,8 @@
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
-				"integrated_edit_field11": {
-					"field": "Fax",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field12": {
-					"field": "Lat",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field13": {
-					"field": "Lng",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field14": {
-					"field": "apikey",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
 				"integrated_edit_field15": {
 					"field": "ownerid",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field16": {
-					"field": "userpic",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field17": {
-					"field": "companylogo",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field18": {
-					"field": "BillingName",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field19": {
-					"field": "BillingAddress",
-					"type": "integrated_edit_field",
-					"orientation": 0
-				},
-				"integrated_edit_field20": {
-					"field": "password",
 					"type": "integrated_edit_field",
 					"orientation": 0
 				},
@@ -2575,6 +3306,151 @@
 				},
 				"view_edit": {
 					"type": "view_edit"
+				},
+				"next": {
+					"type": "next"
+				},
+				"prev": {
+					"type": "prev"
+				},
+				"integrated_edit_field11": {
+					"field": "two_factor",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field12": {
+					"field": "email",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field13": {
+					"field": "password",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field14": {
+					"field": "email1",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				},
+				"integrated_edit_field16": {
+					"field": "email2",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				}
+			},
+			"dbProps": {},
+			"version": 13,
+			"imageItem": {
+				"type": "page_image"
+			},
+			"imageBgColor": "#f2f2f2",
+			"controlsBgColor": "white",
+			"imagePosition": "right",
+			"listTotals": 1,
+			"title": {}
+		},
+		{
+			"id": "search",
+			"type": "search",
+			"layoutId": "nomenu",
+			"disabled": false,
+			"default": 0,
+			"forms": {
+				"above-grid": {
+					"modelId": "search-above-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1",
+									"colspan": 2
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"below-grid": {
+					"modelId": "search-below-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"search_search",
+								"search_reset",
+								"search_back_list",
+								"search_cancel"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"top": {
+					"modelId": "search-header",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"search_header"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"grid": {
+					"modelId": "simple-search",
+					"grid": [],
+					"cells": {},
+					"deferredItems": [],
+					"separateLabels": false
+				}
+			},
+			"items": {
+				"search_header": {
+					"type": "search_header"
+				},
+				"search_reset": {
+					"type": "search_reset"
+				},
+				"search_back_list": {
+					"type": "search_back_list"
+				},
+				"search_search": {
+					"type": "search_search"
+				},
+				"search_cancel": {
+					"type": "search_cancel"
 				}
 			},
 			"dbProps": {},
