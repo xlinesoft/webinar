@@ -1,0 +1,1458 @@
+{
+	"programVersion": 2,
+	"versionName": "11.1",
+	"name": "Webinar_08_01_2025 - v11.1",
+	"mainDiagram": {
+		"tables": [
+			{
+				"gid": 2509679470,
+				"y": 10,
+				"x": 20,
+				"width": 111.046875,
+				"height": 152
+			},
+			{
+				"gid": 2587384379,
+				"y": 10,
+				"x": 1215,
+				"width": 182.640625,
+				"height": 152
+			},
+			{
+				"gid": 1649626657,
+				"y": 10,
+				"x": 160,
+				"width": 133.578125,
+				"height": 400
+			},
+			{
+				"gid": 3129131776,
+				"y": 210,
+				"x": 315,
+				"width": 147.703125,
+				"height": 401
+			},
+			{
+				"gid": 4046201341,
+				"y": 10,
+				"x": 635,
+				"width": 146.046875,
+				"height": 264
+			},
+			{
+				"gid": 3845127662,
+				"y": 10,
+				"x": 810,
+				"width": 134.390625,
+				"height": 400
+			},
+			{
+				"gid": 3015334490,
+				"y": 10,
+				"x": 485,
+				"width": 122.703125,
+				"height": 320
+			},
+			{
+				"gid": 2329695445,
+				"y": 10,
+				"x": 970,
+				"width": 128.9375,
+				"height": 96
+			},
+			{
+				"gid": 514404242,
+				"y": 180,
+				"x": 1215,
+				"width": 147.59375,
+				"height": 236
+			},
+			{
+				"gid": 2698031820,
+				"y": 127,
+				"x": 983,
+				"width": 204.15625,
+				"height": 136
+			}
+		]
+	},
+	"securitySettings": {
+		"loginDataSource": "customers",
+		"loginForm": 0,
+		"providers": [
+			{
+				"type": "%db",
+				"name": "db",
+				"active": true,
+				"label": {
+					"text": "Database",
+					"type": 0
+				},
+				"code": "00",
+				"table": {
+					"connId": "conn",
+					"table": "customers"
+				},
+				"usernameField": "CustomerID",
+				"passwordField": "password",
+				"emailField": null,
+				"extUserIdField": null,
+				"fullnameField": null,
+				"userpicField": "userpic",
+				"activationField": "˂Create new˃",
+				"resetTokenField": "˂Create new˃",
+				"resetDateField": "˂Create new˃",
+				"userGroupField": "CustomerID"
+			}
+		],
+		"sessionControl": {
+			"lifeTime": 15,
+			"sessionName": "TewKA6fia7uoAGaqOnJ9",
+			"JWTSecret": "vAZlKC7ZnEK1TBJG20Ng"
+		},
+		"registration": {
+			"remindMethod": 1,
+			"hashAlgorithm": 0,
+			"registerPage": false,
+			"remindPage": false,
+			"changePwdPage": false,
+			"caseInsensitiveLogin": true,
+			"hashPassword": false,
+			"passwordValidation": {
+				"strong": false,
+				"minimumLength": 8,
+				"uniqueCharacters": 4,
+				"digitsAndSymbols": 2,
+				"upperAndLowerCase": false
+			}
+		},
+		"captchaSettings": {
+			"captchaType": 0,
+			"siteKey": "",
+			"secretKey": "",
+			"passesCount": 5
+		},
+		"emailSettings": {
+			"fromEmail": "",
+			"usePHPDefinedSMTP": false,
+			"useBuiltInMailer": false,
+			"SMTPServer": "localhost",
+			"SMTPPort": 25,
+			"SMTPUser": "",
+			"SMTPPassword": "",
+			"securityProtocol": 0
+		},
+		"advancedSecurity": {
+			"allowGuestLogin": true
+		},
+		"auditAndLocking": {
+			"loggingMode": 0,
+			"loggingTable": {
+				"connId": "",
+				"table": ""
+			},
+			"loggingFile": "audit.log",
+			"logSecurityActions": false,
+			"lockAfterUnsuccessfulLogin": false,
+			"enableLocking": false,
+			"lockingTable": {
+				"connId": "",
+				"table": ""
+			},
+			"tables": {}
+		},
+		"twoFactorSettings": {
+			"available": false,
+			"required": false,
+			"enable": true,
+			"remember": true,
+			"types": {},
+			"twoFactorField": "",
+			"emailField": "",
+			"phoneField": "",
+			"codeField": "",
+			"projectName": ""
+		},
+		"staticPermissions": {
+			"groups": {
+				"<Default>": {
+					"permissions": {
+						"agents": {
+							"mask": "ADESPI",
+							"table": "agents",
+							"restrictedPages": {}
+						},
+						"customers": {
+							"mask": "ADESPI",
+							"table": "customers",
+							"restrictedPages": {}
+						},
+						"employees": {
+							"mask": "ADESPI",
+							"table": "employees",
+							"restrictedPages": {}
+						},
+						"products": {
+							"mask": "ADESPI",
+							"table": "products",
+							"restrictedPages": {}
+						},
+						"order details": {
+							"mask": "ADESPI",
+							"table": "order details",
+							"restrictedPages": {}
+						},
+						"orders": {
+							"mask": "ADESPI",
+							"table": "orders",
+							"restrictedPages": {}
+						},
+						"<global>": {
+							"mask": "ADESPI",
+							"table": "<global>",
+							"restrictedPages": {}
+						},
+						"questions": {
+							"mask": "ADESPI",
+							"table": "questions",
+							"restrictedPages": {}
+						},
+						"users_answers": {
+							"mask": "ADESPI",
+							"table": "users_answers",
+							"restrictedPages": {}
+						},
+						"change_password": {
+							"mask": "ADESPI",
+							"table": "change_password",
+							"restrictedPages": {}
+						},
+						"Tasks1 chart": {
+							"mask": "ADESPI",
+							"table": "Tasks1 chart",
+							"restrictedPages": {}
+						}
+					},
+					"admin": false,
+					"username": "<Default>"
+				},
+				"<Guest>": {
+					"permissions": {
+						"agents": {
+							"mask": "",
+							"table": "agents",
+							"restrictedPages": {
+								"list": true,
+								"view": true
+							}
+						},
+						"employees": {
+							"mask": "",
+							"table": "employees",
+							"restrictedPages": {
+								"list": true,
+								"view": true
+							}
+						},
+						"products": {
+							"mask": "",
+							"table": "products",
+							"restrictedPages": {
+								"list": true,
+								"view": true
+							}
+						},
+						"order details": {
+							"mask": "",
+							"table": "order details",
+							"restrictedPages": {
+								"list": true,
+								"view": true
+							}
+						},
+						"orders": {
+							"mask": "",
+							"table": "orders",
+							"restrictedPages": {
+								"list": true,
+								"view": true
+							}
+						},
+						"questions": {
+							"mask": "",
+							"table": "questions",
+							"restrictedPages": {
+								"list": true,
+								"view": true
+							}
+						},
+						"users_answers": {
+							"mask": "",
+							"table": "users_answers",
+							"restrictedPages": {
+								"list": true,
+								"view": true
+							}
+						},
+						"change_password": {
+							"mask": "A",
+							"table": "change_password",
+							"restrictedPages": {
+								"list": true,
+								"view": true,
+								"reset": false,
+								"add": true
+							}
+						},
+						"<global>": {
+							"mask": "",
+							"table": "<global>",
+							"restrictedPages": {
+								"menu": true
+							}
+						},
+						"customers": {
+							"mask": "",
+							"table": "",
+							"restrictedPages": {
+								"list": true,
+								"view": true
+							}
+						},
+						"Tasks1 chart": {
+							"mask": "S",
+							"table": "Tasks1 chart",
+							"restrictedPages": {}
+						}
+					}
+				}
+			}
+		}
+	},
+	"dbConnections": [
+		{
+			"id": "conn",
+			"name": "livedemo_northwind at localhost",
+			"connString": "mysql;localhost;root;;;livedemo_northwind;;1"
+		}
+	],
+	"defaultConnID": "conn",
+	"menus": [
+		{
+			"id": "main",
+			"root": {
+				"children": [
+					{
+						"id": "1",
+						"data": {
+							"name": {
+								"table": "agents",
+								"type": 6
+							},
+							"pageId": "list",
+							"itemType": 2,
+							"linkType": 0,
+							"iconType": 2,
+							"iconName": "glyphicon-earphone",
+							"showIconType": 2,
+							"table": 2509679470,
+							"pageType": "list"
+						}
+					},
+					{
+						"id": "2",
+						"data": {
+							"name": {
+								"table": "customers",
+								"type": 6
+							},
+							"pageId": "list",
+							"itemType": 2,
+							"linkType": 0,
+							"iconType": 2,
+							"iconName": "glyphicon-tree-conifer",
+							"showIconType": 2,
+							"table": 1649626657,
+							"pageType": "list"
+						}
+					},
+					{
+						"id": "3",
+						"data": {
+							"name": {
+								"table": "employees",
+								"type": 6
+							},
+							"pageId": "list",
+							"itemType": 2,
+							"linkType": 0,
+							"iconType": 2,
+							"iconName": "glyphicon-earphone",
+							"showIconType": 2,
+							"table": 3129131776,
+							"pageType": "list"
+						}
+					},
+					{
+						"id": "4",
+						"data": {
+							"name": {
+								"table": "products",
+								"type": 6
+							},
+							"pageId": "list",
+							"itemType": 2,
+							"linkType": 0,
+							"iconType": 2,
+							"iconName": "glyphicon-paperclip",
+							"showIconType": 2,
+							"table": 3015334490,
+							"pageType": "list"
+						}
+					},
+					{
+						"id": "5",
+						"data": {
+							"name": {
+								"table": "order details",
+								"type": 6
+							},
+							"pageId": "list",
+							"itemType": 2,
+							"linkType": 0,
+							"iconType": 2,
+							"iconName": "glyphicon-tree-conifer",
+							"showIconType": 2,
+							"table": 4046201341,
+							"pageType": "list"
+						}
+					},
+					{
+						"id": "6",
+						"data": {
+							"name": {
+								"table": "orders",
+								"type": 6
+							},
+							"pageId": "list",
+							"itemType": 2,
+							"linkType": 0,
+							"iconType": 2,
+							"iconName": "glyphicon-leaf",
+							"showIconType": 2,
+							"table": 3845127662,
+							"pageType": "list"
+						}
+					},
+					{
+						"id": "7",
+						"data": {
+							"name": {
+								"table": "questions",
+								"type": 6
+							},
+							"pageId": "list",
+							"itemType": 2,
+							"linkType": 0,
+							"iconType": 2,
+							"iconName": "glyphicon-tree-conifer",
+							"showIconType": 2,
+							"table": 2329695445,
+							"pageType": "list"
+						}
+					},
+					{
+						"id": "8",
+						"data": {
+							"name": {
+								"table": "users_answers",
+								"type": 6
+							},
+							"pageId": "list",
+							"itemType": 2,
+							"linkType": 0,
+							"iconType": 2,
+							"iconName": "glyphicon-camera",
+							"showIconType": 2,
+							"table": 2698031820,
+							"pageType": "list"
+						}
+					},
+					{
+						"id": "7",
+						"data": {
+							"name": {
+								"table": "questions",
+								"type": 6
+							},
+							"pageId": "list",
+							"itemType": 2,
+							"linkType": 0,
+							"iconType": 2,
+							"iconName": "glyphicon-tree-conifer",
+							"showIconType": 2,
+							"table": 2329695445,
+							"pageType": "list"
+						}
+					},
+					{
+						"id": "8",
+						"data": {
+							"name": {
+								"table": "users_answers",
+								"type": 6
+							},
+							"pageId": "list",
+							"itemType": 2,
+							"linkType": 0,
+							"iconType": 2,
+							"iconName": "glyphicon-camera",
+							"showIconType": 2,
+							"table": 2698031820,
+							"pageType": "list"
+						}
+					},
+					{
+						"id": "9",
+						"data": {
+							"name": {
+								"table": "change_password",
+								"type": 6
+							},
+							"pageId": "add",
+							"itemType": 2,
+							"linkType": 0,
+							"iconType": 2,
+							"iconName": "glyphicon-heart-empty",
+							"showIconType": 2,
+							"table": 2587384379,
+							"pageType": "add"
+						}
+					},
+					{
+						"id": "10",
+						"data": {
+							"name": {
+								"table": "Tasks1 chart",
+								"type": 6
+							},
+							"pageId": "gantt",
+							"itemType": 2,
+							"linkType": 0,
+							"table": 514404242,
+							"pageType": "gantt"
+						}
+					}
+				]
+			}
+		}
+	],
+	"globalPages": [
+		{
+			"id": "menu",
+			"type": "menu",
+			"layoutId": "topbar",
+			"disabled": false,
+			"default": 0,
+			"forms": {
+				"above-grid": {
+					"modelId": "empty-above-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"supertop": {
+					"modelId": "menu-topbar-menu",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								},
+								{
+									"cell": "c2"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"logo",
+								"menu"
+							]
+						},
+						"c2": {
+							"model": "c2",
+							"items": [
+								"loginform_login",
+								"username_button"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"grid": {
+					"modelId": "welcome",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"welcome_item",
+								"welcome_item1",
+								"welcome_item2",
+								"welcome_item3",
+								"welcome_item4",
+								"welcome_item5",
+								"welcome_item6",
+								"welcome_item7",
+								"welcome_item8",
+								"welcome_item9",
+								"welcome_item10",
+								"welcome_item11"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				}
+			},
+			"items": {
+				"logo": {
+					"type": "logo"
+				},
+				"menu": {
+					"type": "menu"
+				},
+				"welcome_item": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "agents",
+					"linkPage": "list",
+					"linkText": {
+						"table": "agents",
+						"type": 6
+					},
+					"linkIcon": {
+						"glyph": "earphone"
+					},
+					"linkComments": {
+						"text": "Agents description",
+						"type": 0
+					},
+					"background": "#dc143c",
+					"linkType": 0
+				},
+				"welcome_item1": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "customers",
+					"linkPage": "list",
+					"linkText": {
+						"table": "customers",
+						"type": 6
+					},
+					"linkIcon": {
+						"glyph": "tree-conifer"
+					},
+					"linkComments": {
+						"text": "Customers description",
+						"type": 0
+					},
+					"background": "#e67349",
+					"linkType": 0
+				},
+				"welcome_item2": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "employees",
+					"linkPage": "list",
+					"linkText": {
+						"table": "employees",
+						"type": 6
+					},
+					"linkIcon": {
+						"glyph": "earphone"
+					},
+					"linkComments": {
+						"text": "Employees description",
+						"type": 0
+					},
+					"background": "#7b68ee",
+					"linkType": 0
+				},
+				"welcome_item3": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "products",
+					"linkPage": "list",
+					"linkText": {
+						"table": "products",
+						"type": 6
+					},
+					"linkIcon": {
+						"glyph": "paperclip"
+					},
+					"linkComments": {
+						"text": "Products description",
+						"type": 0
+					},
+					"background": "#e07878",
+					"linkType": 0
+				},
+				"welcome_item4": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "order details",
+					"linkPage": "list",
+					"linkText": {
+						"table": "order details",
+						"type": 6
+					},
+					"linkIcon": {
+						"glyph": "tree-conifer"
+					},
+					"linkComments": {
+						"text": "Order Details description",
+						"type": 0
+					},
+					"background": "#2f4f4f",
+					"linkType": 0
+				},
+				"welcome_item5": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "orders",
+					"linkPage": "list",
+					"linkText": {
+						"table": "orders",
+						"type": 6
+					},
+					"linkIcon": {
+						"glyph": "leaf"
+					},
+					"background": "#db7093",
+					"linkType": 0
+				},
+				"username_button": {
+					"type": "username_button",
+					"items": [
+						"userinfo_link",
+						"logout_link"
+					]
+				},
+				"loginform_login": {
+					"type": "loginform_login",
+					"popup": false
+				},
+				"userinfo_link": {
+					"type": "userinfo_link"
+				},
+				"logout_link": {
+					"type": "logout_link"
+				},
+				"welcome_item6": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "questions",
+					"linkPage": "list",
+					"linkText": {
+						"table": "questions",
+						"type": 6
+					},
+					"linkIcon": {
+						"glyph": "tree-conifer"
+					},
+					"background": "#3cb371",
+					"linkType": 0
+				},
+				"welcome_item7": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "users_answers",
+					"linkPage": "list",
+					"linkText": {
+						"table": "users_answers",
+						"type": 6
+					},
+					"linkIcon": {
+						"glyph": "camera"
+					},
+					"background": "#e67349",
+					"linkType": 0
+				},
+				"welcome_item8": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "questions",
+					"linkPage": "list",
+					"linkText": {
+						"table": "questions",
+						"type": 6
+					},
+					"linkIcon": {
+						"glyph": "tree-conifer"
+					},
+					"background": "#3cb371",
+					"linkType": 0
+				},
+				"welcome_item9": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "users_answers",
+					"linkPage": "list",
+					"linkText": {
+						"table": "users_answers",
+						"type": 6
+					},
+					"linkIcon": {
+						"glyph": "camera"
+					},
+					"background": "#e67349",
+					"linkType": 0
+				},
+				"welcome_item10": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "change_password",
+					"linkPage": "add",
+					"linkText": {
+						"table": "change_password",
+						"type": 6
+					},
+					"linkIcon": {
+						"glyph": "heart-empty"
+					},
+					"background": "#5f9ea0",
+					"linkType": 0
+				},
+				"welcome_item11": {
+					"type": "welcome_item",
+					"linkUrl": "",
+					"linkTable": "Tasks1 chart",
+					"linkPage": "gantt",
+					"linkText": {
+						"table": "Tasks1 chart",
+						"type": 6
+					},
+					"background": "#dc143c",
+					"linkType": 0
+				}
+			},
+			"dbProps": {},
+			"version": 13,
+			"imageItem": {
+				"type": "page_image"
+			},
+			"imageBgColor": "#f2f2f2",
+			"controlsBgColor": "white",
+			"imagePosition": "right",
+			"welcomePageStay": true,
+			"listTotals": 1,
+			"title": {}
+		},
+		{
+			"id": "login",
+			"type": "login",
+			"layoutId": "pretty1",
+			"disabled": false,
+			"default": 0,
+			"forms": {
+				"above-grid": {
+					"modelId": "login-above-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c2"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c2": {
+							"model": "c2",
+							"items": []
+						},
+						"c1": {
+							"model": "c1",
+							"items": [
+								"login_message"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"top": {
+					"modelId": "plogin-header",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								},
+								{
+									"cell": "c2"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "c3",
+									"colspan": 2
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"login-logo"
+							]
+						},
+						"c2": {
+							"model": "c2",
+							"items": []
+						},
+						"c3": {
+							"model": "c3",
+							"items": [
+								"login_welcome"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"grid": {
+					"modelId": "plogin-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1",
+									"colspan": 2
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "c2",
+									"colspan": 2
+								}
+							],
+							"section": ""
+						},
+						{
+							"section": "",
+							"cells": [
+								{
+									"cell": "c3",
+									"colspan": 2
+								}
+							]
+						},
+						{
+							"cells": [
+								{
+									"cell": "c4"
+								},
+								{
+									"cell": "c6"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "c5",
+									"colspan": 2
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c4": {
+							"model": "c4",
+							"items": [
+								"remember_password"
+							]
+						},
+						"c6": {
+							"model": "c6",
+							"items": [
+								"custom_button"
+							]
+						},
+						"c1": {
+							"model": "c1",
+							"items": [
+								"username_label",
+								"username"
+							]
+						},
+						"c2": {
+							"model": "c2",
+							"items": [
+								"password_label",
+								"password"
+							]
+						},
+						"c5": {
+							"model": "c5",
+							"items": []
+						},
+						"c3": {
+							"model": "c2",
+							"items": [
+								"snippet"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"footer": {
+					"modelId": "plogin-footer",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								},
+								{
+									"cell": "c2"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"login_button"
+							]
+						},
+						"c2": {
+							"model": "c2",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"superbottom": {
+					"modelId": "plogin-superbottom",
+					"grid": [],
+					"cells": {},
+					"deferredItems": [],
+					"recsPerRow": 1
+				}
+			},
+			"items": {
+				"login_message": {
+					"type": "login_message"
+				},
+				"login-logo": {
+					"type": "login-logo",
+					"font-size": "24px"
+				},
+				"login_welcome": {
+					"type": "login_welcome"
+				},
+				"username_label": {
+					"type": "username_label"
+				},
+				"username": {
+					"type": "username"
+				},
+				"password_label": {
+					"type": "password_label"
+				},
+				"password": {
+					"type": "password"
+				},
+				"remember_password": {
+					"type": "remember_password"
+				},
+				"login_button": {
+					"type": "login_button",
+					"icon": {}
+				},
+				"snippet": {
+					"type": "snippet",
+					"eventGid": 3255862233
+				},
+				"custom_button": {
+					"type": "custom_button",
+					"eventGid": 1541818425,
+					"label": {
+						"text": "Reset password",
+						"type": 0
+					},
+					"icon": {}
+				}
+			},
+			"dbProps": {},
+			"version": 13,
+			"imageItem": {
+				"type": "page_image",
+				"shadow": true,
+				"fullSize": false,
+				"image": {
+					"source": 0,
+					"image": "train-in-the-night-publicdomainvectors.org.png"
+				}
+			},
+			"imageBgColor": "#f2f2f2",
+			"controlsBgColor": "white",
+			"imagePosition": "right",
+			"listTotals": 1,
+			"title": {}
+		},
+		{
+			"id": "userinfo",
+			"type": "userinfo",
+			"layoutId": "leftbar",
+			"disabled": false,
+			"default": 0,
+			"forms": {
+				"above-grid": {
+					"modelId": "empty-above-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"below-grid": {
+					"modelId": "empty-above-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": []
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"supertop": {
+					"modelId": "leftbar-top-edit",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								},
+								{
+									"cell": "c2"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c1": {
+							"model": "c1",
+							"items": [
+								"expand_menu_button",
+								"collapse_button",
+								"breadcrumb"
+							]
+						},
+						"c2": {
+							"model": "c2",
+							"items": [
+								"loginform_login",
+								"username_button"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"left": {
+					"modelId": "leftbar-menu",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "c0"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "c1"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"c0": {
+							"model": "c0",
+							"items": [
+								"logo"
+							]
+						},
+						"c1": {
+							"model": "c1",
+							"items": [
+								"menu"
+							]
+						}
+					},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"top": {
+					"modelId": "empty-above-grid",
+					"grid": [],
+					"cells": {},
+					"deferredItems": [],
+					"recsPerRow": 1
+				},
+				"grid": {
+					"modelId": "userinfo-grid",
+					"grid": [
+						{
+							"cells": [
+								{
+									"cell": "fields_message"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "fields"
+								}
+							],
+							"section": ""
+						},
+						{
+							"cells": [
+								{
+									"cell": "buttons"
+								}
+							],
+							"section": ""
+						}
+					],
+					"cells": {
+						"fields_message": {
+							"model": "fields_message",
+							"items": [
+								"user_fields_title",
+								"fields_message"
+							]
+						},
+						"buttons": {
+							"model": "buttons",
+							"items": [
+								"user_fields_reset",
+								"user_fields_save"
+							]
+						},
+						"fields": {
+							"model": "fields",
+							"items": [
+								"user_picture",
+								"integrated_edit_field"
+							]
+						}
+					},
+					"deferredItems": [],
+					"columnCount": 1,
+					"inlineLabels": false,
+					"separateLabels": false
+				}
+			},
+			"items": {
+				"fields_message": {
+					"type": "fields_message"
+				},
+				"user_fields_reset": {
+					"type": "user_fields_reset"
+				},
+				"user_fields_save": {
+					"type": "user_fields_save"
+				},
+				"user_fields_title": {
+					"type": "user_fields_title",
+					"font-size": "24px"
+				},
+				"breadcrumb": {
+					"type": "breadcrumb"
+				},
+				"logo": {
+					"type": "logo"
+				},
+				"menu": {
+					"type": "menu"
+				},
+				"username_button": {
+					"type": "username_button",
+					"items": [
+						"userinfo_link",
+						"logout_link"
+					]
+				},
+				"loginform_login": {
+					"type": "loginform_login",
+					"popup": false
+				},
+				"userinfo_link": {
+					"type": "userinfo_link"
+				},
+				"logout_link": {
+					"type": "logout_link"
+				},
+				"expand_menu_button": {
+					"type": "expand_menu_button"
+				},
+				"collapse_button": {
+					"type": "collapse_button"
+				},
+				"user_picture": {
+					"type": "user_picture",
+					"field": "userpic",
+					"orientation": 0
+				},
+				"integrated_edit_field": {
+					"field": "CustomerID",
+					"type": "integrated_edit_field",
+					"orientation": 0
+				}
+			},
+			"dbProps": {},
+			"version": 13,
+			"imageItem": {
+				"type": "page_image"
+			},
+			"imageBgColor": "#f2f2f2",
+			"controlsBgColor": "white",
+			"imagePosition": "right",
+			"listTotals": 1,
+			"title": {}
+		}
+	],
+	"eventHandlers": [
+		{
+			"eventId": "EVENT_JS_ONLOAD",
+			"pageType": "login",
+			"code": "this.on('beforeSave', function(formObj, fieldControlsArr, pageObj){\n  var val = $(\"#year\").val();\n  formObj.baseParams['year'] = val;\n});\n\n"
+		},
+		{
+			"eventId": "EVENT_BEFORELOGIN",
+			"pageType": "login",
+			"code": "// Place event code here.\n// Use \"Add Action\" button to add code snippets.\n\nif ($_POST[\"year\"]) {\n    $_SESSION[\"year\"] = $_POST[\"year\"];\n} else {\n    $_SESSION[\"year\"] = date('Y');\n}\n\nreturn true;"
+		}
+	],
+	"projectStyle": {
+		"theme": "spacelab",
+		"sidebarWidth": "250px",
+		"sidebarColor": "light",
+		"sidebarTheme": "primary",
+		"topbarTheme": "primary",
+		"logoTheme": "primary",
+		"fixedSidebar": false,
+		"fixedTopbar": true,
+		"sidebarCustomThemeColor": "legacy",
+		"topbarCustomThemeColor": "#333333",
+		"logoCustomThemeColor": "#000000",
+		"verticalBorders": false,
+		"stripedGrid": false,
+		"gpHeaderBg": "legacy",
+		"gpHeaderColor": "legacy",
+		"gpFooterBg": "legacy",
+		"gpPanelBorder": "legacy",
+		"gpBorderColor": "legacy",
+		"gpInnerBorder": "legacy",
+		"gpInnerBorderColor": "legacy",
+		"gcOddBg": "legacy",
+		"gcOddColor": "legacy",
+		"gcEvenBg": "legacy",
+		"gcEvenColor": "legacy",
+		"gcRolloverHighlightBg": "legacy",
+		"gcRolloverHighlightColor": "legacy"
+	},
+	"version": "",
+	"messages": {},
+	"projectLogo": {},
+	"cookieBannerText": {}
+}

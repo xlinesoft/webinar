@@ -1,0 +1,4 @@
+{
+	"name": "Year dropdown",
+	"serverCode": "// Put your code here.\n\n$sql = \"select distinct year(OrderDate) as y from orders where OrderDate is not null order by 1\";\n\n\necho \"<select class='form-control' name='year' id='year'>\";\necho \"<option value=''>Select year</option>\";\n\n// main loop\n$rs = DB::Query($sql);\n \nwhile( $data = $rs->fetchAssoc() )\n{\n    $year = $data[\"y\"];\n    echo \"<option value='\". $year . \"'>\". $year . \"</option>\"; \n}\n\necho \"</select>\";"
+}
